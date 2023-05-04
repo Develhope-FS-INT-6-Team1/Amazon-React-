@@ -3,156 +3,158 @@ import "../CartsMiddlePart/CartsMiddlePart.css";
 
 export default function CartsMiddlePart() {
     return (
-        <><section className="sec-1">
-            <div className="container">
-                <div className="container-1">
-                    <div className="para">
-                        <p>You are on amazon.com. You can also shop on Amazon Turkey for millions of products with fast
-                            local delivery. <a href="#">Click here to go to amazon.com.tr</a></p>
+        <div>
+            <section className="sec-1">
+                <div className="container">
+                    <div className="container-1">
+                        <div className="para">
+                            <p>You are on amazon.com. You can also shop on Amazon Turkey for millions of products with fast
+                                local delivery. <a href="#">Click here to go to amazon.com.tr</a></p>
+                        </div>
+                        <div className="product-comp">
+                            <div className="box">
+                                <h3>Gaming accessories</h3>
+                                <div className="box-a">
+                                    <div>
+                                        <img
+                                            src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2021/June/Fuji_Quad_Headset_1x._SY116_CB667159" />
+                                        <span>Headsets</span>
+                                    </div>
+                                    <div>
+                                        <img
+                                            src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2021/June/Fuji_Quad_Keyboard_1x._SY116_CB6671" />
+                                        <span>Keyboards</span>
+                                    </div>
+                                    <div>
+                                        <img
+                                            src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2021/June/Fuji_Quad_Mouse_1x._SY116_CB6671590" />
+                                        <span>Computer mice</span>
+                                    </div>
+                                    <div>
+                                        <img
+                                            src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2021/June/Fuji_Quad_Chair_1x._SY116_CB667159" />
+                                        <span>Chairs</span>
+                                    </div>
+                                </div>
+                                <a href="http://#">See more</a>
+                            </div>
+                            <div className="box">
+                                <h3>Refresh your space</h3>
+                                <div className="box-a">
+                                    <div>
+                                        <img
+                                            src="https://images-na.ssl-images-amazon.com/images/G/01/launchpad/2023/Gateway/January/DesktopQuadCat_372x232_LP-HP_B08MYX5Q2W_01.23._SY232_CB619238939_.jpg" />
+                                        <span>Dining</span>
+                                    </div>
+                                    <div>
+                                        <img
+                                            src="https://images-na.ssl-images-amazon.com/images/G/01/launchpad/2023/Gateway/January/DesktopQuadCat_372x232_home_B08RCCP3HV_01.23._SY232_CB619238939_.jpg" />
+                                        <span>Home</span>
+                                    </div>
+                                    <div>
+                                        <img
+                                            src="https://images-na.ssl-images-amazon.com/images/G/01/launchpad/2023/Gateway/January/DesktopQuadCat_372x232_kitchen_B0126LMDFK_01.23._SY232_CB619238939_.jpg" />
+                                        <span>Kitchen</span>
+                                    </div>
+                                    <div>
+                                        <img
+                                            src="https://images-na.ssl-images-amazon.com/images/G/01/launchpad/2023/Gateway/January/DesktopQuadCat_372x232_health-beauty_B07662GN57_01.23._SY232_CB619238939_.jpg" />
+                                        <span>Health and Beauty</span>
+                                    </div>
+                                </div>
+                                <a href="http://#">See more</a>
+                            </div>
+                            <div className="box">
+                                <h3>Shop by Category</h3>
+                                <div className="box-a">
+                                    <div>
+                                        <img
+                                            src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2019/February/Dashboard/computer240x._SY170_CB468850970_.jpg" />
+                                        <span>Computers</span>
+                                    </div>
+                                    <div>
+                                        <img
+                                            src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2019/August/DashboardCard/PS4_240X._SY170_CB438749318_.jpg" />
+                                        <span>Video Games</span>
+                                    </div>
+                                    <div>
+                                        <img
+                                            src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2019/February/Dashboard/Baby240X._SY170_CB468850909_.jpg" />
+                                        <span>Baby</span>
+                                    </div>
+                                    <div>
+                                        <img
+                                            src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2019/February/Dashboard/Toys240X._SY170_CB468851693_.jpg" />
+                                        <span>Toys & Games</span>
+                                    </div>
+                                </div>
+                                <a href="http://#">Shop now</a>
+                            </div>
+                            <div className="box-b">
+                                <div className="best">
+                                    <h3>Sign in for the best experience</h3>
+                                    <a href="SignInPage.html"><button>Sign in Securely</button></a>
+                                </div>
+                                <div>
+                                    <img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/October/Fuji_D2_45M_en_US_2x._CB418309979_.jpg"
+                                        height="242px" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div className="product-comp">
+                            <div className="box box-c">
+                                <h3>Electronics</h3>
+                                <div>
+                                    <img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_Electronics_2x._SY608_CB432774322_.jpg"
+                                        alt="" />
+                                </div>
+                                <a href="http://#">See more</a>
+                            </div>
+                            <div className="box box-c">
+                                <h3>Health & Personal Care</h3>
+                                <div>
+                                    <img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2022/February/DashboardCards/GW_CONS_AUS_HPC_HPCEssentials_CatCard_Desktop2x._SY608_CB627424361_.jpg"
+                                        alt="" />
+                                </div>
+                                <a href="http://#">Shop now</a>
+                            </div>
+                            <div className="box box-c">
+                                <h3>Dresses</h3>
+                                <div>
+                                    <img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2022/February/DashboardCards/Fuji_dash_dress_2X._SY608_CB626369146_.jpg"
+                                        alt="" />
+                                </div>
+                                <a href="http://#">Shop now</a>
+                            </div>
+                            <div className="box box-c">
+                                <h3>Beauty picks</h3>
+                                <div>
+                                    <img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_Beauty_2x._SY608_CB432774344_.jpg"
+                                        alt="" />
+                                </div>
+                                <a href="http://#">Shop now</a>
+                            </div>
+                        </div>
                     </div>
-                    <div className="product-comp">
-                        <div className="box">
-                            <h3>Gaming accessories</h3>
-                            <div className="box-a">
-                                <div>
-                                    <img
-                                        src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2021/June/Fuji_Quad_Headset_1x._SY116_CB667159" />
-                                    <span>Headsets</span>
-                                </div>
-                                <div>
-                                    <img
-                                        src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2021/June/Fuji_Quad_Keyboard_1x._SY116_CB6671" />
-                                    <span>Keyboards</span>
-                                </div>
-                                <div>
-                                    <img
-                                        src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2021/June/Fuji_Quad_Mouse_1x._SY116_CB6671590" />
-                                    <span>Computer mice</span>
-                                </div>
-                                <div>
-                                    <img
-                                        src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2021/June/Fuji_Quad_Chair_1x._SY116_CB667159" />
-                                    <span>Chairs</span>
-                                </div>
+                    <div className="slider">
+                        <div className="image-box">
+                            <div className="slide">
+                                <img src="https://m.media-amazon.com/images/I/71tIrZqybrL._SX3000_.jpg" alt="" />
                             </div>
-                            <a href="http://#">See more</a>
-                        </div>
-                        <div className="box">
-                            <h3>Refresh your space</h3>
-                            <div className="box-a">
-                                <div>
-                                    <img
-                                        src="https://images-na.ssl-images-amazon.com/images/G/01/launchpad/2023/Gateway/January/DesktopQuadCat_372x232_LP-HP_B08MYX5Q2W_01.23._SY232_CB619238939_.jpg" />
-                                    <span>Dining</span>
-                                </div>
-                                <div>
-                                    <img
-                                        src="https://images-na.ssl-images-amazon.com/images/G/01/launchpad/2023/Gateway/January/DesktopQuadCat_372x232_home_B08RCCP3HV_01.23._SY232_CB619238939_.jpg" />
-                                    <span>Home</span>
-                                </div>
-                                <div>
-                                    <img
-                                        src="https://images-na.ssl-images-amazon.com/images/G/01/launchpad/2023/Gateway/January/DesktopQuadCat_372x232_kitchen_B0126LMDFK_01.23._SY232_CB619238939_.jpg" />
-                                    <span>Kitchen</span>
-                                </div>
-                                <div>
-                                    <img
-                                        src="https://images-na.ssl-images-amazon.com/images/G/01/launchpad/2023/Gateway/January/DesktopQuadCat_372x232_health-beauty_B07662GN57_01.23._SY232_CB619238939_.jpg" />
-                                    <span>Health and Beauty</span>
-                                </div>
+                            <div className="slide">
+                                <img src="https://m.media-amazon.com/images/I/61TD5JLGhIL._SX3000_.jpg" alt="" />
                             </div>
-                            <a href="http://#">See more</a>
-                        </div>
-                        <div className="box">
-                            <h3>Shop by Category</h3>
-                            <div className="box-a">
-                                <div>
-                                    <img
-                                        src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2019/February/Dashboard/computer240x._SY170_CB468850970_.jpg" />
-                                    <span>Computers</span>
-                                </div>
-                                <div>
-                                    <img
-                                        src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2019/August/DashboardCard/PS4_240X._SY170_CB438749318_.jpg" />
-                                    <span>Video Games</span>
-                                </div>
-                                <div>
-                                    <img
-                                        src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2019/February/Dashboard/Baby240X._SY170_CB468850909_.jpg" />
-                                    <span>Baby</span>
-                                </div>
-                                <div>
-                                    <img
-                                        src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2019/February/Dashboard/Toys240X._SY170_CB468851693_.jpg" />
-                                    <span>Toys & Games</span>
-                                </div>
+                            <div className="slide">
+                                <img src="https://m.media-amazon.com/images/I/61jovjd+f9L._SX3000_.jpg" alt="" />
                             </div>
-                            <a href="http://#">Shop now</a>
-                        </div>
-                        <div className="box-b">
-                            <div className="best">
-                                <h3>Sign in for the best experience</h3>
-                                <a href="SignInPage.html"><button>Sign in Securely</button></a>
+                            <div className="slide">
+                                <img src="https://m.media-amazon.com/images/I/71qid7QFWJL._SX3000_.jpg" alt="" />
                             </div>
-                            <div>
-                                <img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/October/Fuji_D2_45M_en_US_2x._CB418309979_.jpg"
-                                    height="242px" alt="" />
-                            </div>
-                        </div>
-                    </div>
-                    <div className="product-comp">
-                        <div className="box box-c">
-                            <h3>Electronics</h3>
-                            <div>
-                                <img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_Electronics_2x._SY608_CB432774322_.jpg"
-                                    alt="" />
-                            </div>
-                            <a href="http://#">See more</a>
-                        </div>
-                        <div className="box box-c">
-                            <h3>Health & Personal Care</h3>
-                            <div>
-                                <img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2022/February/DashboardCards/GW_CONS_AUS_HPC_HPCEssentials_CatCard_Desktop2x._SY608_CB627424361_.jpg"
-                                    alt="" />
-                            </div>
-                            <a href="http://#">Shop now</a>
-                        </div>
-                        <div className="box box-c">
-                            <h3>Dresses</h3>
-                            <div>
-                                <img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2022/February/DashboardCards/Fuji_dash_dress_2X._SY608_CB626369146_.jpg"
-                                    alt="" />
-                            </div>
-                            <a href="http://#">Shop now</a>
-                        </div>
-                        <div className="box box-c">
-                            <h3>Beauty picks</h3>
-                            <div>
-                                <img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_Beauty_2x._SY608_CB432774344_.jpg"
-                                    alt="" />
-                            </div>
-                            <a href="http://#">Shop now</a>
                         </div>
                     </div>
                 </div>
-                <div className="slider">
-                    <div className="image-box">
-                        <div className="slide">
-                            <img src="https://m.media-amazon.com/images/I/71tIrZqybrL._SX3000_.jpg" alt="" />
-                        </div>
-                        <div className="slide">
-                            <img src="https://m.media-amazon.com/images/I/61TD5JLGhIL._SX3000_.jpg" alt="" />
-                        </div>
-                        <div className="slide">
-                            <img src="https://m.media-amazon.com/images/I/61jovjd+f9L._SX3000_.jpg" alt="" />
-                        </div>
-                        <div className="slide">
-                            <img src="https://m.media-amazon.com/images/I/71qid7QFWJL._SX3000_.jpg" alt="" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section><section className="sec-2">
+            </section>
+            <section className="sec-2">
                 <div className="slide-sec">
                     <div className="l-btn"><i className="fa-solid fa-chevron-left"></i></div>
                     <div className="r-btn"><i className="fa-solid fa-chevron-right"></i></div>
@@ -173,7 +175,8 @@ export default function CartsMiddlePart() {
                         <li><img src="https://m.media-amazon.com/images/I/61LJoXj2HcL._AC_SY400_.jpg" height="200px" alt="" /></li>
                     </ul>
                 </div>
-            </section><section className="sec-2">
+            </section>
+            <section className="sec-2">
                 <div className="slide-sec">
                     <div className="l-btn btn-1b"><i className="fa-solid fa-chevron-left"></i></div>
                     <div className="r-btn btn-1a"><i className="fa-solid fa-chevron-right"></i></div>
@@ -198,7 +201,8 @@ export default function CartsMiddlePart() {
                         <li><img src="https://m.media-amazon.com/images/I/71LIKeM7GGL._AC_SY400_.jpg" height="200px" alt="" /></li>
                     </ul>
                 </div>
-            </section><section className="sec-1-1">
+            </section>
+            <section className="sec-1-1">
                 <div className="container">
                     <div className="container-1-1">
                         <div className="product-comp">
@@ -232,13 +236,14 @@ export default function CartsMiddlePart() {
                                     <img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2021/September/DashboardCards/Fuji_Dash_SmartWatch_2X._SY608_CB639922111_.jpg"
                                         alt="" />
                                 </div>
-                                <a style={{ marginTop: '-22px' }} href="http://#">Shop now</a>
+                                <a style={{marginTop: '-22px'}} href="http://#">Shop now</a>
                             </div>
                         </div>
                     </div>
-
+                    
                 </div>
-            </section><section className="sec-2">
+            </section>
+            <section className="sec-2">
                 <div className="slide-sec">
                     <div className="l-btn btn-3b"><i className="fa-solid fa-chevron-left"></i></div>
                     <div className="r-btn btn-3a"><i className="fa-solid fa-chevron-right"></i></div>
@@ -260,11 +265,12 @@ export default function CartsMiddlePart() {
                     </ul>
                 </div>
 
-            </section><section className="sec-2">
+            </section>
+            <section className="sec-2">
                 <div className="slide-sec">
                     <div className="l-btn btn-4b"><i className="fa-solid fa-chevron-left"></i></div>
                     <div className="r-btn btn-4a"><i className="fa-solid fa-chevron-right"></i></div>
-                    <h3>Home Décor Under $20 &nbsp;&nbsp; <a href="#" style={{ fontSize: '13px', color: '#007185', fontWeight: 500 }}>Shop now</a></h3>
+                    <h3>Home Décor Under $20 &nbsp;&nbsp; <a href="#" style={{fontSize: '13px', color: '#007185', fontWeight: 500}}>Shop now</a></h3>
                     <ul className="product-slide product-slide-4">
                         <li><img src="https://m.media-amazon.com/images/I/613+CG1dP1L._AC_SY400_.jpg" height="200px" alt="" /></li>
                         <li><img src="https://m.media-amazon.com/images/I/71kENaxQixL._AC_SY400_.jpg" height="200px" alt="" /></li>
@@ -282,7 +288,8 @@ export default function CartsMiddlePart() {
                         <li><img src="https://m.media-amazon.com/images/I/61XwmZLvaNL._AC_SY400_.jpg" height="200px" alt="" /></li>
                     </ul>
                 </div>
-            </section><section className="sec-1-1">
+            </section>
+            <section className="sec-1-1">
                 <div className="container">
                     <div className="container-1-1">
                         <div className="product-comp">
@@ -320,9 +327,10 @@ export default function CartsMiddlePart() {
                             </div>
                         </div>
                     </div>
-
+                    
                 </div>
-            </section><section className="sec-1-1">
+            </section>
+            <section className="sec-1-1">
                 <div className="container">
                     <div className="container-1-1">
                         <div className="product-comp">
@@ -334,7 +342,7 @@ export default function CartsMiddlePart() {
                                 </div>
                                 <a href="http://#">Shop now</a>
                             </div>
-                           
+                            <!-- -------------------- -->
                             <div className="box">
                                 <h3>Gaming merchandise</h3>
                                 <div className="box-a">
@@ -376,20 +384,22 @@ export default function CartsMiddlePart() {
                                     <img src="https://images-na.ssl-images-amazon.com/images/G/01/home/THILGMA/Holiday2022/Graphics/XCM_CUTTLE_1475305_2610205_758x608_2X_en_US._SY608_CB608600856_.jpg"
                                         alt="" />
                                 </div>
-                                <a style={{ marginTop: '-22px' }} href="http://#">Shop now</a>
+                                <a style={{marginTop: '-22px'}} href="http://#">Shop now</a>
                             </div>
                         </div>
                     </div>
-
-                </div>
-            </section><section className="signIn">
-                <div className="signIn-wrapper">
-                    <div className="signInContent">
-                        <p className="p1">See personalized recommendations</p>
-                        <a href="SignInPage.html"><button>Sign in</button></a>
-                        <p className="p2">New customer? <a href="http://#">Start here.</a></p>
-                    </div>
+                    
                 </div>
             </section>
-    ); </> 
-,}
+            <section className="signIn">
+            <div className="signIn-wrapper">
+                <div className="signInContent">
+                    <p className="p1">See personalized recommendations</p>
+                    <a href="SignInPage.html"><button>Sign in</button></a>
+                    <p className="p2">New customer? <a href="http://#">Start here.</a></p>
+                </div>
+            </div>
+            </section>  
+        </div>
+    );
+}
