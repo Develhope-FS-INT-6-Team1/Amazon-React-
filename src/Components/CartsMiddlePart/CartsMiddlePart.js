@@ -342,7 +342,7 @@ export default function CartsMiddlePart() {
                                 </div>
                                 <a href="http://#">Shop now</a>
                             </div>
-                            <!-- -------------------- -->
+                            {/* <!-- -------------------- --> */}
                             <div className="box">
                                 <h3>Gaming merchandise</h3>
                                 <div className="box-a">
