@@ -11,10 +11,10 @@ export function FirstHeader() {
     return(
       <div className="nav-header">
         <div className="nav-left">
-          <a href="#" className="nav-logo">
+          <a href="/" className="nav-logo">
             <img src={MainLogo} alt="" width="100px"/>
           </a>
-          <a href="#" className="location">
+          <a href="/purchase" className="location">
             <img src={LocationIcon} id="location-icon" alt="" width="15px" height="18px"/>
             <div>
               <p id="row1">Hello</p>
@@ -59,7 +59,7 @@ export function FirstHeader() {
         </div>
 
         <div className="nav-right">
-          <a href="#" className="lang">
+          <a href="#Main" className="lang">
             <img src={LangFlag} alt="" width="17px" height="13"/>
             <p className="text-lang">EN</p>
           </a>
@@ -105,7 +105,7 @@ export function FirstHeader() {
 
           <div className="overlay"></div>
 
-          <a href="#" className="account">
+          <a href="#Main" className="account">
             <p id="row1">Hello, sign in</p>
             <p>Accounts & Lists</p>
           </a>
@@ -139,11 +139,11 @@ export function FirstHeader() {
             </div>
           </div>
 
-         <a href="#" className="text">
+         <a href="#Main" className="text">
             <p id="row1">Returns</p>
             <p>& Orders</p>
           </a>
-          <a href="#" className="cart">
+          <a href="#Main" className="cart">
             <div className="cart-icon">
               <p className="items-in-cart">0</p>
               <img src={CartIcon} alt="" width="40px"/>

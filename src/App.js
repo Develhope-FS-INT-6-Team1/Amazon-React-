@@ -1,16 +1,20 @@
 import './App.css';
-import FirstFooter from './Components/FirstFooter/FirstFooter';
-import { FirstHeader } from './Components/FirstHeader/FirstHeader';
-import CartsMiddlePart from './Components/CartsMiddlePart/CartsMiddlePart';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomePage from './Pages/HomePage';
+import PurchasePage from './Pages/PurchasePage';
 
 function App() {
   return (
-    <div className="App">
-      <FirstHeader/>
-      <CartsMiddlePart />
-      <FirstFooter/>
-      
-    </div>
+    <Router>
+      <div>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/purchase" element={<PurchasePage />} />
+
+        </Routes>
+        
+      </div>
+    </Router>
   );
 }
 

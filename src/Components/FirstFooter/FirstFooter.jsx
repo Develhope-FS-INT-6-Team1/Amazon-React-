@@ -11,22 +11,22 @@ export default function FirstFooter() {
           <h1>Get to Know Us</h1>
           <ul>
             <li>
-              <a href="#">Careers</a>
+              <a href="#Main">Careers</a>
             </li>
             <li>
-              <a href="#">Blog</a>
+              <a href="#Main">Blog</a>
             </li>
             <li>
-              <a href="#">About Amazon</a>
+              <a href="#Main">About Amazon</a>
             </li>
             <li>
-              <a href="#">Investor Relations</a>
+              <a href="#Main">Investor Relations</a>
             </li>
             <li>
-              <a href="#">Amazon Devices</a>
+              <a href="#Main">Amazon Devices</a>
             </li>
             <li>
-              <a href="#">Amazon Science</a>
+              <a href="#Main">Amazon Science</a>
             </li>
           </ul>
         </div>
@@ -34,29 +34,29 @@ export default function FirstFooter() {
           <h1>Make Money With Us</h1>
           <ul>
             <li>
-              <a href="#">Sell products on Amazon</a>
+              <a href="#Main">Sell products on Amazon</a>
             </li>
             <li>
-              <a href="#">Sell on Amazon Business</a>
+              <a href="#Main">Sell on Amazon Business</a>
             </li>
 
             <li>
-              <a href="#">Sell apps on Amazon</a>
+              <a href="#Main">Sell apps on Amazon</a>
             </li>
             <li>
-              <a href="#">Become an Affiliate</a>
+              <a href="#Main">Become an Affiliate</a>
             </li>
             <li>
-              <a href="#">Advertise your products</a>
+              <a href="#Main">Advertise your products</a>
             </li>
             <li>
-              <a href="#">Self-publish with us</a>
+              <a href="#Main">Self-publish with us</a>
             </li>
             <li>
-              <a href="#">Host an Amazon Hub</a>
+              <a href="#Main">Host an Amazon Hub</a>
             </li>
             <li>
-              <a href="#">See More Make Money with Us</a>
+              <a href="#Main">See More Make Money with Us</a>
             </li>
           </ul>
         </div>
@@ -64,16 +64,16 @@ export default function FirstFooter() {
           <h1>Amazon Payment Products</h1>
           <ul>
             <li>
-              <a href="#">Amazon Business Card</a>
+              <a href="#Main">Amazon Business Card</a>
             </li>
             <li>
-              <a href="#">Shop with Points</a>
+              <a href="#Main">Shop with Points</a>
             </li>
             <li>
-              <a href="#">Reload Your Balance</a>
+              <a href="#Main">Reload Your Balance</a>
             </li>
             <li>
-              <a href="#">Amazon Currency Converter</a>
+              <a href="#Main">Amazon Currency Converter</a>
             </li>
           </ul>
         </div>
@@ -81,28 +81,28 @@ export default function FirstFooter() {
           <h1>Let us Help You</h1>
           <ul>
             <li>
-              <a href="#">Amazon and Covid-19</a>
+              <a href="#Main">Amazon and Covid-19</a>
             </li>
             <li>
-              <a href="#">Your Account</a>
+              <a href="#Main">Your Account</a>
             </li>
             <li>
-              <a href="#">Your Orders</a>
+              <a href="#Main">Your Orders</a>
             </li>
             <li>
-              <a href="#">Shipping Rates & Policies</a>
+              <a href="#Main">Shipping Rates & Policies</a>
             </li>
             <li>
-              <a href="#">Returns & Replacements</a>
+              <a href="#Main">Returns & Replacements</a>
             </li>
             <li>
-              <a href="#">Manage Your Content and Devices</a>
+              <a href="#Main">Manage Your Content and Devices</a>
             </li>
             <li>
-              <a href="#">Amazon Assistant</a>
+              <a href="#Main">Amazon Assistant</a>
             </li>
             <li>
-              <a href="#">Help</a>
+              <a href="#Main">Help</a>
             </li>
           </ul>
         </div>

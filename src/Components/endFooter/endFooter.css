@@ -3,11 +3,11 @@
     box-sizing: border-box;
     font-family: 'Amazon Ember';
 }
-
+/*
 @font-face{
     font-family: 'Amazon Ember';
     src: url(amazon-ember-cufonfonts/Amazon\ Ember.ttf);
-}
+}*/
 footer {
     display: flex;
     justify-content: center;

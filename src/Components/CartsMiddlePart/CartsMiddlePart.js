@@ -9,7 +9,7 @@ export default function CartsMiddlePart() {
                     <div className="container-1">
                         <div className="para">
                             <p>You are on amazon.com. You can also shop on Amazon Turkey for millions of products with fast
-                                local delivery. <a href="#">Click here to go to amazon.com.tr</a></p>
+                                local delivery. <a href="#Main">Click here to go to amazon.com.tr</a></p>
                         </div>
                         <div className="product-comp">
                             <div className="box">
@@ -270,7 +270,7 @@ export default function CartsMiddlePart() {
                 <div className="slide-sec">
                     <div className="l-btn btn-4b"><i className="fa-solid fa-chevron-left"></i></div>
                     <div className="r-btn btn-4a"><i className="fa-solid fa-chevron-right"></i></div>
-                    <h3>Home Décor Under $20 &nbsp;&nbsp; <a href="#" style={{fontSize: '13px', color: '#007185', fontWeight: 500}}>Shop now</a></h3>
+                    <h3>Home Décor Under $20 &nbsp;&nbsp; <a href="#Main" style={{fontSize: '13px', color: '#007185', fontWeight: 500}}>Shop now</a></h3>
                     <ul className="product-slide product-slide-4">
                         <li><img src="https://m.media-amazon.com/images/I/613+CG1dP1L._AC_SY400_.jpg" height="200px" alt="" /></li>
                         <li><img src="https://m.media-amazon.com/images/I/71kENaxQixL._AC_SY400_.jpg" height="200px" alt="" /></li>

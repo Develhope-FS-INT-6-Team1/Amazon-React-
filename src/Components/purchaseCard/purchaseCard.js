@@ -5,10 +5,10 @@ export default function purchaseCard() {
   return (
      <header className="nav-header">
     <div className="nav-left">
-      <a href="#" className="nav-logo">
+      <a href="#Main" className="nav-logo">
         <img src="assets/logo.png" alt="" width="100px">
       </a>
-      <a href="#" className="location">
+      <a href="#Main" className="location">
         <img src="assets/location.png" id="location-icon" alt="" width="15px" height="18px">
         <div>
           <p id="row1">Hello</p>
@@ -53,7 +53,7 @@ export default function purchaseCard() {
     </div>
 
     <div className="nav-right">
-      <a href="#" className="lang">
+      <a href="#Main" className="lang">
         <img src="assets/flag.jpg" alt="" width="17px" height="13">
         <p className="text-lang">EN</p>
       </a>
@@ -98,7 +98,7 @@ export default function purchaseCard() {
       </div>
       <div className="overlay"></div>
 
-      <a href="#" className="account">
+      <a href="#Main" className="account">
         <p id="row1">Hello, sign in</p>
         <p>Accounts & Lists</p>
       </a>
@@ -132,11 +132,11 @@ export default function purchaseCard() {
         </div>
       </div>
 
-      <a href="#" className="text">
+      <a href="#Main" className="text">
         <p id="row1">Returns</p>
         <p>& Orders</p>
       </a>
-      <a href="#" className="cart">
+      <a href="#Main" className="cart">
         <div className="cart-icon">
           <p className="items-in-cart">0</p>
           <img src="assets/cart.png" alt="" width="40px">
@@ -254,7 +254,7 @@ export default function purchaseCard() {
         <div className="Fmiddlepart">
         <i className="text" style="color: rgba(0,113,133,255);">Visit the Invicta Store</i>
         <h2 className="text">Invicta Men's Pro Diver Collection Coin-Edge Automatic Watch</h2>
-        <div className="inline" ><i><i id="star">&#9733&#9733&#9733&#9733&#9734</i><a id="link" href="#"> &nbsp;38,523 ratings | 836 answered questions</a><details><summary></summary><img id="cpt4" src="Capture4.PNG" height="250" width="250" alt=""></details></i></div></div>
+        <div className="inline" ><i><i id="star">&#9733&#9733&#9733&#9733&#9734</i><a id="link" href="#Main"> &nbsp;38,523 ratings | 836 answered questions</a><details><summary></summary><img id="cpt4" src="Capture4.PNG" height="250" width="250" alt=""></details></i></div></div>
         <hr>
       <div className="Smiddlepart">
         <p>24% <b>$89.90</b></p>
@@ -263,7 +263,7 @@ export default function purchaseCard() {
       </div>
       <div className="card-body">
       <p className="card-text">$95.56 Shipping & Import Fees Deposit to Turkey Details<br>
-        Available at a lower price from <a href="#" className="link"> other sellers</a> that may not offer free Prime shipping.</p>
+        Available at a lower price from <a href="#Main" className="link"> other sellers</a> that may not offer free Prime shipping.</p>
     <hr>
     <div className="card-section">
       <h2 className="card-section-title">Color:Steel</h2>
@@ -349,7 +349,7 @@ export default function purchaseCard() {
             <label className="card-image-text">$100.05</label>
           </div>
       </div>
-      <a href="#" className="clink">See all 22 options &rarr;</a>
+      <a href="#Main" className="clink">See all 22 options &rarr;</a>
     </div>
     <hr>
     <div className="card-section">
@@ -365,7 +365,7 @@ export default function purchaseCard() {
           &nbsp;&nbsp; warranty questions, etc.)</li>
       </ul>
       <hr>
-      <a href="#" className="card-link">See product specifications &rarr;</a>
+      <a href="#Main" className="card-link">See product specifications &rarr;</a>
     </div>
       </div>
 
@@ -376,7 +376,7 @@ export default function purchaseCard() {
         <div className="description">
           <p>
             $95.56  Shipping & Import Fees <br />Deposit to Turkey
-            <a href="#" className="more-info"
+            <a href="#Main" className="more-info"
               >Details&#x25BC;<i className="fas fa-angle-down"></i></a
             ><br />$14.51 delivery
           </p>
@@ -399,21 +399,21 @@ export default function purchaseCard() {
         </div>
         <button className="add-to-cart">Add to Cart</button>
         <button className="buy-now">Buy Now</button>
-        <a href="#" className="secure">&#128274; Secure transaction </a>
+        <a href="#Main" className="secure">&#128274; Secure transaction </a>
         <p>
           ships from &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Amazon</b>
         </p>
         <p>
           Sold
           by&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-            href="#"
+            href="#Main"
             className="watch"
             >Watchsavings</a
           >
         </p>
         <p>
           Return policy:
-          <a href="#" className="secure"
+          <a href="#Main" className="secure"
             >Eligible for <br />Return, Refund or Replacement<br />within 30 days
             of receipt</a
           >&#x25BC;
@@ -436,49 +436,49 @@ export default function purchaseCard() {
       <div className="footer-one-links">
         <h1>Get to Know Us</h1>
         <ul>
-          <li><a href="#">Careers</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">About Amazon</a></li>
-          <li><a href="#">Investor Relations</a></li>
-          <li><a href="#">Amazon Devices</a></li>
-          <li><a href="#">Amazon Science</a></li>
+          <li><a href="#Main">Careers</a></li>
+          <li><a href="#Main">Blog</a></li>
+          <li><a href="#Main">About Amazon</a></li>
+          <li><a href="#Main">Investor Relations</a></li>
+          <li><a href="#Main">Amazon Devices</a></li>
+          <li><a href="#Main">Amazon Science</a></li>
         </ul>
       </div>
       <div className="footer-one-links">
         <h1>Make Money With Us</h1>
         <ul>
-          <li><a href="#">Sell products on Amazon</a></li>
-          <li><a href="#">Sell on Amazon Business</a></li>
-          <li><a href="#">Sell apps on Amazon</a></li>
-          <li><a href="#">Become an Affiliate</a></li>
-          <li><a href="#">Advertise your products</a></li>
-          <li><a href="#">Self-publish with us</a></li>
-          <li><a href="#">Host an Amazon Hub</a></li>
-          <li><a href="#">See More Make Money with Us</a></li>
+          <li><a href="#Main">Sell products on Amazon</a></li>
+          <li><a href="#Main">Sell on Amazon Business</a></li>
+          <li><a href="#Main">Sell apps on Amazon</a></li>
+          <li><a href="#Main">Become an Affiliate</a></li>
+          <li><a href="#Main">Advertise your products</a></li>
+          <li><a href="#Main">Self-publish with us</a></li>
+          <li><a href="#Main">Host an Amazon Hub</a></li>
+          <li><a href="#Main">See More Make Money with Us</a></li>
         </ul>
       </div>
       <div className="footer-one-links">
         <h1>Amazon Payment Products</h1>
         <ul>
 
-          <li><a href="#">Amazon Business Card</a></li>
-          <li><a href="#">Shop with Points</a></li>
-          <li><a href="#">Reload Your Balance</a></li>
-          <li><a href="#">Amazon Currency Converter</a></li>
+          <li><a href="#Main">Amazon Business Card</a></li>
+          <li><a href="#Main">Shop with Points</a></li>
+          <li><a href="#Main">Reload Your Balance</a></li>
+          <li><a href="#Main">Amazon Currency Converter</a></li>
         </ul>
       </div>
       <div className="footer-one-links">
         <h1>Let us Help You</h1>
         <ul>
 
-          <li><a href="#">Amazon and Covid-19</a></li>
-          <li><a href="#">Your Account</a></li>
-          <li><a href="#">Your Orders</a></li>
-          <li><a href="#">Shipping Rates & Policies</a></li>
-          <li><a href="#">Returns & Replacements</a></li>
-          <li><a href="#">Manage Your Content and Devices</a></li>
-          <li><a href="#">Amazon Assistant</a></li>
-          <li><a href="#">Help</a>
+          <li><a href="#Main">Amazon and Covid-19</a></li>
+          <li><a href="#Main">Your Account</a></li>
+          <li><a href="#Main">Your Orders</a></li>
+          <li><a href="#Main">Shipping Rates & Policies</a></li>
+          <li><a href="#Main">Returns & Replacements</a></li>
+          <li><a href="#Main">Manage Your Content and Devices</a></li>
+          <li><a href="#Main">Amazon Assistant</a></li>
+          <li><a href="#Main">Help</a>
           </li>
         </ul>
       </div>
@@ -511,216 +511,216 @@ export default function purchaseCard() {
       <div className="footer-section">
         <h3>Amazon Music</h3>
         <ul>
-          <li><a href="#">Stream millions <br>of songs</a></li>
+          <li><a href="#Main">Stream millions <br>of songs</a></li>
         </ul>
       </div>
       <div className="footer-section">
         <h3>Amazon Advertising</h3>
         <ul>
-          <li><a href="#">Find, attract,<br>and<br>engage<br>customers</a></li>
+          <li><a href="#Main">Find, attract,<br>and<br>engage<br>customers</a></li>
 
         </ul>
       </div>
       <div className="footer-section">
         <h3>6pm</h3>
         <ul>
-          <li><a href="#">Score deals <br>on fashion <br>brands</a></li>
+          <li><a href="#Main">Score deals <br>on fashion <br>brands</a></li>
 
         </ul>
       </div>
       <div className="footer-section">
         <h3>AbeBooks</h3>
         <ul>
-          <li><a href="#">Books, art <br>& collectibles</a></li>
+          <li><a href="#Main">Books, art <br>& collectibles</a></li>
 
         </ul>
       </div>
       <div className="footer-section">
         <h3>ACX</h3>
         <ul>
-          <li><a href="#">Audionbook <br>publishing <br>Made Easy</a></li>
+          <li><a href="#Main">Audionbook <br>publishing <br>Made Easy</a></li>
 
         </ul>
       </div>
       <div className="footer-section">
         <h3>Sell on Amazon</h3>
         <ul>
-          <li><a href="#">Start a Selling <br>Account</a></li>
+          <li><a href="#Main">Start a Selling <br>Account</a></li>
 
         </ul>
       </div>
       <div className="footer-section">
         <h3>Amazon Business</h3>
         <ul>
-          <li><a href="#">Everything For <br>Your Business</a></li>
+          <li><a href="#Main">Everything For <br>Your Business</a></li>
 
         </ul>
       </div>
       <div className="footer-section">
         <h3>AmazonGlobal</h3>
         <ul>
-          <li><a href="#">Ship Orders <br>Internationally</a></li>
+          <li><a href="#Main">Ship Orders <br>Internationally</a></li>
 
         </ul>
       </div>
       <div className="footer-section">
         <h3>Home Services</h3>
         <ul>
-          <li><a href="#">Experienced <br>Pros <br>Happiness <br>Guarantee</a></li>
+          <li><a href="#Main">Experienced <br>Pros <br>Happiness <br>Guarantee</a></li>
 
         </ul>
       </div>
       <div className="footer-section">
         <h3>Amazon Ignite</h3>
         <ul>
-          <li><a href="#">Sell your <br>original <br>Digital <br>Educational <br>Resources</a></li>
+          <li><a href="#Main">Sell your <br>original <br>Digital <br>Educational <br>Resources</a></li>
 
         </ul>
       </div>
       <div className="footer-section">
         <h3>Amazon Web Services</h3>
         <ul>
-          <li><a href="#">Scalable Cloud <br>Computing Services</a></li>
+          <li><a href="#Main">Scalable Cloud <br>Computing Services</a></li>
 
         </ul>
       </div>
       <div className="footer-section">
         <h3>Audible</h3>
         <ul>
-          <li><a href="#">Listen to Books & <br>Original <br>Audio <br>Performances</a></li>
+          <li><a href="#Main">Listen to Books & <br>Original <br>Audio <br>Performances</a></li>
 
         </ul>
       </div>
       <div className="footer-section">
         <h3>Book Depository</h3>
         <ul>
-          <li><a href="#">Books With Free <br>Delivery <br>Worldwide</a></li>
+          <li><a href="#Main">Books With Free <br>Delivery <br>Worldwide</a></li>
 
         </ul>
       </div>
       <div className="footer-section">
         <h3>Box Office Mojo</h3>
         <ul>
-          <li><a href="#">Find Movie <br>Box Office Data</a></li>
+          <li><a href="#Main">Find Movie <br>Box Office Data</a></li>
 
         </ul>
       </div>
       <div className="footer-section">
         <h3>ComiXology</h3>
         <ul>
-          <li><a href="#">Thousands of <br>Digital Comics</a></li>
+          <li><a href="#Main">Thousands of <br>Digital Comics</a></li>
 
         </ul>
       </div>
       <div className="footer-section">
         <h3>DPReview</h3>
         <ul>
-          <li><a href="#">Digital <br>Photography</a></li>
+          <li><a href="#Main">Digital <br>Photography</a></li>
 
         </ul>
       </div>
       <div className="footer-section">
         <h3>Fabric</h3>
         <ul>
-          <li><a href="#">Sewing,<br>Quiting<br>& Knitting</a></li>
+          <li><a href="#Main">Sewing,<br>Quiting<br>& Knitting</a></li>
 
         </ul>
       </div>
       <div className="footer-section">
         <h3>Goodreads</h3>
         <ul>
-          <li><a href="#">Book reviews <br>& recommendations</a></li>
+          <li><a href="#Main">Book reviews <br>& recommendations</a></li>
 
         </ul>
       </div>
       <div className="footer-section">
         <h3>IMDb</h3>
         <ul>
-          <li><a href="#">Movies, TV<br>& Celebrities</a></li>
+          <li><a href="#Main">Movies, TV<br>& Celebrities</a></li>
 
         </ul>
       </div>
       <div className="footer-section">
         <h3>IMDb Pro</h3>
         <ul>
-          <li><a href="#">Get info <br>Entertainment <br>Professionals <br>Need</a></li>
+          <li><a href="#Main">Get info <br>Entertainment <br>Professionals <br>Need</a></li>
 
         </ul>
       </div>
       <div className="footer-section">
         <h3>Kindle Direct Publishing</h3>
         <ul>
-          <li><a href="#">Indie Digital & <br>Print Publishing <br>Made Easy</a></li>
+          <li><a href="#Main">Indie Digital & <br>Print Publishing <br>Made Easy</a></li>
 
         </ul>
       </div>
       <div className="footer-section">
         <h3>Prime Video Direct</h3>
         <ul>
-          <li><a href="#">Video<br>Distribution <br>Made Easy</a></li>
+          <li><a href="#Main">Video<br>Distribution <br>Made Easy</a></li>
 
         </ul>
       </div>
       <div className="footer-section">
         <h3>Shopbop</h3>
         <ul>
-          <li><a href="#">Designer<br>Fashion Brands</a></li>
+          <li><a href="#Main">Designer<br>Fashion Brands</a></li>
 
         </ul>
       </div>
       <div className="footer-section">
         <h3>Woot!</h3>
         <ul>
-          <li><a href="#">Deals and <br>Shenanigans</a></li>
+          <li><a href="#Main">Deals and <br>Shenanigans</a></li>
 
         </ul>
       </div>
       <div className="footer-section">
         <h3>Zappos</h3>
         <ul>
-          <li><a href="#">Shoes & <br>Clothing</a></li>
+          <li><a href="#Main">Shoes & <br>Clothing</a></li>
 
         </ul>
       </div>
       <div className="footer-section">
         <h3>Ring</h3>
         <ul>
-          <li><a href="#">Smart Home <br>Security Systems</a></li>
+          <li><a href="#Main">Smart Home <br>Security Systems</a></li>
 
         </ul>
       </div>
       <div className="footer-section">
         <h3>eero WiFi</h3>
         <ul>
-          <li><a href="#">Stream 4k Video <br>in Every Room</a></li>
+          <li><a href="#Main">Stream 4k Video <br>in Every Room</a></li>
 
         </ul>
       </div>
       <div className="footer-section">
         <h3>Blink</h3>
         <ul>
-          <li><a href="#">Smart Security <br>for Every Home</a></li>
+          <li><a href="#Main">Smart Security <br>for Every Home</a></li>
 
         </ul>
       </div>
       <div className="footer-section">
         <h3>Neighbors App</h3>
         <ul>
-          <li><a href="#">Real-Time <br>Crime <br>& Saftey <br>Alerts</a></li>
+          <li><a href="#Main">Real-Time <br>Crime <br>& Saftey <br>Alerts</a></li>
 
         </ul>
       </div>
       <div className="footer-section">
         <h3>Amazon Subscription Boxes</h3>
         <ul>
-          <li><a href="#">Top subscription Boxes-<br>right to your door</a></li>
+          <li><a href="#Main">Top subscription Boxes-<br>right to your door</a></li>
 
         </ul>
       </div>
       <div className="footer-section">
         <h3>PillPack</h3>
         <ul>
-          <li><a href="#">Pharmacy <br>Simplified</a></li>
+          <li><a href="#Main">Pharmacy <br>Simplified</a></li>
 
         </ul>
       </div>
@@ -729,9 +729,9 @@ export default function purchaseCard() {
   </footer>
   <div className="copyRightArea">
     <div className="container1">
-      <a className="container2" href="#">Conditions of Use</a>
-      <a className="container2" href="#">Privacy Notice</a>
-      <a className="container2" href="#">Your ads Privacy Choices</a>
+      <a className="container2" href="#Main">Conditions of Use</a>
+      <a className="container2" href="#Main">Privacy Notice</a>
+      <a className="container2" href="#Main">Your ads Privacy Choices</a>
     </div>
     <p className="copyright">
       © 1996-2023, Amazon.com, Inc. or its affiliates
