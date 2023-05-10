@@ -93,7 +93,7 @@ export default function CartsMiddlePart() {
                             <div className="box-b">
                                 <div className="best">
                                     <h3>Sign in for the best experience</h3>
-                                    <a href="SignInPage.html"><button>Sign in Securely</button></a>
+                                    <a href="/signin"><button>Sign in Securely</button></a>
                                 </div>
                                 <div>
                                     <img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/October/Fuji_D2_45M_en_US_2x._CB418309979_.jpg"
@@ -394,8 +394,8 @@ export default function CartsMiddlePart() {
             <div className="signIn-wrapper">
                 <div className="signInContent">
                     <p className="p1">See personalized recommendations</p>
-                    <a href="SignInPage.html"><button>Sign in</button></a>
-                    <p className="p2">New customer? <a href="http://#">Start here.</a></p>
+                    <a href="/signin"><button>Sign in</button></a>
+                    <p className="p2">New customer? <a href="/signup">Start here.</a></p>
                 </div>
             </div>
             </section>  
