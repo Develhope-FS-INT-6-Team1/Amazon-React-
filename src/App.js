@@ -13,11 +13,8 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/purchase" element={<PurchasePage />} />
-<<<<<<< HEAD
-=======
           <Route path="/signin" element={<SignInPage />} />
           <Route path="/signup" element={<SignUpPage />} />
->>>>>>> c82438ed1fd672622bb34b84ecb41d2750a64f21
         </Routes>
         
       </div>

@@ -1,0 +1,83 @@
+
+   [
+    {
+       "userID": "u1",
+       "totalMoney": 150,
+       "userName": "Olala3",
+       "password": "123456",
+       "preferedLanguage": "Tr",
+       "preferedCurrency": "$"
+    },
+    {
+       "userID": "u2",
+       "totalMoney": 200,
+       "userName": "johndoe",
+       "password": "abc123",
+       "preferedLanguage": "En",
+       "preferedCurrency": "$"
+    },
+    {
+       "userID": "u3",
+       "totalMoney": 500,
+       "userName": "janedoe",
+       "password": "xyz789",
+       "preferedLanguage": "En",
+       "preferedCurrency": "£"
+    },
+    {
+       "userID": "u4",
+       "totalMoney": 1000,
+       "userName": "harrypotter",
+       "password": "magic123",
+       "preferedLanguage": "En",
+       "preferedCurrency": "$"
+    },
+    {
+       "userID": "u5",
+       "totalMoney": 750,
+       "userName": "ronweasley",
+       "password": "redhair321",
+       "preferedLanguage": "En",
+       "preferedCurrency": "$"
+    },
+    {
+       "userID": "u6",
+       "totalMoney": 300,
+       "userName": "hermionegranger",
+       "password": "bookworm456",
+       "preferedLanguage": "En",
+       "preferedCurrency": "€"
+    },
+    {
+       "userID": "u7",
+       "totalMoney": 50,
+       "userName": "bob",
+       "password": "bob123",
+       "preferedLanguage": "En",
+       "preferedCurrency": "$"
+    },
+    {
+       "userID": "u8",
+       "totalMoney": 100,
+       "userName": "alice",
+       "password": "alice456",
+       "preferedLanguage": "Tr",
+       "preferedCurrency": "₺"
+    },
+    {
+       "userID": "u9",
+       "totalMoney": 800,
+       "userName": "peterparker",
+       "password": "spiderman789",
+       "preferedLanguage": "En",
+       "preferedCurrency": "$"
+    },
+    {
+       "userID": "u10",
+       "totalMoney": 250,
+       "userName": "clarkkent",
+       "password": "superman123",
+       "preferedLanguage": "En",
+       "preferedCurrency": "$"
+    }
+ ]
