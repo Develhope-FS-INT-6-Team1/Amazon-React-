@@ -1,7 +1,7 @@
 import React from 'react';
-import "../purchaseCard/purchaseCard.js";
+import "./purchaseCard.css";
 
-export default function purchaseCard() {
+export default function PurchaseCard() {
   return (
 
     <section className="mainpage-content">

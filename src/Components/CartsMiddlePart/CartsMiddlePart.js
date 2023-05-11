@@ -182,13 +182,13 @@ export default function CartsMiddlePart() {
                     <div className="r-btn btn-1a"><i className="fa-solid fa-chevron-right"></i></div>
                     <h3>International top sellers</h3>
                     <ul className="product-slide product-slide-1">
-                        <li id="goToWatch"><img src="https://m.media-amazon.com/images/I/71ME1Q-JrHL._AC_SY400_.jpg" height="200px" alt="" /></li>
-                        <li id="goToWatch"><img src="https://m.media-amazon.com/images/I/612LoQpeJzL._AC_SY400_.jpg" height="200px" alt="" /></li>
+                        <li><a href="/purchase"><img src="https://m.media-amazon.com/images/I/71ME1Q-JrHL._AC_SY400_.jpg" height="200px" alt="" /></a></li>
+                        <li><a href="/purchase"><img src="https://m.media-amazon.com/images/I/612LoQpeJzL._AC_SY400_.jpg" height="200px" alt="" /></a></li>
                         <li><img src="https://m.media-amazon.com/images/I/71Kd8STQcRL._AC_SY400_.jpg" height="200px" alt="" /></li>
                         <li><img src="https://m.media-amazon.com/images/I/61ScNHhDEVL._AC_SY400_.jpg" height="200px" alt="" /></li>
                         <li><img src="https://m.media-amazon.com/images/I/61KAU68KoxL._AC_SY400_.jpg" height="200px" alt="" /></li>
                         <li><img src="https://m.media-amazon.com/images/I/61V6A6N5NNL._AC_SY400_.jpg" height="200px" alt="" /></li>
-                        <li id="goToWatch"><img src="https://m.media-amazon.com/images/I/81P+jq1zF5L._AC_SY400_.jpg" height="200px" alt="" /></li>
+                        <li><a href="/purchase"><img src="https://m.media-amazon.com/images/I/81P+jq1zF5L._AC_SY400_.jpg" height="200px" alt="" /></a></li>
                         <li><img src="https://m.media-amazon.com/images/I/61nNyksoKbL._AC_SY400_.jpg" height="200px" alt="" /></li>
                         <li><img src="https://m.media-amazon.com/images/I/71CXw9pibPL._AC_SY400_.jpg" height="200px" alt="" /></li>
                         <li><img src="https://m.media-amazon.com/images/I/71YCllvavVL._AC_SY400_.jpg" height="200px" alt="" /></li>
