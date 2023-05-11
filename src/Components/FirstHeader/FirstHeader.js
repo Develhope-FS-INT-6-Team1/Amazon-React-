@@ -105,7 +105,7 @@ export function FirstHeader() {
 
           <div className="overlay"></div>
 
-          <a href="#Main" className="account">
+          <a href="/signin" className="account">
             <p id="row1">Hello, sign in</p>
             <p>Accounts & Lists</p>
           </a>
