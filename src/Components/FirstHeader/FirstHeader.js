@@ -6,7 +6,7 @@ import SearchIcon from "../../Assets/search-260.png"
 import LangFlag from "../../Assets/flag.jpg"
 import CartIcon from "../../Assets/cart.png"
 
-export function FirstHeader() {
+export default function FirstHeader() {
 
     return(
       <div className="nav-header">

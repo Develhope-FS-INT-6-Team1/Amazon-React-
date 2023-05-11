@@ -1,5 +1,5 @@
 import '../App.css';
-import { FirstHeader } from '../Components/FirstHeader/FirstHeader';
+import FirstHeader from '../Components/FirstHeader/FirstHeader';
 import CartItem from '../Components/ItemCard/ItemCard';
 
 
