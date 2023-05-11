@@ -1,0 +1,135 @@
+*{
+    
+}
+.item-wrap{
+    height: 100vh;
+    background-color: rgb(243, 242, 242);
+}
+.cart-item {
+    padding: 20px;
+    width: fit-content;
+    height: fit-content;
+    margin-left: 30px;
+    background-color: white;
+    padding: 30px;
+  }
+  .item-and-checkout{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .price {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .item-image {
+    width: 20%;
+    height: 80%;
+    object-fit: cover;
+  }
+  
+  .item-details {
+    flex-grow: 1;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 2;
+  }
+  .item-details p{
+    margin-left: 20px;
+  }
+  
+  .item-title {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .item-description {
+    font-size: 14px;
+    margin-bottom: 20px;
+    width: 60ch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .item-price {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .quantity {
+    font-size: 14px;
+  }
+  
+  .subtotal {
+    font-size: 16px;
+  }
+  
+  .subtotal-amount {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .policy {
+    grid-area: policy;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.policy a{
+    text-decoration: none;
+    color: rgb(55, 55, 157);
+}
+.checkout {
+    /* position: absolute; */
+    width: 300px;
+    background-color: white;
+    grid-area: checkout;
+    padding: 20px;
+    /* right: 0; */
+    /* top: 0; */
+}
+
+.checkout label{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.checkout p{
+    font-size: 18px;
+}
+#checkout-button {
+    height: 30px;
+    width: 260px;
+    border-radius: 8px;
+    border: none;
+    background-color: rgb(247,202,0);
+    font-size: 13px;
+    margin: 20px 0 40px 0;
+}
+.body-text {
+    margin-top: -10px;
+    font-size: 14px;
+}
+.dropdown-menu{
+    width: 70px;
+    height: 30px;
+    border-radius: 5px;
+}
+.dropdown-menu option::before {
+    content: "QTY ";
+  }

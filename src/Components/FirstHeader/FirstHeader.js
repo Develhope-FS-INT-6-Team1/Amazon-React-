@@ -143,7 +143,7 @@ export function FirstHeader() {
             <p id="row1">Returns</p>
             <p>& Orders</p>
           </a>
-          <a href="#Main" className="cart">
+          <a href="/purchase" className="cart">
             <div className="cart-icon">
               <p className="items-in-cart">0</p>
               <img src={CartIcon} alt="" width="40px"/>
