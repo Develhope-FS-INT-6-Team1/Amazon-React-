@@ -15,8 +15,15 @@
     font-weight: bold;
 }
 
-a {
+.header-links {
     text-decoration: none;
+    color: white;
+    margin: 0px;
+    padding: 0px;
+}
+
+.header-p {
+    margin: 0px;
     color: white;
 }
 
@@ -37,6 +44,7 @@ a {
     margin-top: 1px;
     margin-bottom: 1px;
     padding: 10px;
+    color: white;
 } 
 
 .nav-logo {

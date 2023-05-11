@@ -109,7 +109,7 @@ export default function FirstFooter() {
       </div>
       <hr style={{color: 'white'}} />
         <div className="footer-settings">
-        <img src={FooterLogo} alt="Footer Logo" />
+        <img src={FooterLogo} alt="Footer Logo" width='75px'/>
           <div className="select-language">
             <i className="fa fa-globe"></i>
             <div className="select-language__label">
@@ -128,7 +128,6 @@ export default function FirstFooter() {
           <button className="btn-1">USD - U.S. Dollar</button>
           <button className="btn-2">United States</button>
         </div>
-      <hr/>
     </div>
   );
 }

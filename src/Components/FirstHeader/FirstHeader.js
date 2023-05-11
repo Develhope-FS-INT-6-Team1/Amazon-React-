@@ -11,14 +11,14 @@ export function FirstHeader() {
     return(
       <div className="nav-header">
         <div className="nav-left">
-          <a href="/" className="nav-logo">
+          <a href="/" className="nav-logo header-links">
             <img src={MainLogo} alt="" width="100px"/>
           </a>
-          <a href="/purchase" className="location">
+          <a href="/purchase" className="location  header-links">
             <img src={LocationIcon} id="location-icon" alt="" width="15px" height="18px"/>
             <div>
-              <p id="row1">Hello</p>
-              <p>Select your address</p>
+              <p id="row1" className="header-p">Hello</p>
+              <p className="header-p">Select your address</p>
             </div>
           </a>
         </div>
@@ -59,14 +59,14 @@ export function FirstHeader() {
         </div>
 
         <div className="nav-right">
-          <a href="#Main" className="lang">
+          <a href="#Main" className="lang  header-links">
             <img src={LangFlag} alt="" width="17px" height="13"/>
-            <p className="text-lang">EN</p>
+            <p className="text-lang header-p">EN</p>
           </a>
 
           <div className="hidden-lang">
             <p className="in-line">Change language</p>
-            <a href="/" className="in-line">Learn more</a>
+            <a href="/" className="in-line header-links">Learn more</a>
             <div className="selected-lang">
               <input type="radio" id="en" name="fav_language" value="en"/>
               <label for="en">English - EN</label><br/>
@@ -89,11 +89,11 @@ export function FirstHeader() {
             <hr/>
             <div>
               <p className="in-line">Change currency</p>
-              <a href="/" className="in-line">Learn more</a>
+              <a href="/" className="in-line header-links">Learn more</a>
             </div>
             <div>
               <p className="in-line">$ - USD - US Dollar</p>
-              <a href="/" className="in-line">Change</a>
+              <a href="/" className="in-line header-links">Change</a>
             </div>
             <hr/>
             <div className="flag">
@@ -105,14 +105,14 @@ export function FirstHeader() {
 
           <div className="overlay"></div>
 
-          <a href="/signin" className="account">
-            <p id="row1">Hello, sign in</p>
-            <p>Accounts & Lists</p>
+          <a href="/signin" className="account header-links">
+            <p id="row1" className="header-p">Hello, sign in</p>
+            <p className="header-p">Accounts & Lists</p>
           </a>
 
           <div className="hidden-account">
             <div id="account1">
-              <button className="account-button">Sign in</button>
+              <button className="account-button"><a href="/signin">Sign in</a></button>
               <div className="inline-link">
                 <p>New customer?</p>
                 <a href="/" id="start-here">Start here.</a>
@@ -139,16 +139,16 @@ export function FirstHeader() {
             </div>
           </div>
 
-         <a href="#Main" className="text">
-            <p id="row1">Returns</p>
-            <p>& Orders</p>
+         <a href="#Main" className="text header-links">
+            <p id="row1" className="header-p">Returns</p>
+            <p className="header-p ">& Orders</p>
           </a>
-          <a href="/purchase" className="cart">
+          <a href="/cart" className="cart header-links">
             <div className="cart-icon">
-              <p className="items-in-cart">0</p>
+              <p className="items-in-cart header-p">0</p>
               <img src={CartIcon} alt="" width="40px"/>
             </div>
-            <p>Cart</p>
+            <p className="header-p">Cart</p>
           </a>
       </div>
       </div>

@@ -2,6 +2,8 @@
     position: relative;
     background-color: #232F3E;
     height: fit-content;
+    margin-bottom: 0px;
+    padding: 0px;
 }
 
 .footer-btn {
@@ -44,7 +46,7 @@ li{
     font-size: 14px;
 }
 
-a {
+li a {
     text-decoration: none;
     color: #fff;
 }
@@ -157,6 +159,7 @@ a:hover {
     justify-content: center;
     align-items: center;
     margin: auto;
+    margin-bottom: 0px;
     padding: 20px;
 }
 .footer-settings img{
