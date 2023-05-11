@@ -6,17 +6,17 @@ export default function purchaseCard() {
      <header className="nav-header">
     <div className="nav-left">
       <a href="#Main" className="nav-logo">
-        <img src="assets/logo.png" alt="" width="100px">
+        <img src="assets/logo.png" alt="" width="100px"/>
       </a>
       <a href="#Main" className="location">
-        <img src="assets/location.png" id="location-icon" alt="" width="15px" height="18px">
+        <img src="assets/location.png" id="location-icon" alt="" width="15px" height="18px"/>
         <div>
           <p id="row1">Hello</p>
           <p>Select your address</p>
         </div>
       </a>
     </div>
-
+    
     <div className="nav-fill">
       <select name="departments" id="select-deps">
         <option value="all">All</option>
@@ -46,41 +46,41 @@ export default function purchaseCard() {
         <option value="tools">Tools & Home Improvements</option>
         <option value="toys">Toys & Games</option>
       </select>
-      <input type="text" className="nav-input" name="field-keywords" autocomplete="off" placeholder="Search Amazon">
+      <input type="text" className="nav-input" name="field-keywords" autocomplete="off" placeholder="Search Amazon"/>
       <div className="search-button">
-        <img src="assets/search-260.png" alt="" width="25px" id="search-icon">
+        <img src="assets/search-260.png" alt="" width="25px" id="search-icon"/>
       </div>
     </div>
 
-    <div className="nav-right">
+    <div className="nav-right"/>
       <a href="#Main" className="lang">
-        <img src="assets/flag.jpg" alt="" width="17px" height="13">
+        <img src="assets/flag.jpg" alt="" width="17px" height="13"/>
         <p className="text-lang">EN</p>
       </a>
 
-      <div className="hidden-lang">
+      <div className="hidden-lang"/>
         <p className="in-line">Change language</p>
         <a href="/" className="in-line">Learn more</a>
-        <div className="selected-lang">
-          <input type="radio" id="en" name="fav_language" value="en">
-          <label for="en">English - EN</label><br>
-        </div>
-        <hr>
-        <input type="radio" id="es" name="fav_language" value="es">
-        <label for="es">Español - ES</label><br>
-        <input type="radio" id="ar" name="fav_language" value="ar">
-        <label for="ar">العربية - AR</label><br>
-        <input type="radio" id="de" name="fav_language" value="de">
-        <label for="de">Deutsch - DE</label><br>
-        <input type="radio" id="he" name="fav_language" value="he">
-        <label for="he">HE - תרגום</label><br>
-        <input type="radio" id="ko" name="fav_language" value="ko">
-        <label for="ko">한국어 - KO</label><br>
-        <input type="radio" id="pt" name="fav_language" value="pt">
-        <label for="pt">português - PT</label><br>
-        <input type="radio" id="zh" name="fav_language" value="zh">
-        <label for="zh">中文 (简体) - ZH </label><br>
-        <hr>
+        <div className="selected-lang"/>
+          <input type="radio" id="en" name="fav_language" value="en"/>
+          <label for="en">English - EN</label><br/>
+        <div/>
+        <hr/>
+        <input type="radio" id="es" name="fav_language" value="es"/>
+        <label for="es">Español - ES</label><br/>
+        <input type="radio" id="ar" name="fav_language" value="ar"/>
+        <label for="ar">العربية - AR</label><br/>
+        <input type="radio" id="de" name="fav_language" value="de"/>
+        <label for="de">Deutsch - DE</label><br/>
+        <input type="radio" id="he" name="fav_language" value="he"/>
+        <label for="he">HE - תרגום</label><br/>
+        <input type="radio" id="ko" name="fav_language" value="ko"/>
+        <label for="ko">한국어 - KO</label><br/>
+        <input type="radio" id="pt" name="fav_language" value="pt"/>
+        <label for="pt">português - PT</label><br/>
+        <input type="radio" id="zh" name="fav_language" value="zh"/>
+        <label for="zh">中文 (简体) - ZH </label><br/>
+        <hr/>
         <div>
           <p className="in-line">Change currency</p>
           <a href="/" className="in-line">Learn more</a>
@@ -89,13 +89,13 @@ export default function purchaseCard() {
           <p className="in-line">$ - USD - US Dollar</p>
           <a href="/" className="in-line">Change</a>
         </div>
-        <hr>
+        <hr/>
         <div className="flag">
-          <img src="assets/flag.jpg" alt="" width="17px" height="13">
-          <p>You are shopping on <br> Amazon.com</p>
+          <img src="assets/flag.jpg" alt="" width="17px" height="13"/>
+          <p>You are shopping on <br/> Amazon.com</p>
         </div>
         <a href="/" id="change-country">Change country/region.</a>
-      </div>
+      <div>
       <div className="overlay"></div>
 
       <a href="#Main" className="account">
@@ -104,7 +104,7 @@ export default function purchaseCard() {
       </a>
 
       <div className="hidden-account">
-        <div id="account1">
+        <div id="account1"><br/>
           <button className="account-button">Sign in</button>
           <div className="inline-link">
             <p>New customer?</p>
@@ -139,12 +139,12 @@ export default function purchaseCard() {
       <a href="#Main" className="cart">
         <div className="cart-icon">
           <p className="items-in-cart">0</p>
-          <img src="assets/cart.png" alt="" width="40px">
+          <img src="assets/cart.png" alt="" width="40px"/>
         </div>
         <p>Cart</p>
       </a>
     </div>
-  </header>
+  <header/>
   
   <nav className="nav">
     <div className="leftnav"></div>
@@ -177,7 +177,7 @@ export default function purchaseCard() {
 
           <button id="aapp">Amazon Appstore</button>
         </li>
-        <div className="HS">
+        <div className="HS"/>
           <li>
             <h3>Help &amp; Settings</h3>
           </li>
@@ -238,7 +238,7 @@ export default function purchaseCard() {
       </div>
     </ul>
   </div>
-  </div>
+  <div/>
   
 
     <section className="mainpage-content">
@@ -254,104 +254,104 @@ export default function purchaseCard() {
         <div className="Fmiddlepart">
         <i className="text" style="color: rgba(0,113,133,255);">Visit the Invicta Store</i>
         <h2 className="text">Invicta Men's Pro Diver Collection Coin-Edge Automatic Watch</h2>
-        <div className="inline" ><i><i id="star">&#9733&#9733&#9733&#9733&#9734</i><a id="link" href="#Main"> &nbsp;38,523 ratings | 836 answered questions</a><details><summary></summary><img id="cpt4" src="Capture4.PNG" height="250" width="250" alt=""></details></i></div></div>
-        <hr>
+        <div className="inline" ><i><i id="star">&#9733&#9733&#9733&#9733&#9734</i><a id="link" href="#Main"> &nbsp;38,523 ratings | 836 answered questions</a><details><summary></summary><img id="cpt4" src="Capture4.PNG" height="250" width="250" alt=""/></details></i></div></div>
+        <hr/>
       <div className="Smiddlepart">
         <p>24% <b>$89.90</b></p>
         <i>List Price:<del> $119.00</del></i> 
 
       </div>
       <div className="card-body">
-      <p className="card-text">$95.56 Shipping & Import Fees Deposit to Turkey Details<br>
+      <p className="card-text">$95.56 Shipping & Import Fees Deposit to Turkey Details<br/>
         Available at a lower price from <a href="#Main" className="link"> other sellers</a> that may not offer free Prime shipping.</p>
-    <hr>
+    <hr/>
     <div className="card-section">
       <h2 className="card-section-title">Color:Steel</h2>
       <div className="card-images">
         <div className="card-image">
-          <img src="https://m.media-amazon.com/images/I/41fV82MnGmL._SS64_.jpg" alt="Image 1">
+          <img src="https://m.media-amazon.com/images/I/41fV82MnGmL._SS64_.jpg" alt="Image 1"/>
           <label className="card-image-text">$86.99</label>
         </div>
         <div className="card-image">
-          <img src="https://m.media-amazon.com/images/I/41130oLic9L._SS64_.jpg" alt="Image 2">
+          <img src="https://m.media-amazon.com/images/I/41130oLic9L._SS64_.jpg" alt="Image 2"/>
           <label className="card-image-text">$54.33</label>
         </div>
         <div className="card-image">
-          <img src="https://m.media-amazon.com/images/I/41lBnxQjoHS._SS64_.jpg" alt="Image 3">
+          <img src="https://m.media-amazon.com/images/I/41lBnxQjoHS._SS64_.jpg" alt="Image 3"/>
           <label className="card-image-text">$62.35</label>
         </div>
         <div className="card-image">
-          <img src="https://m.media-amazon.com/images/I/41CXrYg2ifS._SS64_.jpg" alt="Image 4">
+          <img src="https://m.media-amazon.com/images/I/41CXrYg2ifS._SS64_.jpg" alt="Image 4"/>
           <label className="card-image-text">$86.99</label>
         </div>
         <div className="card-image">
-          <img src="https://m.media-amazon.com/images/I/41ZUpidZuBS._SS64_.jpg" alt="Image 5">
+          <img src="https://m.media-amazon.com/images/I/41ZUpidZuBS._SS64_.jpg" alt="Image 5"/>
           <label className="card-image-text">$95.00</label>
         </div>
         <div className="card-image">
-          <img src="https://m.media-amazon.com/images/I/41GU-3NckRS._SS64_.jpg" alt="Image 6">
+          <img src="https://m.media-amazon.com/images/I/41GU-3NckRS._SS64_.jpg" alt="Image 6"/>
           <label className="card-image-text">72.11</label>
         </div>
         <div className="card-image">
-            <img src="https://m.media-amazon.com/images/I/41ojeOLorDL._SS64_.jpg" alt="Image 7">
+            <img src="https://m.media-amazon.com/images/I/41ojeOLorDL._SS64_.jpg" alt="Image 7"/>
             <label className="card-image-text">$91.20</label>
           </div>
           <div className="card-image">
-            <img src="https://m.media-amazon.com/images/I/51jWp4N1HYL._SS64_.jpg" alt="Image 8">
+            <img src="https://m.media-amazon.com/images/I/51jWp4N1HYL._SS64_.jpg" alt="Image 8"/>
             <label className="card-image-text">$48.63</label>
           </div>
           <div className="card-image">
-            <img src="https://m.media-amazon.com/images/I/4192EhbjDqS._SS64_.jpg" alt="Image 9">
+            <img src="https://m.media-amazon.com/images/I/4192EhbjDqS._SS64_.jpg" alt="Image 9"/>
             <label className="card-image-text">$38.99</label>
           </div>
           <div className="card-image">
-            <img src="https://m.media-amazon.com/images/I/41ncrs38FTS._SS64_.jpg" alt="Image 10">
+            <img src="https://m.media-amazon.com/images/I/41ncrs38FTS._SS64_.jpg" alt="Image 10"/>
             <label className="card-image-text">$85.99</label>
           </div>
           <div className="card-image">
-            <img src="https://m.media-amazon.com/images/I/418pJ0cdRFS._SS64_.jpg" alt="Image 11">
+            <img src="https://m.media-amazon.com/images/I/418pJ0cdRFS._SS64_.jpg" alt="Image 11"/>
             <label className="card-image-text">$59.33</label>
           </div>
           <div className="card-image">
-            <img src="https://m.media-amazon.com/images/I/41IP1GnVcHS._SS64_.jpg" alt="Image 12">
+            <img src="https://m.media-amazon.com/images/I/41IP1GnVcHS._SS64_.jpg" alt="Image 12"/>
             <label className="card-image-text">$78.00</label>
           </div>
           <div className="card-image">
-            <img src="https://m.media-amazon.com/images/I/41-PL5AU1xL._SS64_.jpg" alt="Image 13">
+            <img src="https://m.media-amazon.com/images/I/41-PL5AU1xL._SS64_.jpg" alt="Image 13"/>
             <label className="card-image-text">$68.10</label>
           </div>
           <div className="card-image">
-            <img src="https://m.media-amazon.com/images/I/41NO7Bcw1-L._SS64_.jpg" alt="Image 14">
+            <img src="https://m.media-amazon.com/images/I/41NO7Bcw1-L._SS64_.jpg" alt="Image 14"/>
             <label className="card-image-text">$32.51</label>
           </div>
           <div className="card-image">
-            <img src="https://m.media-amazon.com/images/I/41ALwAZqK3S._SS64_.jpg" alt="Image 15">
+            <img src="https://m.media-amazon.com/images/I/41ALwAZqK3S._SS64_.jpg" alt="Image 15"/>
             <label className="card-image-text">$73.99</label>
           </div>
           <div className="card-image">
-            <img src="	https://m.media-amazon.com/images/I/513P-nzs7xL._SS64_.jpg " alt="Image 16">
+            <img src="	https://m.media-amazon.com/images/I/513P-nzs7xL._SS64_.jpg " alt="Image 16"/>
             <label className="card-image-text">$99.99</label>
           </div>
           <div className="card-image">
-            <img src="	https://m.media-amazon.com/images/I/41g4bhZNBvS._SS64_.jpg" alt="Image 17">
+            <img src="	https://m.media-amazon.com/images/I/41g4bhZNBvS._SS64_.jpg" alt="Image 17"/>
             <label className="card-image-text">$86.99</label>
           </div>
           <div className="card-image">
-            <img src="https://m.media-amazon.com/images/I/41waqQRBPWS._SS64_.jpg " alt="Image 18">
+            <img src="https://m.media-amazon.com/images/I/41waqQRBPWS._SS64_.jpg " alt="Image 18"/>
             <label className="card-image-text">$91.35</label>
           </div>
           <div className="card-image">
-            <img src="https://m.media-amazon.com/images/I/41PRNxoInjS._SS64_.jpg" alt="Image 19">
+            <img src="https://m.media-amazon.com/images/I/41PRNxoInjS._SS64_.jpg" alt="Image 19"/>
             <label className="card-image-text">$40.51</label>
           </div>
           <div className="card-image">
-            <img src="	https://m.media-amazon.com/images/I/41dzolTJcRS._SS64_.jpg" alt="Image 20">
+            <img src="	https://m.media-amazon.com/images/I/41dzolTJcRS._SS64_.jpg" alt="Image 20"/>
             <label className="card-image-text">$100.05</label>
           </div>
       </div>
       <a href="#Main" className="clink">See all 22 options &rarr;</a>
     </div>
-    <hr>
+    <hr/>
     <div className="card-section">
       <ul className="card-list">
         <li>&#8226;&nbsp;&nbsp;Imported</li>
@@ -364,13 +364,13 @@ export default function purchaseCard() {
           &nbsp;&nbsp;&nbsp;questions (re: Additional links, band replacement, band adjustment, 
           &nbsp;&nbsp; warranty questions, etc.)</li>
       </ul>
-      <hr>
+      <hr/>
       <a href="#Main" className="card-link">See product specifications &rarr;</a>
     </div>
       </div>
 
     </div>
-      </div>
+      <div/>
       <div className="card">
         <div className="price">$89.90      </div>
         <div className="description">
@@ -506,227 +506,227 @@ export default function purchaseCard() {
     </hr>
   </div> 
   
-  <footer className="footer-position">
-    <div className="footer-container">
+  <footer className="footer-position"/>
+    <div className="footer-container"/>
       <div className="footer-section">
         <h3>Amazon Music</h3>
         <ul>
-          <li><a href="#Main">Stream millions <br>of songs</a></li>
+          <li><a href="#Main">Stream millions <br/>of songs</a></li>
         </ul>
       </div>
       <div className="footer-section">
         <h3>Amazon Advertising</h3>
         <ul>
-          <li><a href="#Main">Find, attract,<br>and<br>engage<br>customers</a></li>
+          <li><a href="#Main">Find, attract,<br/>and<br/>engage<br/>customers</a></li>
 
         </ul>
       </div>
       <div className="footer-section">
         <h3>6pm</h3>
         <ul>
-          <li><a href="#Main">Score deals <br>on fashion <br>brands</a></li>
+          <li><a href="#Main">Score deals <br/>on fashion <br/>brands</a></li>
 
         </ul>
       </div>
       <div className="footer-section">
         <h3>AbeBooks</h3>
         <ul>
-          <li><a href="#Main">Books, art <br>& collectibles</a></li>
+          <li><a href="#Main">Books, art <br/>& collectibles</a></li>
 
         </ul>
       </div>
       <div className="footer-section">
         <h3>ACX</h3>
         <ul>
-          <li><a href="#Main">Audionbook <br>publishing <br>Made Easy</a></li>
+          <li><a href="#Main">Audionbook <br/>publishing <br/>Made Easy</a></li>
 
         </ul>
       </div>
       <div className="footer-section">
         <h3>Sell on Amazon</h3>
         <ul>
-          <li><a href="#Main">Start a Selling <br>Account</a></li>
+          <li><a href="#Main">Start a Selling <br/>Account</a></li>
 
         </ul>
       </div>
       <div className="footer-section">
         <h3>Amazon Business</h3>
         <ul>
-          <li><a href="#Main">Everything For <br>Your Business</a></li>
+          <li><a href="#Main">Everything For <br/>Your Business</a></li>
 
         </ul>
       </div>
       <div className="footer-section">
         <h3>AmazonGlobal</h3>
         <ul>
-          <li><a href="#Main">Ship Orders <br>Internationally</a></li>
+          <li><a href="#Main">Ship Orders <br/>Internationally</a></li>
 
         </ul>
       </div>
       <div className="footer-section">
         <h3>Home Services</h3>
         <ul>
-          <li><a href="#Main">Experienced <br>Pros <br>Happiness <br>Guarantee</a></li>
+          <li><a href="#Main">Experienced <br/>Pros <br/>Happiness <br/>Guarantee</a></li>
 
         </ul>
       </div>
       <div className="footer-section">
         <h3>Amazon Ignite</h3>
         <ul>
-          <li><a href="#Main">Sell your <br>original <br>Digital <br>Educational <br>Resources</a></li>
+          <li><a href="#Main">Sell your <br/>original <br/>Digital <br/>Educational <br/>Resources</a></li>
 
         </ul>
       </div>
       <div className="footer-section">
         <h3>Amazon Web Services</h3>
         <ul>
-          <li><a href="#Main">Scalable Cloud <br>Computing Services</a></li>
+          <li><a href="#Main">Scalable Cloud <br/>Computing Services</a></li>
 
         </ul>
       </div>
       <div className="footer-section">
         <h3>Audible</h3>
         <ul>
-          <li><a href="#Main">Listen to Books & <br>Original <br>Audio <br>Performances</a></li>
+          <li><a href="#Main">Listen to Books & <br/>Original <br/>Audio <br/>Performances</a></li>
 
         </ul>
       </div>
       <div className="footer-section">
         <h3>Book Depository</h3>
         <ul>
-          <li><a href="#Main">Books With Free <br>Delivery <br>Worldwide</a></li>
+          <li><a href="#Main">Books With Free <br/>Delivery <br/>Worldwide</a></li>
 
         </ul>
       </div>
       <div className="footer-section">
         <h3>Box Office Mojo</h3>
         <ul>
-          <li><a href="#Main">Find Movie <br>Box Office Data</a></li>
+          <li><a href="#Main">Find Movie <br/>Box Office Data</a></li>
 
         </ul>
       </div>
       <div className="footer-section">
         <h3>ComiXology</h3>
         <ul>
-          <li><a href="#Main">Thousands of <br>Digital Comics</a></li>
+          <li><a href="#Main">Thousands of <br/>Digital Comics</a></li>
 
         </ul>
       </div>
       <div className="footer-section">
         <h3>DPReview</h3>
         <ul>
-          <li><a href="#Main">Digital <br>Photography</a></li>
+          <li><a href="#Main">Digital <br/>Photography</a></li>
 
         </ul>
       </div>
       <div className="footer-section">
         <h3>Fabric</h3>
         <ul>
-          <li><a href="#Main">Sewing,<br>Quiting<br>& Knitting</a></li>
+          <li><a href="#Main">Sewing,<br/>Quiting<br/>& Knitting</a></li>
 
         </ul>
       </div>
       <div className="footer-section">
         <h3>Goodreads</h3>
         <ul>
-          <li><a href="#Main">Book reviews <br>& recommendations</a></li>
+          <li><a href="#Main">Book reviews <br/>& recommendations</a></li>
 
         </ul>
       </div>
       <div className="footer-section">
         <h3>IMDb</h3>
         <ul>
-          <li><a href="#Main">Movies, TV<br>& Celebrities</a></li>
+          <li><a href="#Main">Movies, TV<br/>& Celebrities</a></li>
 
         </ul>
       </div>
       <div className="footer-section">
         <h3>IMDb Pro</h3>
         <ul>
-          <li><a href="#Main">Get info <br>Entertainment <br>Professionals <br>Need</a></li>
+          <li><a href="#Main">Get info <br/>Entertainment <br/>Professionals <br/>Need</a></li>
 
         </ul>
       </div>
       <div className="footer-section">
         <h3>Kindle Direct Publishing</h3>
         <ul>
-          <li><a href="#Main">Indie Digital & <br>Print Publishing <br>Made Easy</a></li>
+          <li><a href="#Main">Indie Digital & <br/>Print Publishing <br/>Made Easy</a></li>
 
         </ul>
       </div>
       <div className="footer-section">
         <h3>Prime Video Direct</h3>
         <ul>
-          <li><a href="#Main">Video<br>Distribution <br>Made Easy</a></li>
+          <li><a href="#Main">Video<br/>Distribution <br/>Made Easy</a></li>
 
         </ul>
       </div>
       <div className="footer-section">
         <h3>Shopbop</h3>
         <ul>
-          <li><a href="#Main">Designer<br>Fashion Brands</a></li>
+          <li><a href="#Main">Designer<br/>Fashion Brands</a></li>
 
         </ul>
       </div>
       <div className="footer-section">
         <h3>Woot!</h3>
         <ul>
-          <li><a href="#Main">Deals and <br>Shenanigans</a></li>
+          <li><a href="#Main">Deals and <br/>Shenanigans</a></li>
 
         </ul>
       </div>
       <div className="footer-section">
         <h3>Zappos</h3>
         <ul>
-          <li><a href="#Main">Shoes & <br>Clothing</a></li>
+          <li><a href="#Main">Shoes & <br/>Clothing</a></li>
 
         </ul>
       </div>
       <div className="footer-section">
         <h3>Ring</h3>
         <ul>
-          <li><a href="#Main">Smart Home <br>Security Systems</a></li>
+          <li><a href="#Main">Smart Home <br/>Security Systems</a></li>
 
         </ul>
       </div>
       <div className="footer-section">
         <h3>eero WiFi</h3>
         <ul>
-          <li><a href="#Main">Stream 4k Video <br>in Every Room</a></li>
+          <li><a href="#Main">Stream 4k Video <br/>in Every Room</a></li>
 
         </ul>
       </div>
       <div className="footer-section">
         <h3>Blink</h3>
         <ul>
-          <li><a href="#Main">Smart Security <br>for Every Home</a></li>
+          <li><a href="#Main">Smart Security <br/>for Every Home</a></li>
 
         </ul>
       </div>
       <div className="footer-section">
         <h3>Neighbors App</h3>
         <ul>
-          <li><a href="#Main">Real-Time <br>Crime <br>& Saftey <br>Alerts</a></li>
+          <li><a href="#Main">Real-Time <br/>Crime <br/>& Saftey <br/>Alerts</a></li>
 
         </ul>
       </div>
       <div className="footer-section">
         <h3>Amazon Subscription Boxes</h3>
         <ul>
-          <li><a href="#Main">Top subscription Boxes-<br>right to your door</a></li>
+          <li><a href="#Main">Top subscription Boxes-<br/>right to your door</a></li>
 
         </ul>
       </div>
       <div className="footer-section">
         <h3>PillPack</h3>
         <ul>
-          <li><a href="#Main">Pharmacy <br>Simplified</a></li>
+          <li><a href="#Main">Pharmacy <br/>Simplified</a></li>
 
         </ul>
       </div>
-    </div>
+    <div/>
   
-  </footer>
+  <footer/>
   <div className="copyRightArea">
     <div className="container1">
       <a className="container2" href="#Main">Conditions of Use</a>
