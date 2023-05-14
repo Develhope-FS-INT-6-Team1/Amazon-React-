@@ -15,7 +15,7 @@ export default function PurchaseCard() {
       </div>
       <div className="middlepart">
         <div className="Fmiddlepart">
-        <i className="text" style="color: rgba(0,113,133,255);">Visit the Invicta Store</i>
+        <i className="text" style={{color: "rgba(0,113,133,255)"}}>Visit the Invicta Store</i>
         <h2 className="text">Invicta Men's Pro Diver Collection Coin-Edge Automatic Watch</h2>
         <div className="inline" ><i><i id="star">&#9733&#9733&#9733&#9733&#9734</i><a id="link" href="#Main"> &nbsp;38,523 ratings | 836 answered questions</a><details><summary></summary><img id="cpt4" src="Capture4.PNG" height="250" width="250" alt=""/></details></i></div></div>
         <hr/>

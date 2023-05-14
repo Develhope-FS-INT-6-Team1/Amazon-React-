@@ -1,0 +1,24 @@
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  #Main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .wrapper-header1 {
+    flex-grow: 1;
+  }
+  
+  .footer-container-pp {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f2f2f2;
+    margin-top: 70rem;
+
+  }
+  
