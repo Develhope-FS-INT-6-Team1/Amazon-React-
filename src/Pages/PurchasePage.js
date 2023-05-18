@@ -1,8 +1,8 @@
 import '../App.css';
 import FirstFooter from '../Components/FirstFooter/FirstFooter';
 import FirstHeader from '../Components/FirstHeader/FirstHeader';
-import EndFooter from '../Components/endFooter/EndFooter';
-import PurchaseCard from '../Components/PurchaseCard/PurchaseCard';
+import EndFooter from '../Components/endFooter/endFooter';
+import PurchaseCard from '../Components/purchaseCard/purchaseCard';
 import './PurchasePage.css'
 
 
