@@ -46,7 +46,7 @@ label{
     font-weight: bold;
 }
 
-#email-input {
+#email-input, #password-input {
     width: 100%;
     height: 30px;
     margin-top: 5px;
@@ -131,4 +131,19 @@ label{
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
+}
+
+.keep-me{
+    display: flex;
+    gap: 5px;
+}
+
+.password-input{
+    display: flex;
+    flex-direction: column;
+}
+
+.forgot-password{
+    display: flex;
+    justify-content: space-between;
 }
