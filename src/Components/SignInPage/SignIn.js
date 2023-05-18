@@ -1,22 +1,24 @@
-import '../SignInPage/SignIn.css'
-import LogoBlack from '../../Assets/LogoBlack.png'
-import ArrowIcon from '../../Assets/arrow-icon.png'
-import { useState } from 'react';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import LogoBlack from '../../Assets/LogoBlack.png';
+import ArrowIcon from '../../Assets/arrow-icon.png';
 import usersData from '../../Users.json';
 
-export function SingIn() {
+export function SignIn() {
+    const navigate = useNavigate();
     const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
 
     const handleLogin = () => {
-        const user = usersData.find((user) => user.userName === username && user.password === password);
+        const user = usersData.find((user) => user.userName === username);
 
         if (user) {
-        console.log('Login successful');
+        console.log('Username is correct. Proceed to enter password.');
+        navigate('/signin2', { state: { username } });
         } else {
-        console.log('Invalid username or password');
+        console.log('Invalid username');
         }
     };
+
 
     return (
         <div className="main-page">
@@ -28,10 +30,12 @@ export function SingIn() {
                 <div className="box-contents">
                     <h1>Sign in</h1>
                     <div>
-                        <label for="email-input">Email or mobile phone number</label>
-                        <input type="email" id="email-input" />
+                        <label htmlFor='email-input'>Email or mobile phone number</label>
+                        <input type="text" id="username-input" value={username} onChange={(e) => setUsername(e.target.value)} />
                     </div>
-                    <button className="continue" onClick={handleLogin}><a href="/signin2">Continue</a></button>
+                    <button className="continue" onClick={handleLogin}>
+                        <a href={`/signin2?username=${encodeURIComponent(username)}`}>Continue</a>
+                    </button>
                     <span>
                         By continuing, you agree to Amazon's
                         <a href="#">Conditions of Use</a>
