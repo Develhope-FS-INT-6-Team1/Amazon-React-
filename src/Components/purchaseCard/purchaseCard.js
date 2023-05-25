@@ -10,8 +10,8 @@ export default function PurchaseCard() {
         <button id="secondimg"><img src="assets/Capture1.PNG" alt="" width="50" height="50" /></button>
       </div>
       <div className="bigimages">
-        <img id="firstBimg" src="assets/watch.jpg" width="277" height="460" alt="" />
-        <img id="secondBimg" src="assets/watch1.jpg" width="277" height="460" alt="" />
+        <img id="firstBimg" src="https://m.media-amazon.com/images/I/71RdP+pYfbL._AC_UY879_.jpg" width="277" height="460" alt="" />
+        <img id="secondBimg" src="https://m.media-amazon.com/images/I/81WnfW2F-eL._AC_UY879_.jpg" width="277" height="460" alt="" />
       </div>
       <div className="middlepart">
         <div className="Fmiddlepart">
