@@ -6,7 +6,7 @@ import SearchIcon from "../../Assets/search-260.png"
 import LangFlag from "../../Assets/flag.jpg"
 import CartIcon from "../../Assets/cart.png"
 
-export default function FirstHeader() {
+export default function FirstHeader({ userName, preferedLanguage, preferedCurrency }) {
 
     return(
       <div className="nav-header">
@@ -61,7 +61,7 @@ export default function FirstHeader() {
         <div className="nav-right">
           <a href="#Main" className="lang  header-links">
             <img src={LangFlag} alt="" width="17px" height="13"/>
-            <p className="text-lang header-p">EN</p>
+            <p className="text-lang header-p">{preferedLanguage}</p>
           </a>
 
           <div className="hidden-lang">
@@ -92,7 +92,7 @@ export default function FirstHeader() {
               <a href="/" className="in-line header-links">Learn more</a>
             </div>
             <div>
-              <p className="in-line">$ - USD - US Dollar</p>
+              <p className="in-line">{preferedCurrency}</p>
               <a href="/" className="in-line header-links">Change</a>
             </div>
             <hr/>
@@ -105,10 +105,16 @@ export default function FirstHeader() {
 
           <div className="overlay"></div>
 
-          <a href="/signin" className="account header-links">
-            <p id="row1" className="header-p">Hello, sign in</p>
-            <p className="header-p">Accounts & Lists</p>
-          </a>
+          {userName ? (
+            <p id="row1" className="header-p">
+              Hello, {userName}
+            </p>
+          ) : (
+            <a href="/signin" className="account header-links">
+              <p id="row1" className="header-p">Hello, sign in</p>
+              <p className="header-p">Accounts & Lists</p>
+            </a>
+          )}
 
           <div className="hidden-account">
             <div id="account1">

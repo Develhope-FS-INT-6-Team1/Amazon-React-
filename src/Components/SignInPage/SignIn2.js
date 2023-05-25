@@ -16,7 +16,8 @@ export function SignIn2() {
 
         if (user) {
         console.log('Login successful');
-        navigate('/');
+        localStorage.setItem('userId', user.userID);
+        navigate('/', { state: { username: user.userName, preferedLanguage: user.preferedLanguage, preferedCurrency: user.preferedCurrency } });
         } else {
         console.log('Invalid username or password');
         }
