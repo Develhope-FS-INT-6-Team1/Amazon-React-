@@ -1,12 +1,48 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import "../FirstHeader/FirstHeader.css";
 import MainLogo from "../../Assets/logo.png";
 import LocationIcon from "../../Assets/location.png"
 import SearchIcon from "../../Assets/search-260.png"
 import LangFlag from "../../Assets/flag.jpg"
 import CartIcon from "../../Assets/cart.png"
+import userJson from '../../Users.json';
 
-export default function FirstHeader({ userName, preferedLanguage, preferedCurrency }) {
+export default function FirstHeader() {
+  const [userId, setUserId] = useState('');
+  const [userName, setUserName] = useState('');
+  const [preferedLanguage, setPreferedLanguage] = useState('');
+  const [preferedCurrency, setPreferedCurrency] = useState('');
+
+
+  useEffect(()=> {
+    const fetchUserData = async () => {
+      try {
+        const value = await localStorage.getItem('userId');
+        //for logOut localStorage.deleteItem('userId');
+        if(value != null){
+          console.log(value);
+          setUserId(value);
+          
+        }
+
+          
+        const user = userJson.find((user) => user.userID === userId);
+        if (user) {
+          console.log("User has logged in");
+          setUserName(user.userName);
+          setPreferedLanguage(user.preferedLanguage);
+          setPreferedCurrency(user.preferedCurrency);
+        }
+        
+        
+      } 
+      catch (error) {
+        console.error('Error fetching user data:', error);
+      }
+    };
+    fetchUserData();
+  }, [userId]);
+
 
     return(
       <div className="nav-header">

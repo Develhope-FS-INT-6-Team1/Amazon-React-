@@ -2,9 +2,10 @@ import '../App.css';
 import FirstFooter from '../Components/FirstFooter/FirstFooter';
 import FirstHeader from '../Components/FirstHeader/FirstHeader';
 import CartsMiddlePart from '../Components/CartsMiddlePart/CartsMiddlePart';
-import EndFooter from '../Components/endFooter/EndFooter';
+import EndFooter from '../Components/EndFooter/EndFooter.js';
 import { useEffect, useState } from 'react';
 import { SecondHeader } from '../Components/SecondHeader/SecondHeader';
+import userJson from '../Users.json';
 
 
 
@@ -19,17 +20,25 @@ function HomePage() {
   useEffect(()=> {
     const fetchUserData = async () => {
       try {
-        const response = await fetch('../Users.json');
-        const userData = await response.json();
+        const value = await localStorage.getItem('userId');
+        if(value != null){
+          console.log(value);
+          setUserId(value);
+          
+        }
 
-        const user = userData.find((user) => user.id === userId);
-
+          
+        const user = userJson.find((user) => user.userID === userId);
         if (user) {
+          console.log("User has logged in");
           setUserName(user.userName);
           setPreferedLanguage(user.preferedLanguage);
           setPreferedCurrency(user.preferedCurrency);
         }
-      } catch (error) {
+        
+        
+      } 
+      catch (error) {
         console.error('Error fetching user data:', error);
       }
     };
@@ -38,10 +47,7 @@ function HomePage() {
 
   return (
     <div id="Main" className="App">
-      <FirstHeader
-        username={userName}
-        preferredLanguage={preferedLanguage}
-        preferredCurrency={preferedCurrency} />
+      <FirstHeader/>
       <SecondHeader/>
       <CartsMiddlePart />
       <FirstFooter/>

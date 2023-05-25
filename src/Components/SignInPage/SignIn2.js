@@ -15,11 +15,12 @@ export function SignIn2() {
         const user = usersData.find((user) => user.userName === username && user.password === password);
 
         if (user) {
-        console.log('Login successful');
-        localStorage.setItem('userId', user.userID);
-        navigate('/', { state: { username: user.userName, preferedLanguage: user.preferedLanguage, preferedCurrency: user.preferedCurrency } });
-        } else {
-        console.log('Invalid username or password');
+            console.log('Login successful');
+            localStorage.setItem('userId', user.userID);
+            navigate('/', { state: { username: user.userName, preferedLanguage: user.preferedLanguage, preferedCurrency: user.preferedCurrency } });
+        } 
+        else {
+            console.log('Invalid username or password');
         }
     };
 
