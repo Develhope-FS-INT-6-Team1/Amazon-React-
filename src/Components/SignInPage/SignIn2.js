@@ -1,10 +1,26 @@
 import '../SignInPage/SignIn.css'
 import LogoBlack from '../../Assets/LogoBlack.png'
-import ArrowIcon from '../../Assets/arrow-icon.png'
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import usersData from '../../Users.json';
 
+
 export function SignIn2() {
+    const navigate = useNavigate();
+    const location = useLocation();
+    const { username } = location.state || '';
+    const [password, setPassword] = useState('');
+
+    const handleLogin = () => {
+        const user = usersData.find((user) => user.userName === username && user.password === password);
+
+        if (user) {
+        console.log('Login successful');
+        navigate('/');
+        } else {
+        console.log('Invalid username or password');
+        }
+    };
 
     return (
         <div className="main-page">
@@ -16,17 +32,17 @@ export function SignIn2() {
                 <div className="box-contents">
                     <h1>Sign in</h1>
                     <div className='keep-me'>
-                        <p>/////////////////////</p>
+                        <p>{username}</p>
                         <a href="/signin">Change</a>
                     </div>
                     <div className='password-input'>
                         <div className='forgot-password'>
-                            <label for="password-input">Password</label>
+                            <label htmlFor="password-input">Password</label>
                             <a href="#">Forgot your password?</a>
                         </div>
-                        <input type="password" id="password-input" />
+                        <input type="password" id="password-input" value={password} onChange={(e) => setPassword(e.target.value)} />
                     </div>
-                    <button className="continue">Sign In</button>
+                    <button className="continue" onClick={handleLogin}>Sign In</button>
                     <div className='keep-me'>
                         <input type='checkbox'/>
                         Keep me signed in.

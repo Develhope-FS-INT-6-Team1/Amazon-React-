@@ -52,7 +52,7 @@ export default function FirstHeader() {
             <option value="tools">Tools & Home Improvements</option>
             <option value="toys">Toys & Games</option>
           </select>
-          <input type="text" className="nav-input" name="field-keywords" autocomplete="off" placeholder="Search Amazon"/>
+          <input type="text" className="nav-input" name="field-keywords" autoComplete="off" placeholder="Search Amazon"/>
           <div className="search-button">
             <img src={SearchIcon} alt="" width="25px" id="search-icon"/>
           </div>
@@ -69,23 +69,23 @@ export default function FirstHeader() {
             <a href="/" className="in-line header-links">Learn more</a>
             <div className="selected-lang">
               <input type="radio" id="en" name="fav_language" value="en"/>
-              <label for="en">English - EN</label><br/>
+              <label htmlFor="en">English - EN</label><br/>
             </div>
             <hr/>
             <input type="radio" id="es" name="fav_language" value="es"/>
-            <label for="es">Español - ES</label><br/>
+            <label htmlFor="es">Español - ES</label><br/>
             <input type="radio" id="ar" name="fav_language" value="ar"/>
-            <label for="ar">العربية - AR</label><br/>
+            <label htmlFor="ar">العربية - AR</label><br/>
             <input type="radio" id="de" name="fav_language" value="de"/>
-            <label for="de">Deutsch - DE</label><br/>
+            <label htmlFor="de">Deutsch - DE</label><br/>
             <input type="radio" id="he" name="fav_language" value="he"/>
-            <label for="he">HE - תרגום</label><br/>
+            <label htmlFor="he">HE - תרגום</label><br/>
             <input type="radio" id="ko" name="fav_language" value="ko"/>
-            <label for="ko">한국어 - KO</label><br/>
+            <label htmlFor="ko">한국어 - KO</label><br/>
             <input type="radio" id="pt" name="fav_language" value="pt"/>
-            <label for="pt">português - PT</label><br/>
+            <label htmlFor="pt">português - PT</label><br/>
             <input type="radio" id="zh" name="fav_language" value="zh"/>
-            <label for="zh">中文 (简体) - ZH </label><br/>
+            <label htmlFor="zh">中文 (简体) - ZH </label><br/>
             <hr/>
             <div>
               <p className="in-line">Change currency</p>
