@@ -15,9 +15,6 @@ export default function PurchaseCard({ item }) {
         <button id="firstimg">
           <img src={item.image} alt="img" width="50" height="50" />
         </button>
-        <button id="secondimg">
-          <img src={item.image} alt="" width="50" height="50" />
-        </button>
       </div>
       <div className="bigimages">
 
@@ -30,7 +27,7 @@ export default function PurchaseCard({ item }) {
           <i className="text" style={{ color: "rgba(0,113,133,255)" }}>
             Visit the Invicta Store
           </i>
-          <h2 className="text">
+          <h2 className="text" id="h2itemname">
             {/* Invicta Men's Pro Diver Collection Coin-Edge Automatic Watch */}
             {item.name}
           </h2>
@@ -58,7 +55,7 @@ export default function PurchaseCard({ item }) {
           <p>
             24% <b>{item.price}</b>
           </p>
-          <i>
+          <i className="list-price">
             List Price:<del> $119.00</del>
           </i>
         </div>
@@ -119,107 +116,10 @@ export default function PurchaseCard({ item }) {
                 />
                 <label className="card-image-text">72.11</label>
               </div>
-              <div className="card-image">
-                <img
-                  src={item.image}
-                  alt="Image 7"
-                />
-                <label className="card-image-text">$91.20</label>
-              </div>
-              <div className="card-image">
-                <img
-                  src={item.image}
-                  alt="Image 8"
-                />
-                <label className="card-image-text">$48.63</label>
-              </div>
-              <div className="card-image">
-                <img
-                  src={item.image}
-                  alt="Image 9"
-                />
-                <label className="card-image-text">$38.99</label>
-              </div>
-              <div className="card-image">
-                <img
-                  src={item.image}
-                  alt="Image 10"
-                />
-                <label className="card-image-text">$85.99</label>
-              </div>
-              <div className="card-image">
-                <img
-                  src={item.image}
-                  alt="Image 11"
-                />
-                <label className="card-image-text">$59.33</label>
-              </div>
-              <div className="card-image">
-                <img
-                  src={item.image}
-                  alt="Image 12"
-                />
-                <label className="card-image-text">$78.00</label>
-              </div>
-              <div className="card-image">
-                <img
-                  src={item.image}
-                  alt="Image 13"
-                />
-                <label className="card-image-text">$68.10</label>
-              </div>
-              <div className="card-image">
-                <img
-                  src={item.image}
-                  alt="Image 14"
-                />
-                <label className="card-image-text">$32.51</label>
-              </div>
-              <div className="card-image">
-                <img
-                  src={item.image}
-                  alt="Image 15"
-                />
-                <label className="card-image-text">$73.99</label>
-              </div>
-              <div className="card-image">
-                <img
-                  src={item.image}
-                  alt="Image 16"
-                />
-                <label className="card-image-text">$99.99</label>
-              </div>
-              <div className="card-image">
-                <img
-                  src={item.image}
-                  alt="Image 17"
-                />
-                <label className="card-image-text">$86.99</label>
-              </div>
-              <div className="card-image">
-                <img
-                  src={item.image}
-                  alt="Image 18"
-                />
-                <label className="card-image-text">$91.35</label>
-              </div>
-              <div className="card-image">
-                <img
-                  src={item.image}
-                  alt="Image 19"
-                />
-                <label className="card-image-text">$40.51</label>
-              </div>
-              <div className="card-image">
-                <img
-                  src={item.image}
-                  alt="Image 20"
-                />
-                <label className="card-image-text">$100.05</label>
-              </div>
+
             </div>
             <a href="#Main" className="clink">
-              See all 22 options &rarr;
+              See all options &rarr;
             </a>
           </div>
           <hr />
@@ -282,8 +182,8 @@ export default function PurchaseCard({ item }) {
             <button className="dropdown-item">5</button>
           </div>
         </div>
-        <button className="add-to-cart" onClick={handleAddToCart}>Add to Cart</button>
-        <button className="buy-now">Buy Now</button>
+        <button className="add-to-cart" onClick={handleAddToCart}><a href="/cart" id='button-link'>Add to Cart</a></button>
+        <button className="buy-now"><a href="/cart" id='button-link'>Buy Now</a></button>
         <a href="#Main" className="secure">
           &#128274; Secure transaction{" "}
         </a>
