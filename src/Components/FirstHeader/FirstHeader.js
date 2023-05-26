@@ -4,6 +4,7 @@ import MainLogo from "../../Assets/logo.png";
 import LocationIcon from "../../Assets/location.png"
 import SearchIcon from "../../Assets/search-260.png"
 import LangFlag from "../../Assets/flag.jpg"
+import LangFlagTr from "../../Assets/flagtr.png"
 import CartIcon from "../../Assets/cart.png"
 import userJson from '../../Users.json';
 
@@ -18,7 +19,6 @@ export default function FirstHeader() {
     const fetchUserData = async () => {
       try {
         const value = await localStorage.getItem('userId');
-        //for logOut localStorage.deleteItem('userId');
         if(value != null){
           console.log(value);
           setUserId(value);
@@ -43,6 +43,14 @@ export default function FirstHeader() {
     fetchUserData();
   }, [userId]);
 
+  const handleSignOut = () => {
+    localStorage.removeItem('userId');
+    
+    setUserId('');
+    setUserName('');
+    setPreferedLanguage('');
+    setPreferedCurrency('');
+  };
 
     return(
       <div className="nav-header">
@@ -95,10 +103,17 @@ export default function FirstHeader() {
         </div>
 
         <div className="nav-right">
-          <a href="#Main" className="lang  header-links">
-            <img src={LangFlag} alt="" width="17px" height="13"/>
-            <p className="text-lang header-p">{preferedLanguage}</p>
-          </a>
+          {userName ? (
+            <a href="#Main" className="lang  header-links">
+              <img src={LangFlagTr} alt="" width="17px" height="13"/>
+              <p className="text-lang header-p">{preferedLanguage}</p>
+            </a>
+          ) : (
+            <a href="#Main" className="lang  header-links">
+              <img src={LangFlag} alt="" width="17px" height="13"/>
+              <p className="text-lang header-p">EN</p>
+            </a>
+          )}
 
           <div className="hidden-lang">
             <p className="in-line">Change language</p>
@@ -142,9 +157,10 @@ export default function FirstHeader() {
           <div className="overlay"></div>
 
           {userName ? (
-            <p id="row1" className="header-p">
-              Hello, {userName}
-            </p>
+            <a href="/signin" className="account header-links">
+              <p id="row1" className="header-p">Hello, {userName}</p>
+              <p className="header-p">Accounts & Lists</p>
+            </a>
           ) : (
             <a href="/signin" className="account header-links">
               <p id="row1" className="header-p">Hello, sign in</p>
@@ -152,34 +168,62 @@ export default function FirstHeader() {
             </a>
           )}
 
-          <div className="hidden-account">
-            <div id="account1">
-              <button className="account-button"><a href="/signin">Sign in</a></button>
-              <div className="inline-link">
-                <p>New customer?</p>
-                <a href="/" id="start-here">Start here.</a>
+          {userName ?(
+            <div className="hidden-account">
+              <div id="account1">
+                <button className="account-button" onClick={handleSignOut}><a href="/">Sign Out</a></button>
+              </div>
+              <div id="account2">
+                <h3>Your Lists</h3>
+                <a href="/">Create a List</a>
+                <a href="/">Find a List or Registry</a>
+              </div>
+              <div id="account3">
+                <h3>Your Account</h3>
+                <a href="/">Account</a>
+                <a href="/">Orders</a>
+                <a href="/">Recommendations</a>
+                <a href="/">Browsing History</a>
+                <a href="/">Watchlist</a>
+                <a href="/">Video Purchases & Rentals</a>
+                <a href="/">Kindle Unlimited</a>
+                <a href="/">Content & Devices</a>
+                <a href="/">Subscribe & Save Items</a>
+                <a href="/">Memberships & Subscriptions</a>
+                <a href="/">Music Library</a>
               </div>
             </div>
-            <div id="account2">
-              <h3>Your Lists</h3>
-              <a href="/">Create a List</a>
-              <a href="/">Find a List or Registry</a>
+          ) : (
+            <div className="hidden-account">
+              <div id="account1">
+                <button className="account-button"><a href="/signin">Sign in</a></button>
+                <div className="inline-link">
+                  <p>New customer?</p>
+                  <a href="/" id="start-here">Start here.</a>
+                </div>
+              </div>
+              <div id="account2">
+                <h3>Your Lists</h3>
+                <a href="/">Create a List</a>
+                <a href="/">Find a List or Registry</a>
+              </div>
+              <div id="account3">
+                <h3>Your Account</h3>
+                <a href="/">Account</a>
+                <a href="/">Orders</a>
+                <a href="/">Recommendations</a>
+                <a href="/">Browsing History</a>
+                <a href="/">Watchlist</a>
+                <a href="/">Video Purchases & Rentals</a>
+                <a href="/">Kindle Unlimited</a>
+                <a href="/">Content & Devices</a>
+                <a href="/">Subscribe & Save Items</a>
+                <a href="/">Memberships & Subscriptions</a>
+                <a href="/">Music Library</a>
+              </div>
             </div>
-            <div id="account3">
-              <h3>Your Account</h3>
-              <a href="/">Account</a>
-              <a href="/">Orders</a>
-              <a href="/">Recommendations</a>
-              <a href="/">Browsing History</a>
-              <a href="/">Watchlist</a>
-              <a href="/">Video Purchases & Rentals</a>
-              <a href="/">Kindle Unlimited</a>
-              <a href="/">Content & Devices</a>
-              <a href="/">Subscribe & Save Items</a>
-              <a href="/">Memberships & Subscriptions</a>
-              <a href="/">Music Library</a>
-            </div>
-          </div>
+          )}
+
 
          <a href="#Main" className="text header-links">
             <p id="row1" className="header-p">Returns</p>
