@@ -22,10 +22,10 @@ const CartItem = () => {
   };
 
   const image =
-    "https://m.media-amazon.com/images/I/61I8BjnzubL.__AC_SX300_SY300_QL70_FMwebp_.jpg";
+    "https://m.media-amazon.com/images/I/61bBZe-hCrL._AC_UX675_.jpg";
   const description =
-    "UHURU Wireless Gaming Mouse Up to 10000 DPI, Rechargeable USB Wireless Mouse with 6 Buttons 7 Changeable LED Color...";
-  const price = 9.99;
+    "Skechers Women's D'Lites Fresh Start Fashion Sneaker";
+  const price = 49.99;
 
   return (
     <div className="item-wrap">
@@ -40,10 +40,7 @@ const CartItem = () => {
             <img src={image} alt="" className="item-image" />
             <div className="item-details">
               <div className="item-description">
-              <p>UHURU Wireless Gaming Mouse Up to 10000 DPI, Rechargeable USB Wireless Mouse with 6 Buttons 7 Changeable LED Color...</p>
-              </div>
-
-              <div>
+              <p>{description}</p>
               <p>In Stock</p>
               <p class="body-text">
                 <label class="body-text">
@@ -95,15 +92,16 @@ const CartItem = () => {
 
         <div class="policy">
           <div class="checkout">
-          <div className="subtotal">Subtotal ({quantity} Items): <span className="subtotal-amount"> {calculateSubtotal()}</span>
+            <div className="subtotal">Subtotal ({quantity} Items):
+              <span className="subtotal-amount">
+                {calculateSubtotal()}
+              </span>
             </div>
-            <input type="checkbox" id="gift" />
-            <label for="gift">This order contains a gift</label>
-            <input
-              type="button"
-              id="checkout-button"
-              value="Proceed to checkout"
-            />
+            <div>
+              <input type="checkbox" id="gift" />
+              <label for="gift">This order contains a gift</label>
+            </div>
+            <button id="checkout-button">Proceed to checkout</button>
           </div>
         </div>
 
