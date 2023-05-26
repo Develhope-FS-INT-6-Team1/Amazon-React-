@@ -4,6 +4,12 @@ import FirstFooter from '../FirstFooter/FirstFooter'
 
 
 const CartItem = () => {
+
+  const [cartItems, setCartItems] = useState([]);
+
+  const handleAddToCart = (item) => {
+    setCartItems([...cartItems, item]);
+  };
   const [quantity, setQuantity] = useState(1);
 
   const handleChangeQuantity = (event) => {

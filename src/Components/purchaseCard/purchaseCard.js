@@ -2,6 +2,12 @@ import React from "react";
 import "./purchaseCard.css";
 
 export default function PurchaseCard({ item }) {
+  const [cartItems, setCartItems] = React.useState([]);
+  const handleAddToCart = () => {
+    setCartItems([...cartItems, item]);
+  };
+  
+
   console.log(item);
   return (
     <section className="mainpage-content">
@@ -274,7 +280,7 @@ export default function PurchaseCard({ item }) {
             <button className="dropdown-item">5</button>
           </div>
         </div>
-        <button className="add-to-cart">Add to Cart</button>
+        <button className="add-to-cart" onClick={handleAddToCart}>Add to Cart</button>
         <button className="buy-now">Buy Now</button>
         <a href="#Main" className="secure">
           &#128274; Secure transaction{" "}
