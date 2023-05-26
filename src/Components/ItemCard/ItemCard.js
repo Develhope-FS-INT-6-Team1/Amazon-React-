@@ -29,7 +29,6 @@ const CartItem = () => {
 
   return (
     <div className="item-wrap">
-{/* <FirstHeader/> */}
       <div className="item-and-checkout">
         <div className="cart-item">
           <div className="-row">
@@ -40,7 +39,9 @@ const CartItem = () => {
           <div className="-row">
             <img src={image} alt="" className="item-image" />
             <div className="item-details">
-              <div className="item-description">{description}</div>
+              <div className="item-description">
+              <p>UHURU Wireless Gaming Mouse Up to 10000 DPI, Rechargeable USB Wireless Mouse with 6 Buttons 7 Changeable LED Color...</p>
+              </div>
 
               <div>
               <p>In Stock</p>
@@ -85,17 +86,17 @@ const CartItem = () => {
             </div>
             <div className="item-price">{price}</div>
           </div>
-          <div className="-row" style={{marginLeft:"35rem"}}>
-            <div className="subtotal">Subtotal ({quantity} Items): <span className="subtotal-amount"> {calculateSubtotal()}</span></div>
+          <div className="-row-rem">
+            <div className="subtotal">Subtotal ({quantity} Items): <span className="subtotal-amount"> {calculateSubtotal()}</span>
+            </div>
           </div>
           <hr />
         </div>
 
         <div class="policy">
           <div class="checkout">
-            <p>
-              Subtotal (1 item): <b>$89.90</b>
-            </p>
+          <div className="subtotal">Subtotal ({quantity} Items): <span className="subtotal-amount"> {calculateSubtotal()}</span>
+            </div>
             <input type="checkbox" id="gift" />
             <label for="gift">This order contains a gift</label>
             <input
@@ -106,6 +107,8 @@ const CartItem = () => {
           </div>
         </div>
 
+      </div>
+      <div style={{height:'60px',width:'73%', background:'white', marginTop:'20px', marginBottom:'40px'}}>
       </div>
         <p className="bottom-paragraph">
           The price and availability of items at Amazon.com are subject to
