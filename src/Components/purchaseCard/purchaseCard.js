@@ -20,8 +20,10 @@ export default function PurchaseCard({ item }) {
         </button>
       </div>
       <div className="bigimages">
+
         <img id="firstBimg" src={item.image} width="277" height="460" alt="" />
         <img id="secondBimg" src={item.image} width="277" height="460" alt="" />
+       
       </div>
       <div className="middlepart">
         <div className="Fmiddlepart">
