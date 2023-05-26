@@ -12,10 +12,10 @@ function PurchasePage() {
     <div id="Main">
       <div className="wrapper-header1">
         <FirstHeader/>
+      </div>
         <div className="content-pcard">
           <PurchaseCard/>
         </div>
-      </div>
       <div className="footer-container-pp">
         <FirstFooter/>
         <EndFooter/>
