@@ -1,7 +1,11 @@
-import React from 'react'
+import React, {useState} from 'react'
 import "../CartsMiddlePart/CartsMiddlePart.css";
+import { ITEMS__DATA } from '../../Assets/Data/data';
+import { Link } from 'react-router-dom';
 
 export default function CartsMiddlePart() {
+    const [data, setData] = useState(ITEMS__DATA)
+
     return (
         <div>
             <section className="sec-1">
@@ -181,7 +185,7 @@ export default function CartsMiddlePart() {
                     <div className="l-btn btn-1b"><i className="fa-solid fa-chevron-left"></i></div>
                     <div className="r-btn btn-1a"><i className="fa-solid fa-chevron-right"></i></div>
                     <h3>International top sellers</h3>
-                    <ul className="product-slide product-slide-1">
+                    {/* <ul className="product-slide product-slide-1">
                         <li><a href="/purchase"><img src="https://m.media-amazon.com/images/I/71ME1Q-JrHL._AC_SY400_.jpg" height="200px" alt="" /></a></li>
                         <li><a href="/purchase"><img src="https://m.media-amazon.com/images/I/612LoQpeJzL._AC_SY400_.jpg" height="200px" alt="" /></a></li>
                         <li><img src="https://m.media-amazon.com/images/I/71Kd8STQcRL._AC_SY400_.jpg" height="200px" alt="" /></li>
@@ -199,6 +203,20 @@ export default function CartsMiddlePart() {
                         <li><img src="https://m.media-amazon.com/images/I/71hP6RPS8eL._AC_SY400_.jpg" height="200px" alt="" /></li>
                         <li><img src="https://m.media-amazon.com/images/I/41b56f0YzwL._AC_SY400_.jpg" height="200px" alt="" /></li>
                         <li><img src="https://m.media-amazon.com/images/I/71LIKeM7GGL._AC_SY400_.jpg" height="200px" alt="" /></li>
+                    </ul> */}
+                    <ul className="product-slide product-slide-1">
+
+                    {
+                        data.map((item)=>{
+                            return (
+                                <li key={item.id}>
+                                <Link to={`/purchase/${item.id}`}>
+                                        <img src={item.image} height="200px" alt="" />
+                                    </Link>
+                                </li>
+                                );
+                        })
+                    }
                     </ul>
                 </div>
             </section>

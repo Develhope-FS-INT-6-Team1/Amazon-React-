@@ -1,14 +1,10 @@
-*{
-    
-}
+
 .item-wrap{
     height: 100vh;
     background-color: rgb(243, 242, 242);
 }
 .cart-item {
     padding: 20px;
-    width: fit-content;
-    height: fit-content;
     margin-left: 30px;
     background-color: white;
     padding: 30px;
@@ -125,11 +121,14 @@
     margin-top: -10px;
     font-size: 14px;
 }
-.dropdown-menu{
+.quantity-dropdown-menu{
     width: 70px;
     height: 30px;
     border-radius: 5px;
 }
-.dropdown-menu option::before {
+.quantity-dropdown-menu option::before {
     content: "QTY ";
+  }
+  .bottom-paragraph{
+    font-size: 14px;
   }

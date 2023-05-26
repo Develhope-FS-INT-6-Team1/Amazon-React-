@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../ItemCard/ItemCard.css";
+import FirstFooter from '../FirstFooter/FirstFooter'
 
 
 const CartItem = () => {
@@ -54,7 +55,7 @@ const CartItem = () => {
                 <select
                   name="quantity"
                   tabindex="0"
-                  className="dropdown-menu"
+                  className="quantity-dropdown-menu"
                   type="number"
                   min="1"
                   value={quantity}
@@ -100,14 +101,16 @@ const CartItem = () => {
         </div>
 
       </div>
-        <p>
+        <p className="bottom-paragraph">
           The price and availability of items at Amazon.com are subject to
           change. The Cart is a temporary place to store a list of your items
           and reflects each item's most recent price. <a href="/">Learn more</a>
           <br /> Do you have a gift card or promotional code? We'll ask you to
           enter your claim code when it's time to pay.
         </p>
+        
     </div>
+    
   );
 };
 
