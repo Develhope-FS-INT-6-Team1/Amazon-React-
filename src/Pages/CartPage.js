@@ -1,5 +1,5 @@
 import '../App.css';
-import FirstHeader from '../Components/FirstHeader/FirstHeader';
+import FirstHeader from '../Components/FirstHeader/FirstHeader.tsx';
 import CartItem from '../Components/ItemCard/ItemCard';
 import FirstFooter from '../Components/FirstFooter/FirstFooter';
 import EndFooter from '../Components/EndFooter/EndFooter'

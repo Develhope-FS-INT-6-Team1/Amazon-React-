@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import FirstFooter from "../../Components/FirstFooter/FirstFooter";
-import FirstHeader from "../../Components/FirstHeader/FirstHeader";
+import FirstHeader from "../../Components/FirstHeader/FirstHeader.tsx";
 import EndFooter from "../../Components/EndFooter/EndFooter";
 import "./PurchasePage.css";
 import { ITEMS__DATA } from "../../Assets/Data/data";

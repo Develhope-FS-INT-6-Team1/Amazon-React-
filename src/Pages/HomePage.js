@@ -1,6 +1,6 @@
 import '../App.css';
 import FirstFooter from '../Components/FirstFooter/FirstFooter';
-import FirstHeader from '../Components/FirstHeader/FirstHeader';
+import FirstHeader from '../Components/FirstHeader/FirstHeader.tsx';
 import CartsMiddlePart from '../Components/CartsMiddlePart/CartsMiddlePart';
 import EndFooter from '../Components/EndFooter/EndFooter';
 import { useEffect, useState } from 'react';
