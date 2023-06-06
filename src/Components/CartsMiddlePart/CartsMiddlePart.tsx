@@ -3,8 +3,19 @@ import "../CartsMiddlePart/CartsMiddlePart.css";
 import { ITEMS__DATA } from '../../Assets/Data/data';
 import { Link } from 'react-router-dom';
 
+
+
 export default function CartsMiddlePart() {
     const [data, setData] = useState(ITEMS__DATA)
+    const [slideIndex, setSlideIndex] = useState(0);
+
+    const handleSlide = (direction) => {
+        if (direction === 'left') {
+          setSlideIndex((prevIndex) => (prevIndex === 0 ? 0 : prevIndex - 1));
+        } else if (direction === 'right') {
+          setSlideIndex((prevIndex) => (prevIndex === 11 ? 11 : prevIndex + 1));
+        }
+    };
 
     return (
         <div>
@@ -160,8 +171,8 @@ export default function CartsMiddlePart() {
             </section>
             <section className="sec-2">
                 <div className="slide-sec">
-                    <div className="l-btn"><i className="fa-solid fa-chevron-left"></i></div>
-                    <div className="r-btn"><i className="fa-solid fa-chevron-right"></i></div>
+                    <div className="l-btn" onClick={() => handleSlide('left')}><i className="fa-solid fa-chevron-left"></i></div>
+                    <div className="r-btn" onClick={() => handleSlide('right')}><i className="fa-solid fa-chevron-right"></i></div>
                     <h3>Top Sellers in Toys for you</h3>
                     <ul className="product-slide">
                         <li><img src="https://m.media-amazon.com/images/I/619FxH4rtOL._AC_SY400_.jpg" height="200px" alt="" /></li>

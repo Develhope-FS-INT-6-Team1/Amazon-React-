@@ -1,5 +1,5 @@
 import '../App.css';
-import { SignUp } from '../Components/SignUp/SignUp';
+import { SignUp } from '../Components/SignUp/SignUp.tsx';
 
 
 export function SignUpPage() {
