@@ -1,16 +1,26 @@
 import React, { useState } from "react";
 import "../ItemCard/ItemCard.css";
-import FirstFooter from '../FirstFooter/FirstFooter'
 
+interface CartItem {
+  image: string;
+  description: string;
+  price: number;
+  quantity: number;
+}
 
 const CartItem = () => {
+  const [cartItems, setCartItems] = useState<CartItem[]>([]);
+  const [quantity, setQuantity] = useState<number>(1);
 
-  const [cartItems, setCartItems] = useState([]);
-
-  const handleAddToCart = (item) => {
+  const handleAddToCart = () => {
+    const item: CartItem = {
+      image: "https://m.media-amazon.com/images/I/61bBZe-hCrL._AC_UX675_.jpg",
+      description: "Skechers Women's D'Lites Fresh Start Fashion Sneaker",
+      price: 49.99,
+      quantity: quantity,
+    };
     setCartItems([...cartItems, item]);
   };
-  const [quantity, setQuantity] = useState(1);
 
   const handleChangeQuantity = (event) => {
     const { value } = event.target;
@@ -21,11 +31,11 @@ const CartItem = () => {
     return price * quantity;
   };
 
-  const image =
-    "https://m.media-amazon.com/images/I/61bBZe-hCrL._AC_UX675_.jpg";
-  const description =
-    "Skechers Women's D'Lites Fresh Start Fashion Sneaker";
-  const price = 49.99;
+  const { image, description, price } = {
+    image: "https://m.media-amazon.com/images/I/61bBZe-hCrL._AC_UX675_.jpg",
+    description: "Skechers Women's D'Lites Fresh Start Fashion Sneaker",
+    price: 49.99,
+  };
 
   return (
     <div className="item-wrap">
@@ -42,12 +52,12 @@ const CartItem = () => {
               <div className="item-description">
               <p>{description}</p>
               <p>In Stock</p>
-              <p class="body-text">
-                <label class="body-text">
-                  <input type="checkbox" name="" value="" class="body-text" />
-                  <span class="body-text">
+              <p className="body-text">
+                <label className="body-text">
+                  <input type="checkbox" name="" value="" className="body-text" />
+                  <span className="body-text">
                     This is a gift
-                    <span class="body-text">
+                    <span className="body-text">
                       <a href="#">&nbsp;Learn more</a>
                     </span>
                   </span>
@@ -90,8 +100,8 @@ const CartItem = () => {
           <hr />
         </div>
 
-        <div class="policy">
-          <div class="checkout">
+        <div className="policy">
+          <div className="checkout">
             <div className="subtotal">Subtotal ({quantity} Items):
               <span className="subtotal-amount">
                 {calculateSubtotal()}
@@ -99,7 +109,7 @@ const CartItem = () => {
             </div>
             <div>
               <input type="checkbox" id="gift" />
-              <label for="gift">This order contains a gift</label>
+              <label htmlFor="gift">This order contains a gift</label>
             </div>
             <button id="checkout-button">Proceed to checkout</button>
           </div>
