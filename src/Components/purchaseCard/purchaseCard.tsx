@@ -1,14 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import "./purchaseCard.css";
 
-export default function PurchaseCard({ item }) {
-  const [cartItems, setCartItems] = React.useState([]);
+interface Item {
+  image: string;
+  name: string;
+  price: string;
+  color: string;
+  About: {
+    first: string;
+    second: string;
+    third: string;
+    fourth: string;
+    fifth: string;
+    sixth: string;
+  }[];
+}
+
+interface PurchaseCardProps {
+  item: Item;
+}
+
+const PurchaseCard: React.FC<PurchaseCardProps> = ({ item }) => {
+  const [cartItems, setCartItems] = useState<Item[]>([]);
+
   const handleAddToCart = () => {
     setCartItems([...cartItems, item]);
   };
-  
 
   console.log(item);
+
   return (
     <section className="mainpage-content">
       <div className="smallimages">
@@ -17,10 +37,20 @@ export default function PurchaseCard({ item }) {
         </button>
       </div>
       <div className="bigimages">
-
-        <img id="firstBimg" src={item.image} width="277" height="460" alt="" />
-        <img id="secondBimg" src={item.image} width="277" height="460" alt="" />
-       
+        <img
+          id="firstBimg"
+          src={item.image}
+          width="277"
+          height="460"
+          alt=""
+        />
+        <img
+          id="secondBimg"
+          src={item.image}
+          width="277"
+          height="460"
+          alt=""
+        />
       </div>
       <div className="middlepart">
         <div className="Fmiddlepart">
@@ -28,7 +58,6 @@ export default function PurchaseCard({ item }) {
             Visit the Invicta Store
           </i>
           <h2 className="text" id="h2itemname">
-            {/* Invicta Men's Pro Diver Collection Coin-Edge Automatic Watch */}
             {item.name}
           </h2>
           <div className="inline">
@@ -75,48 +104,31 @@ export default function PurchaseCard({ item }) {
             <h2 className="card-section-title">Color:{item.color}</h2>
             <div className="card-images">
               <div className="card-image">
-                <img
-                  src={item.image}
-                  alt="Image 1"
-                />
+                <img src={item.image} alt="Image 1" />
                 <label className="card-image-text">$86.99</label>
               </div>
               <div className="card-image">
-                <img
-                  src={item.image}
-                  alt="Image 2"
-                />
+                <img src={item.image} alt="Image 2" />
                 <label className="card-image-text">$54.33</label>
               </div>
               <div className="card-image">
-                <img
-                  src={item.image}
-                  alt="Image 3"
-                />
-                <label className="card-image-text">$62.35</label>
+                <img src={item.image} alt="Image 3" />
+               
+
+ <label className="card-image-text">$62.35</label>
               </div>
               <div className="card-image">
-                <img
-                  src={item.image}
-                  alt="Image 4"
-                />
+                <img src={item.image} alt="Image 4" />
                 <label className="card-image-text">$86.99</label>
               </div>
               <div className="card-image">
-                <img
-                  src={item.image}
-                  alt="Image 5"
-                />
+                <img src={item.image} alt="Image 5" />
                 <label className="card-image-text">$95.00</label>
               </div>
               <div className="card-image">
-                <img
-                  src={item.image}
-                  alt="Image 6"
-                />
+                <img src={item.image} alt="Image 6" />
                 <label className="card-image-text">72.11</label>
               </div>
-
             </div>
             <a href="#Main" className="clink">
               See all options &rarr;
@@ -126,24 +138,12 @@ export default function PurchaseCard({ item }) {
           <div className="card-section">
             <ul className="card-list">
               <li>&#8226;&nbsp;&nbsp;Imported</li>
-              <li>
-                {item.About[0].first}
-              </li>
-              <li>
-               { item.About[0].second}
-              </li>
-              <li>
-              { item.About[0].third}
-              </li>
-              <li>
-              { item.About[0].fourth}
-              </li>
-              <li>
-              { item.About[0].fifth}
-              </li>
-              <li>
-              { item.About[0].sixth}
-              </li>
+              <li>{item.About[0].first}</li>
+              <li>{item.About[0].second}</li>
+              <li>{item.About[0].third}</li>
+              <li>{item.About[0].fourth}</li>
+              <li>{item.About[0].fifth}</li>
+              <li>{item.About[0].sixth}</li>
             </ul>
             <hr />
             <a href="#Main" className="card-link">
@@ -182,8 +182,16 @@ export default function PurchaseCard({ item }) {
             <button className="dropdown-item">5</button>
           </div>
         </div>
-        <button className="add-to-cart" onClick={handleAddToCart}><a href="/cart" id='button-link'>Add to Cart</a></button>
-        <button className="buy-now"><a href="/cart" id='button-link'>Buy Now</a></button>
+        <button className="add-to-cart" onClick={handleAddToCart}>
+          <a href="/cart" id="button-link">
+            Add to Cart
+          </a>
+        </button>
+        <button className="buy-now">
+          <a href="/cart" id="button-link">
+            Buy Now
+          </a>
+        </button>
         <a href="#Main" className="secure">
           &#128274; Secure transaction{" "}
         </a>
@@ -193,7 +201,9 @@ export default function PurchaseCard({ item }) {
         </p>
         <p>
           Sold
-          by&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          by&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&
+
+nbsp;&nbsp;&nbsp;&nbsp;
           <a href="#Main" className="watch">
             Watchsavings
           </a>
@@ -220,7 +230,9 @@ export default function PurchaseCard({ item }) {
         >
           Add to list
         </a>
-      </div>  
+      </div>
     </section>
   );
-}
+};
+
+export default PurchaseCard;
