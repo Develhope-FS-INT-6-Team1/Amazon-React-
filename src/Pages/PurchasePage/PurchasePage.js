@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import FirstFooter from "../../Components/FirstFooter/FirstFooter";
+import FirstFooter from "../../Components/FirstFooter/FirstFooter.tsx";
 import FirstHeader from "../../Components/FirstHeader/FirstHeader.tsx";
-import EndFooter from "../../Components/EndFooter/EndFooter";
+import EndFooter from "../../Components/EndFooter/EndFooter.tsx";
 import "./PurchasePage.css";
 import { ITEMS__DATA } from "../../Assets/Data/data";
-import PurchaseCard from "../../Components/PurchaseCard/PurchaseCard";
+import PurchaseCard from "../../Components/PurchaseCard/PurchaseCard.tsx";
 import { useParams } from "react-router-dom";
 
 function PurchasePage() {

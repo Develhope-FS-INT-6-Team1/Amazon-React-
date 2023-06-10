@@ -1,8 +1,8 @@
 import '../App.css';
-import FirstFooter from '../Components/FirstFooter/FirstFooter';
+import FirstFooter from '../Components/FirstFooter/FirstFooter.tsx';
 import FirstHeader from '../Components/FirstHeader/FirstHeader.tsx';
 import CartsMiddlePart from '../Components/CartsMiddlePart/CartsMiddlePart.tsx';
-import EndFooter from '../Components/EndFooter/EndFooter';
+import EndFooter from '../Components/EndFooter/EndFooter.tsx';
 import { useEffect, useState } from 'react';
 import { SecondHeader } from '../Components/SecondHeader/SecondHeader';
 import userJson from '../Users.json';
