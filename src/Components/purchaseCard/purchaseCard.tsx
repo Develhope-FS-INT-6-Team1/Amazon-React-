@@ -21,24 +21,23 @@ interface PurchaseCardProps {
 }
 
 const PurchaseCard: React.FC<PurchaseCardProps> = ({ item }) => {
-  const [cartItems, setCartItems] = useState<Item[]>([]);
-
-  const handleAddToCart = () => {
-    setCartItems([...cartItems, item]);
-  };
-
-  console.log(item);
-
   const [quantity, setQuantity] = useState<number>(1);
 
   const handleChangeQuantity = (event) => {
     const { value } = event.target;
-    setQuantity(value);
+    setQuantity(Number(value));
   };
 
   const calculateSubtotal = () => {
     return item.price * quantity;
   };
+
+  const handleAddToCart = () => {
+    const itemToAdd: Item = { ...item };
+    const cartItems = JSON.parse(localStorage.getItem("cartItems") || "[]");
+    cartItems.push(itemToAdd);
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+  };  
 
   return (
     <section className="mainpage-content">
@@ -48,20 +47,8 @@ const PurchaseCard: React.FC<PurchaseCardProps> = ({ item }) => {
         </button>
       </div>
       <div className="bigimages">
-        <img
-          id="firstBimg"
-          src={item.image}
-          width="277"
-          height="460"
-          alt=""
-        />
-        <img
-          id="secondBimg"
-          src={item.image}
-          width="277"
-          height="460"
-          alt=""
-        />
+        <img id="firstBimg" src={item.image} width="277" height="460" alt="" />
+        <img id="secondBimg" src={item.image} width="277" height="460" alt="" />
       </div>
       <div className="middlepart">
         <div className="Fmiddlepart">
@@ -124,9 +111,8 @@ const PurchaseCard: React.FC<PurchaseCardProps> = ({ item }) => {
               </div>
               <div className="card-image">
                 <img src={item.image} alt="Image 3" />
-               
 
- <label className="card-image-text">$62.35</label>
+                <label className="card-image-text">$62.35</label>
               </div>
               <div className="card-image">
                 <img src={item.image} alt="Image 4" />
@@ -194,36 +180,35 @@ const PurchaseCard: React.FC<PurchaseCardProps> = ({ item }) => {
           </div>
         </div> */}
         <div className="quantity">
-                <select
-                  name="quantity"
-                  tabindex="0"
-                  className="quantity-dropdown-menu dropdown-toggle"
-                  type="number"
-                  min="1"
-                  value={quantity}
-                  onChange={handleChangeQuantity}
-                  >
-                  Qty:
-                  <option value="0">0 (Delete)</option>
-                  <option value="1" selected="">
-                    1
-                  </option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="10">10+</option>
-                </select>
-              </div>
+          <select
+            name="quantity"
+            tabindex="0"
+            className="quantity-dropdown-menu dropdown-toggle"
+            type="number"
+            min="1"
+            value={quantity}
+            onChange={handleChangeQuantity}
+          >
+            Qty:
+            <option value="0">0 (Delete)</option>
+            <option value="1" selected="">
+              1
+            </option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10+</option>
+          </select>
+        </div>
         <button className="add-to-cart" onClick={handleAddToCart}>
-          <a href="/cart" id="button-link">
-            Add to Cart
-          </a>
+          Add to Cart
         </button>
+
         <button className="buy-now">
           <a href="/cart" id="button-link">
             Buy Now
@@ -237,10 +222,8 @@ const PurchaseCard: React.FC<PurchaseCardProps> = ({ item }) => {
           <b>Amazon</b>
         </p>
         <p>
-          Sold
-          by&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&
-
-nbsp;&nbsp;&nbsp;&nbsp;
+          Sold by&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&
+          nbsp;&nbsp;&nbsp;&nbsp;
           <a href="#Main" className="watch">
             Watchsavings
           </a>

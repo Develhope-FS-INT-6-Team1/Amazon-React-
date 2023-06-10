@@ -45,6 +45,12 @@ export default function FirstHeader(): JSX.Element {
     setPreferedCurrency('');
   };
 
+  const [cartItems, setCartItems] = useState([]);
+
+  useEffect(() => {
+    const items = JSON.parse(localStorage.getItem("cartItems") || "[]");
+    setCartItems(items);
+  }, []);
 
   return (
     <div className="nav-header">
@@ -267,7 +273,7 @@ export default function FirstHeader(): JSX.Element {
         </a>
         <a href="/cart" className="cart header-links">
           <div className="cart-icon">
-            <p className="items-in-cart header-p">0</p>
+            <p className="items-in-cart header-p">{cartItems.length}</p>
             <img src={CartIcon} alt="" width="40px"/>
           </div>
           <p className="header-p">Cart</p>

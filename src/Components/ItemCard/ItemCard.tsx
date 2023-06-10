@@ -8,33 +8,20 @@ interface CartItem {
   quantity: number;
 }
 
-const CartItem = () => {
-  const [cartItems, setCartItems] = useState<CartItem[]>([]);
-  const [quantity, setQuantity] = useState<number>(1);
+interface CartItemCardProps {
+  item: CartItem;
+}
 
-  const handleAddToCart = () => {
-    const item: CartItem = {
-      image: "https://m.media-amazon.com/images/I/61bBZe-hCrL._AC_UX675_.jpg",
-      description: "Skechers Women's D'Lites Fresh Start Fashion Sneaker",
-      price: 49.99,
-      quantity: quantity,
-    };
-    setCartItems([...cartItems, item]);
-  };
+const CartItemCard: React.FC<CartItemCardProps> = ({ item }) => {
+  const [quantity, setQuantity] = useState<number>(item.quantity);
 
-  const handleChangeQuantity = (event) => {
+  const handleChangeQuantity = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const { value } = event.target;
-    setQuantity(value);
+    setQuantity(Number(value));
   };
 
   const calculateSubtotal = () => {
-    return price * quantity;
-  };
-
-  const { image, description, price } = {
-    image: "https://m.media-amazon.com/images/I/61bBZe-hCrL._AC_UX675_.jpg",
-    description: "Skechers Women's D'Lites Fresh Start Fashion Sneaker",
-    price: 49.99,
+    return item.price * quantity;
   };
 
   return (
@@ -47,10 +34,10 @@ const CartItem = () => {
           </div>
           <hr></hr>
           <div className="-row">
-            <img src={image} alt="" className="item-image" />
+            <img src={item.image} alt="" className="item-image" />
             <div className="item-details">
               <div className="item-description">
-              <p>{description}</p>
+              <p>{item.description}</p>
               <p>In Stock</p>
               <p className="body-text">
                 <label className="body-text">
@@ -91,7 +78,7 @@ const CartItem = () => {
                 </select>
               </div>
             </div>
-            <div className="item-price">{price}</div>
+            <div className="item-price">{item.price}</div>
           </div>
           <div className="-row-rem">
             <div className="subtotal">Subtotal ({quantity} Items): <span className="subtotal-amount"> {calculateSubtotal()}</span>
@@ -131,4 +118,4 @@ const CartItem = () => {
   );
 };
 
-export default CartItem;
+export default CartItemCard;
