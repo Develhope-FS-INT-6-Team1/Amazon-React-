@@ -2,7 +2,7 @@ import React from "react";
 import "../FirstFooter/FirstFooter.css";
 import FooterLogo from '../../Assets/Images/logo.png'
 
-export default function FirstFooter() {
+export default function FirstFooter(): JSX.Element {
   return (
     <div className="footer-wrapper">
       <button className="footer-btn">Back to top</button>
@@ -107,27 +107,27 @@ export default function FirstFooter() {
           </ul>
         </div>
       </div>
-      <hr style={{color: 'white'}} />
-        <div className="footer-settings">
-        <img src={FooterLogo} alt="Footer Logo" width='75px'/>
-          <div className="select-language">
-            <i className="fa fa-globe"></i>
-            <div className="select-language__label">
-              {" "}
-              <i className="fas fa-heart"></i>English
-            </div>
-            <div className="select-language__icon"></div>
-            <div className="select-language__list">
-              <div className="select-language__item">English</div>
-              <div className="select-language__item">Spanish</div>
-              <div className="select-language__item">French</div>
-              <div className="select-language__item">German</div>
-              <div className="select-language__item">Italian</div>
-            </div>
+      <hr style={{ color: 'white' }} />
+      <div className="footer-settings">
+        <img src={FooterLogo} alt="Footer Logo" width='75px' />
+        <div className="select-language">
+          <i className="fa fa-globe"></i>
+          <div className="select-language__label">
+            {" "}
+            <i className="fas fa-heart"></i>English
           </div>
-          <button className="btn-1">USD - U.S. Dollar</button>
-          <button className="btn-2">United States</button>
+          <div className="select-language__icon"></div>
+          <div className="select-language__list">
+            <div className="select-language__item">English</div>
+            <div className="select-language__item">Spanish</div>
+            <div className="select-language__item">French</div>
+            <div className="select-language__item">German</div>
+            <div className="select-language__item">Italian</div>
+          </div>
         </div>
+        <button className="btn-1">USD - U.S. Dollar</button>
+        <button className="btn-2">United States</button>
+      </div>
     </div>
   );
 }
