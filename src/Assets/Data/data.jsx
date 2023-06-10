@@ -6,7 +6,7 @@ export const ITEMS__DATA = [
   {
     id: 1,
     name: "Invicta Men's Pro Diver Collection Coin-Edge Automatic Watch",
-    price: "$85.03",
+    price: 85.03,
     About: [
       {
         first:
@@ -24,7 +24,7 @@ export const ITEMS__DATA = [
   {
     id: 2,
     name: "Logitech G502 HERO High Performance Wired Gaming Mouse",
-    price: "$34.00",
+    price: 34.00,
     About: [
       {
         first:
@@ -45,7 +45,7 @@ export const ITEMS__DATA = [
   {
     id: 3,
     name: "Hot Wheels Fast and Furious 5-Pack of Toy Race and Drift Cars in 1:64 Scale with Exclusive Decos",
-    price: "$6.25",
+    price: 6.25,
     About: [
       {
         first:"• Hit the accelerator on a Hot Wheels collection with this 5-Pack of Fast & Furious themed toy cars!",
@@ -60,7 +60,7 @@ export const ITEMS__DATA = [
   {
     id: 4,
     name: "Xiaomi Redmi Buds 3 Pro Wireless in-Ear Headphones Bluetooth",
-    price: "$47.50",
+    price: 47.50,
     About: [
       {
         first:"• 35dB deep noise cancellation. Allowing you to enjoy a world with less background noise: The earbuds adopt the dual active noise cancellation technology with feedback and feed-forward microphones. They effectively cancel ambient noise and reduce excess noise in the ear canal. Noise cancellation can be as deep as 35dB*.",
@@ -72,7 +72,7 @@ export const ITEMS__DATA = [
   {
     id: 5,
     name: "Skechers Women's D'Lites Fresh Start Fashion Sneaker",
-    price: "$48.56 - $49.99",
+    price: 49.99,
     About: [
       {
         first:"• 80% Leather, 20% Synthetic",
@@ -88,7 +88,7 @@ export const ITEMS__DATA = [
   {
     id: 6,
     name: "Milwaukee 2953-20 18V Lithium-Ion Brushless Cordless 1/4'' Hex Impact Driver (Bare Tool), Red",
-    price: "$104.35",
+    price: 104.35,
     About: [
       {
         first:"• Brand: Milwaukee",
@@ -102,7 +102,7 @@ export const ITEMS__DATA = [
   {
     id: 7,
     name: "Philips Norelco Multigroomer All-in-One Trimmer Series 7000",
-    price: "$58.49",
+    price: 58.49,
     About: [
       {
         first:"• The all in 1 trimmer for your choice of beard, head, body, and/or face hair styling with 23 pieces for all your trimming needs",
@@ -117,7 +117,7 @@ export const ITEMS__DATA = [
   {
     id: 8,
     name: "A Single Shard Book",
-    price: "$6.09",
+    price: 6.09,
     About: [
       {
         first:"• Tree-ear is fascinated by the celedon ware created in the village of Ch’ulp’o. He is determined to prove himself to",
@@ -131,7 +131,7 @@ export const ITEMS__DATA = [
   {
     id: 9,
     name: "Dove Body Wash with Pump Deep Moisture For Dry Skin Moisturizing",
-    price: "$21.58",
+    price: 21.58,
     About: [
       {
         first: "• 24HR RENEWING MICROMOISTURE: Dove Deep Moisture Body Wash gently cleanses and deeply moisturizes the skin, leaving it renewed and healthy-looking for 24 hours",
@@ -147,7 +147,7 @@ export const ITEMS__DATA = [
   {
     id: 10,
     name: "Mandy's 28pcs Multicolor Artificial Tulip Silk Flowers",
-    price: "$18.99",
+    price: 18.99,
     About: [
       {
         first:"• Materials: Flower is made of soft Polyurethane (PU), stem is made of Plastic.",

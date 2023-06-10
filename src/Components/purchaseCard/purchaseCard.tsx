@@ -4,7 +4,7 @@ import "./purchaseCard.css";
 interface Item {
   image: string;
   name: string;
-  price: string;
+  price: number;
   color: string;
   About: {
     first: string;
@@ -28,6 +28,17 @@ const PurchaseCard: React.FC<PurchaseCardProps> = ({ item }) => {
   };
 
   console.log(item);
+
+  const [quantity, setQuantity] = useState<number>(1);
+
+  const handleChangeQuantity = (event) => {
+    const { value } = event.target;
+    setQuantity(value);
+  };
+
+  const calculateSubtotal = () => {
+    return item.price * quantity;
+  };
 
   return (
     <section className="mainpage-content">
@@ -154,7 +165,7 @@ const PurchaseCard: React.FC<PurchaseCardProps> = ({ item }) => {
       </div>
       <div />
       <div className="card">
-        <div className="price">$89.90 </div>
+        <div className="price">${calculateSubtotal()} </div>
         <div className="description">
           <p>
             $95.56 Shipping & Import Fees <br />
@@ -170,7 +181,7 @@ const PurchaseCard: React.FC<PurchaseCardProps> = ({ item }) => {
           <a className="secure">&#x1F4CD;Deliver to Turkey</a>
         </div>
         <div className="stock">In Stock</div>
-        <div className="quantity">
+        {/* <div className="quantity">
           <button className="dropdown-toggle">
             Qty: 1 &#x25BC;<i className="fas fa-angle-down"></i>
           </button>
@@ -181,7 +192,33 @@ const PurchaseCard: React.FC<PurchaseCardProps> = ({ item }) => {
             <button className="dropdown-item">4</button>
             <button className="dropdown-item">5</button>
           </div>
-        </div>
+        </div> */}
+        <div className="quantity">
+                <select
+                  name="quantity"
+                  tabindex="0"
+                  className="quantity-dropdown-menu dropdown-toggle"
+                  type="number"
+                  min="1"
+                  value={quantity}
+                  onChange={handleChangeQuantity}
+                  >
+                  Qty:
+                  <option value="0">0 (Delete)</option>
+                  <option value="1" selected="">
+                    1
+                  </option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10+</option>
+                </select>
+              </div>
         <button className="add-to-cart" onClick={handleAddToCart}>
           <a href="/cart" id="button-link">
             Add to Cart
