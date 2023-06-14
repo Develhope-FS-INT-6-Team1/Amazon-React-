@@ -4,7 +4,7 @@ import FirstHeader from '../Components/FirstHeader/FirstHeader.tsx';
 import CartsMiddlePart from '../Components/CartsMiddlePart/CartsMiddlePart.tsx';
 import EndFooter from '../Components/EndFooter/EndFooter.tsx';
 import { useEffect, useState } from 'react';
-import { SecondHeader } from '../Components/SecondHeader/SecondHeader';
+import { SecondHeader } from '../Components/SecondHeader/SecondHeader.tsx';
 import userJson from '../Users.json';
 
 

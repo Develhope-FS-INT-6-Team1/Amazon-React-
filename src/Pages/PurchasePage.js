@@ -1,7 +1,7 @@
 import '../App.css';
 import FirstFooter from '../Components/FirstFooter/FirstFooter';
 import FirstHeader from '../Components/FirstHeader/FirstHeader.tsx';
-import EndFooter from '../Components/EndFooter/EndFooter';
+import EndFooter from '../Components/EndFooter/EndFooter.tsx';
 import PurchaseCard from '../Components/PurchaseCard/PurchaseCard';
 import './PurchasePage.css'
 

@@ -3,7 +3,7 @@ import FirstHeader from '../Components/FirstHeader/FirstHeader.tsx';
 import CartItemCard from '../Components/ItemCard/ItemCard.tsx';
 import FirstFooter from '../Components/FirstFooter/FirstFooter.tsx';
 import EndFooter from '../Components/EndFooter/EndFooter.tsx'
-import { SecondHeader } from '../Components/SecondHeader/SecondHeader';
+import { SecondHeader } from '../Components/SecondHeader/SecondHeader.tsx';
 
 
 function CartPage({CartItems}) {
