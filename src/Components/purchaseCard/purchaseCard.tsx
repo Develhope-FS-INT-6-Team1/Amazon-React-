@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./PurchaseCard.css";
+import "./purchaseCard.css";
 
 interface Item {
   image: string;

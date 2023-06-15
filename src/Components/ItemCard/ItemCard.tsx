@@ -10,9 +10,10 @@ interface CartItem {
 
 interface CartItemCardProps {
   item: CartItem;
+  onRemoveItem: (itemId: number) => void;
 }
 
-const CartItemCard: React.FC<CartItemCardProps> = ({ item }) => {
+const CartItemCard: React.FC<CartItemCardProps> = ({ item, onRemoveItem }) => {
   const [quantity, setQuantity] = useState<number>(item.quantity);
 
   const handleChangeQuantity = (event: React.ChangeEvent<HTMLSelectElement>) => {
@@ -22,6 +23,10 @@ const CartItemCard: React.FC<CartItemCardProps> = ({ item }) => {
 
   const calculateSubtotal = () => {
     return item.price * quantity;
+  };
+
+  const handleRemoveItem = () => {
+    onRemoveItem(item.id);
   };
 
   return (
@@ -62,7 +67,7 @@ const CartItemCard: React.FC<CartItemCardProps> = ({ item }) => {
                   value={quantity}
                   onChange={handleChangeQuantity}
                 >
-                  <option value="0">0 (Delete)</option>
+                  <option value="0">0 </option>
                   <option value="1" selected="">
                     1
                   </option>
@@ -76,6 +81,18 @@ const CartItemCard: React.FC<CartItemCardProps> = ({ item }) => {
                   <option value="9">9</option>
                   <option value="10">10+</option>
                 </select>
+
+                <p className="cart-links">
+                                    <span>|</span> &nbsp; &nbsp; &nbsp;
+                                    <a onClick={handleRemoveItem}>Delete</a> &nbsp; &nbsp; &nbsp;
+                                    <span>|</span> &nbsp; &nbsp; &nbsp;
+                                    <a href="#">Save for later</a> &nbsp; &nbsp; &nbsp;
+                                    <span> | </span> &nbsp; &nbsp; &nbsp;
+                                    <a href="#">Compare with similar items</a> &nbsp; &nbsp; &nbsp;
+                                    <span> | </span> &nbsp; &nbsp; &nbsp;
+                                    <a href="#">Share</a> &nbsp; &nbsp; &nbsp;
+                                </p>
+
               </div>
             </div>
             <div className="item-price">{item.price}</div>
