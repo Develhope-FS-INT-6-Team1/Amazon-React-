@@ -6,5 +6,5 @@ export function SignInPage() {
         <div id="Main" className="App">
             <SignIn/>
         </div>
-      );
+    );
 }
