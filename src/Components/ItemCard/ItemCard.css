@@ -81,6 +81,7 @@
   
   .quantity {
     font-size: 14px;
+    display: flex;
   }
   
   .subtotal {
@@ -150,6 +151,9 @@
   
   .bottom-paragraph {
     font-size: 14px;
+  }
+  .cart-links a{
+    cursor: pointer;
   }
   
   /* Responsive Styles */
