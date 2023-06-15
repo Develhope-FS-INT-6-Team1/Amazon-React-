@@ -5,8 +5,8 @@ import HomePage from './Pages/HomePage.tsx';
 import PurchasePage from './Pages/PurchasePage/PurchasePage';
 import { SignInPage } from './Pages/SignInPage.tsx';
 import { SignUpPage } from './Pages/SignUpPage.tsx';
-import CartPage from './Pages/CartPage';
-import { SignInPage2 } from './Pages/SignInPage2';
+import CartPage from './Pages/CartPage.tsx';
+import { SignInPage2 } from './Pages/SignInPage2.tsx';
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
           <Route path="/signup" element={<SignUpPage />} />
           <Route path="/cart" element={<CartPage />} />
         </Routes>
-        
+
       </div>
     </Router>
   );

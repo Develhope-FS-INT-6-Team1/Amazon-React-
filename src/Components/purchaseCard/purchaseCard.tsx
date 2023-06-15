@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./purchaseCard.css";
+import "./PurchaseCard.css";
 
 interface Item {
   image: string;
@@ -37,7 +37,7 @@ const PurchaseCard: React.FC<PurchaseCardProps> = ({ item }) => {
     const cartItems = JSON.parse(localStorage.getItem("cartItems") || "[]");
     cartItems.push(itemToAdd);
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
-  };  
+  };
 
   return (
     <section className="mainpage-content">
