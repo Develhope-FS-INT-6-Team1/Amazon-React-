@@ -1,10 +1,10 @@
 import './App.css';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import HomePage from './Pages/HomePage';
+import HomePage from './Pages/HomePage.tsx';
 import PurchasePage from './Pages/PurchasePage/PurchasePage';
-import { SignInPage } from './Pages/SignInPage';
-import { SignUpPage } from './Pages/SignUpPage';
+import { SignInPage } from './Pages/SignInPage.tsx';
+import { SignUpPage } from './Pages/SignUpPage.tsx';
 import CartPage from './Pages/CartPage';
 import { SignInPage2 } from './Pages/SignInPage2';
 
