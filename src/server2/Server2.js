@@ -1,9 +1,18 @@
-const mysql = require('mysql');
+const { Pool } = require('pg');
+const express = require('express');
+const bodyParser = require('body-parser');
 
+const app = express();
+const port = 3000;
 
-const connection= 'postgres://lxsgynnf:qavuBKsGCqyUJo56TmQTL98Vk3rmsT3A@chunee.db.elephantsql.com/lxsgynnf?sslmode=require';
+app.use(bodyParser.json());
 
-connection.connect((err) => {
+const pool = new Pool({
+  connectionString: 'postgres://lxsgynnf:qavuBKsGCqyUJo56TmQTL98Vk3rmsT3A@chunee.db.elephantsql.com/lxsgynnf',
+  ssl: { rejectUnauthorized: false }
+});
+
+pool.connect((err) => {
   if (err) {
     console.error('Error connecting to the database: ', err);
     return;
@@ -20,10 +29,9 @@ connection.connect((err) => {
     )
   `;
 
-  connection.query(createProductsTableQuery, (err) => {
+  pool.query(createProductsTableQuery, (err) => {
     if (err) {
       console.error('Error creating Products table: ', err);
-      connection.end();
       return;
     }
     console.log('Products table created');
@@ -74,10 +82,9 @@ connection.connect((err) => {
         Different color can be used in different scenes. Such as sunset or orange can DIY to the carrot wreath in Easter. Green tulips can be used as decorations for St. Patrick''s Day. When Christmas day coming, red tulips will be a good choice. Another special color is black, use it for Halloween, make amazing decorations.', 'https://m.media-amazon.com/images/I/71wkTGNOn0L._AC_SL1500_.jpg');
     `;
 
-    connection.query(insertProductsDataQuery, (err) => {
+    pool.query(insertProductsDataQuery, (err) => {
       if (err) {
         console.error('Error inserting data into Products table: ', err);
-        connection.end();
         return;
       }
       console.log('Data inserted into Products table');
@@ -90,10 +97,9 @@ connection.connect((err) => {
         )
       `;
 
-      connection.query(createBasketTableQuery, (err) => {
+      pool.query(createBasketTableQuery, (err) => {
         if (err) {
           console.error('Error creating Basket table: ', err);
-          connection.end();
           return;
         }
         console.log('Basket table created');
@@ -112,10 +118,9 @@ connection.connect((err) => {
             (10, 503, 'u6')
         `;
 
-        connection.query(insertBasketDataQuery, (err) => {
+        pool.query(insertBasketDataQuery, (err) => {
           if (err) {
             console.error('Error inserting data into Basket table: ', err);
-            connection.end();
             return;
           }
           console.log('Data inserted into Basket table');
@@ -131,10 +136,9 @@ connection.connect((err) => {
             )
           `;
 
-          connection.query(createUsersTableQuery, (err) => {
+          pool.query(createUsersTableQuery, (err) => {
             if (err) {
               console.error('Error creating Users table: ', err);
-              connection.end();
               return;
             }
             console.log('Users table created');
@@ -153,7 +157,7 @@ connection.connect((err) => {
                 ('u10', 250, 'clarkkent', 'superman123', 'En', '$')
             `;
 
-            connection.query(insertUsersDataQuery, (err) => {
+            pool.query(insertUsersDataQuery, (err) => {
               if (err) {
                 console.error('Error inserting data into Users table: ', err);
               } else {
@@ -165,7 +169,7 @@ connection.connect((err) => {
                 return new Promise((resolve, reject) => {
                   const query = 'SELECT * FROM Products';
 
-                  connection.query(query, (error, results) => {
+                  pool.query(query, (error, results) => {
                     if (error) {
                       reject(error);
                       return;
@@ -176,13 +180,24 @@ connection.connect((err) => {
                 });
               }
 
+              // Endpoint to get all products
+              app.get('/products', (req, res) => {
+                getAllProducts()
+                  .then((products) => {
+                    res.json(products);
+                  })
+                  .catch((error) => {
+                    res.status(500).json({ error: 'Failed to retrieve products' });
+                  });
+              });
+
               // Function 2: Login function
               function login(username, password) {
                 return new Promise((resolve, reject) => {
                   const query = `SELECT userID FROM Users WHERE userName = ? AND password = ?`;
                   const values = [username, password];
 
-                  connection.query(query, values, (error, results) => {
+                  pool.query(query, values, (error, results) => {
                     if (error) {
                       reject(error);
                       return;
@@ -197,13 +212,26 @@ connection.connect((err) => {
                 });
               }
 
+              // Endpoint for user login
+              app.post('/login', (req, res) => {
+                const { username, password } = req.body;
+
+                login(username, password)
+                  .then((userId) => {
+                    res.json({ userId });
+                  })
+                  .catch((error) => {
+                    res.status(401).json({ error: 'Invalid username or password' });
+                  });
+              });
+
               // Function 3: Register function
               function register(username, password) {
                 return new Promise((resolve, reject) => {
                   const query = `INSERT INTO Users (userName, password) VALUES (?, ?)`;
                   const values = [username, password];
 
-                  connection.query(query, values, (error, results) => {
+                  pool.query(query, values, (error, results) => {
                     if (error) {
                       reject(error);
                       return;
@@ -214,13 +242,26 @@ connection.connect((err) => {
                 });
               }
 
+              // Endpoint for user registration
+              app.post('/register', (req, res) => {
+                const { username, password } = req.body;
+
+                register(username, password)
+                  .then((userId) => {
+                    res.json({ userId });
+                  })
+                  .catch((error) => {
+                    res.status(500).json({ error: 'Failed to register user' });
+                  });
+              });
+
               // Function 4: Get items by product ID
               function getItemsByProductId(productId) {
                 return new Promise((resolve, reject) => {
                   const query = 'SELECT * FROM Products WHERE productId = ?';
                   const values = [productId];
 
-                  connection.query(query, values, (error, results) => {
+                  pool.query(query, values, (error, results) => {
                     if (error) {
                       reject(error);
                       return;
@@ -230,6 +271,24 @@ connection.connect((err) => {
                   });
                 });
               }
+
+              // Endpoint to get items by product ID
+              app.get('/products/:productId', (req, res) => {
+                const productId = req.params.productId;
+
+                getItemsByProductId(productId)
+                  .then((items) => {
+                    res.json(items);
+                  })
+                  .catch((error) => {
+                    res.status(500).json({ error: 'Failed to retrieve items' });
+                  });
+              });
+
+
+              app.listen(3000, () => {
+                console.log(`Server started on port ${port}`);
+              });
 
               // Call the functions or perform other operations here
               getAllProducts()
