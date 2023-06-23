@@ -1,9 +1,55 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../SignUp/SignUp.css';
 import LogoBlack from '../../Assets/LogoBlack.png';
 import AlertSing from '../../Assets/alertSing.png';
+import { async } from 'q';
+import { userInfo } from 'os';
 
 export function SignUp() {
+
+  const [name, setName] = useState('')
+  // const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  // const [confirmpassword, setConfirmPassword] = useState('')
+
+  
+  const registerUser = async () => {
+    const userInfo = {
+      username: name,
+      password:password
+    }
+    try {
+      const response = await fetch('http://localhost:3000/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(userInfo),
+      });
+  
+      if (response.ok) {
+        alert('Registration successful')
+      } else {
+        alert('User not registered')
+      }
+    } catch (error) {
+      // Handle network errors or exceptions
+    }
+  };
+  
+
+  const handleSubmit = () => {
+    if (name.trim() === ''  || password.trim()==='') {
+      return('Fill all the fields')
+    }
+
+    // if (password !== confirmpassword){
+    //   return('Passwords do not match')
+    // }
+
+    registerUser({name, password})
+  }
+
   return (
     <div className="signup-main">
       <a href="/" className="logo">
@@ -15,25 +61,43 @@ export function SignUp() {
           <h1>Create account</h1>
           <div>
             <label htmlFor="name-input">Your name</label>
-            <input id="name-input" className="email-input" placeholder="First and last name" />
+            <input 
+            id="name-input" 
+            className="email-input" 
+            placeholder="First and last name"
+            onChange={(e) => setName(e.target.value)}
+            />
           </div>
           <div>
             <label htmlFor="email-input">Mobile number or email</label>
-            <input id="email-input" className="email-input" />
+            <input
+            id="email-input" 
+            className="email-input" 
+            // onChange={(e) => setEmail(e.target.value)}
+            />
           </div>
           <div>
             <label htmlFor="password-input">Password</label>
-            <input id="password-input" className="email-input" placeholder="At least 6 characters" />
+            <input 
+            id="password-input" 
+            className="email-input" 
+            placeholder="At least 6 characters" 
+            onChange={(e) => setPassword(e.target.value) }
+            />
             <p>
               <img src={AlertSing} height="16px" alt="" /> Passwords must be at least 6 characters.
             </p>
           </div>
           <div>
             <label htmlFor="reenter-input">Re-enter password</label>
-            <input id="reenter-input" className="email-input" />
+            <input 
+            id="reenter-input" 
+            className="email-input" 
+            // onChange={(e) => setConfirmPassword(e.target.value)}
+            />
           </div>
           <br />
-          <button className="continue">Continue</button>
+          <button className="continue" onClick={handleSubmit}>Continue</button>
           <br />
           <span>
             By continuing, you agree to Amazon's <a href="#">Conditions of Use</a> and <a href="#">Privacy Notice</a>.
