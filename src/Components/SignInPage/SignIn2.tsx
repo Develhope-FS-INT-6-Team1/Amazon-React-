@@ -11,7 +11,41 @@ export function SignIn2() {
     const { username } = location.state || '';
     const [password, setPassword] = useState('');
 
-    const handleLogin = () => {
+    const handleLogin = async () => {
+
+        //we haev usernaem and password 
+
+        //send login request with that username and password.
+        const userInfo = {
+            username: username,
+            password:password
+          }
+          try {
+            const response = await fetch('http://localhost:3010/login', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(userInfo),
+            });
+        
+            if (response.ok) {
+                alert('Login successful')
+                console.log('Login successful');
+                console.log(response);
+                //localStorage.setItem('userId', user.userID);
+                //navigate('/', { state: { username: user.userName, preferedLanguage: user.preferedLanguage, preferedCurrency: user.preferedCurrency } });
+            } else {
+                alert('User not registered')
+            }
+          } catch (error) {
+            // Handle network errors or exceptions
+            alert('Wrong Username Or password')
+          }
+
+
+        /*
+
         const user = usersData.find((user) => user.userName === username && user.password === password);
 
         if (user) {
@@ -21,7 +55,7 @@ export function SignIn2() {
         } 
         else {
             console.log('Invalid username or password');
-        }
+        }*/
     };
 
     return (

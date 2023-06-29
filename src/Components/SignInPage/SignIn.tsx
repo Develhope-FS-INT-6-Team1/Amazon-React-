@@ -9,14 +9,14 @@ export function SignIn() {
     const [username, setUsername] = useState('');
 
     const handleLogin = () => {
-        const user = usersData.find((user) => user.userName === username);
+        /*const user = usersData.find((user) => user.userName === username);
 
         if (user) {
-        console.log('Username is correct. Proceed to enter password.');
+        console.log('Username is correct. Proceed to enter password.');*/
         navigate('/signin2', { state: { username } });
-        } else {
+        /*} else {
         console.log('Invalid username');
-        }
+        }*/
     };
 
 

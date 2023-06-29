@@ -1,18 +1,14 @@
 const { Pool } = require('pg');
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 
 const app = express();
-const port = 3000;
+const port = 3010;
+app.use(cors()); // Enable CORS for all routes
 
 app.use(bodyParser.json());
 
-app.use(function(req, res, next) {
-  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3001');
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-  next();
-})
 
 const pool = new Pool({
   connectionString: 'postgres://lxsgynnf:qavuBKsGCqyUJo56TmQTL98Vk3rmsT3A@chunee.db.elephantsql.com/lxsgynnf',
@@ -132,7 +128,7 @@ app.post('/login', (req, res) => {
 
   login(username, password)
     .then((userId) => {
-      res.json({ userId });
+      res.json({ userId });//return also preferd currency and prefered language. 
     })
     .catch((error) => {
       res.status(401).json({ error: 'Invalid username or password' });
@@ -215,7 +211,7 @@ app.get('/products/:productId', (req, res) => {
 });
 
 
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log(`Server started on port ${port}`);
 });
 
