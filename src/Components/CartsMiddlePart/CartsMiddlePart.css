@@ -15,7 +15,7 @@ body {
 
 .first {
     width: 100%;
-    height: auto;
+    height: 70px;
     background-color: #131a22;
     display: flex;
     align-items: center;
@@ -23,7 +23,7 @@ body {
 }
 
 .first img {
-    width: 100%;
+    width: 130px;
     margin: 0 10px;
     padding: 5px 10px;
     border: 1px solid transparent;
@@ -161,13 +161,12 @@ i {
 }
 
 .right img {
-    width: 100%;
-    height: auto;
+    width: 30px;
+    height: 30px;
     padding: 4px;
     margin: 0;
     padding-top: 10px;
     cursor: pointer;
-    display: block;
 }
 
 .sign {
@@ -257,7 +256,7 @@ input div:hover {
 
 .second {
     width: 100%;
-    height: auto;
+    height: 42;
     background-color: #232f3e;
     display: flex;
     align-items: center;
@@ -346,7 +345,7 @@ input div:hover {
 .sec-1 {
     position: relative;
     width: 100%;
-    height: auto;
+    height: 1190px;
     box-sizing: border-box;
 }
 .sec-1-1 {
@@ -360,14 +359,12 @@ input div:hover {
 .slide img {
     width: 1360px;
     height: 100%;
-
 }
 
 .container {
     position: relative;
     width: 100%;
     height: auto;
-
 }
 
 .slider {
@@ -381,7 +378,6 @@ input div:hover {
     display: flex;
     position: absolute;
     animation: carousel 15s alternate infinite;
-
 }
 
 @keyframes carousel {
@@ -569,7 +565,7 @@ input div:hover {
 }
 
 .sec-2 {
-    width: 99.4%;
+    width: 99.4%; 
     margin-left: 0.35%;
     /* text-align: center; */
     height: 315px;
@@ -667,11 +663,10 @@ input div:hover {
 }
 
 .box-d div img {
-    width: 100%;
+    width: 140px;
     height: 110px;
     margin-left: 0px;
     margin-right: 0px;
-    display: block;
 }
 
 .box-d div span {
@@ -725,29 +720,4 @@ input div:hover {
 }
 .signInContent a:hover {
     color: red;
-}
-
-.signimg{
-    padding-top: 7vh;
-    width: 100%;
-    height: auto;
-}
-
-
-@media only screen
-and (min-device-width : 320px)
-and (max-device-width : 540px){
-    .container {display: grid;
-        grid-template-columns: 1fr 3fr;}
-        .box{display: grid;
-            grid-template-columns: 1fr 3fr;}
-
-            .box-a {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                gap: 10px;
-              }
-
-
-
 }

@@ -6,23 +6,15 @@ import axios from "axios";
 
 export default function CartsMiddlePart() {
   //const [data, setData] = useState(ITEMS__DATA)
-
   const [slideIndex, setSlideIndex] = useState(0);
 
-
   const handleSlide = (direction) => {
-
-    if (window.innerWidth < 1000)
-      return slideIndex[1];
-      console.log(window.innerWidth);
-
-      if (direction === "left") {
+    if (direction === "left") {
       setSlideIndex((prevIndex) => (prevIndex === 0 ? 0 : prevIndex - 1));
     } else if (direction === "right") {
       setSlideIndex((prevIndex) => (prevIndex === 11 ? 11 : prevIndex + 1));
     }
   };
-
 
   const [products, setProducts] = useState([]);
 
@@ -42,8 +34,6 @@ export default function CartsMiddlePart() {
   };
   return (
     <div>
-
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <section className="sec-1">
         <div className="container">
           <div className="container-1">
@@ -157,21 +147,20 @@ export default function CartsMiddlePart() {
                 </div>
                 <a href="http://#">Shop now</a>
               </div>
-              <div className=" box-b">
+              <div className="box-b">
                 <div className="best">
                   <h3>Sign in for the best experience</h3>
                   <a href="/signin">
                     <button>Sign in Securely</button>
-                    <div className="signimg">
+                  </a>
+                </div>
+                <div>
                   <img
                     src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/October/Fuji_D2_45M_en_US_2x._CB418309979_.jpg"
-                    height="250px"
+                    height="242px"
                     alt=""
                   />
                 </div>
-                  </a>
-                </div>
-
               </div>
             </div>
             <div className="product-comp">
@@ -219,7 +208,6 @@ export default function CartsMiddlePart() {
           </div>
           <div className="slider">
             <div className="image-box">
-
               <div className="slide">
                 <img
                   src="https://m.media-amazon.com/images/I/71tIrZqybrL._SX3000_.jpg"
@@ -763,7 +751,7 @@ export default function CartsMiddlePart() {
                 <a href="http://#">See more</a>
               </div>
               <div className="box box-c">
-                <h3>Tools & Home Improvement</h3>
+                <h3>Deals in Tools and Home Improvement</h3>
                 <div>
                   <img
                     src="https://images-na.ssl-images-amazon.com/images/G/01/home/THILGMA/Holiday2022/Graphics/XCM_CUTTLE_1475305_2610205_758x608_2X_en_US._SY608_CB608600856_.jpg"
