@@ -23,11 +23,11 @@ export default function CartsMiddlePart() {
     fetchProducts();
   }, []);
 
-  const fetchProducts = () => {
-    axios.get('http://localhost:3001/products')
-      .then((response) => {
-        setProducts(response.data);
-        console.log(products);
+  const fetchProducts = async () => {
+    await axios.get('http://localhost:3001/products')
+      .then(async (response) => {
+        await setProducts(response.data);
+        console.log(response.data);
       })
       .catch((error) => {
         console.error('Error occurred while fetching products:', error);
@@ -361,9 +361,10 @@ export default function CartsMiddlePart() {
               );
             })} */}
             {products.map((item) => {
+              console.log(item);
               return (
-                <li key={item.id}>
-                  <Link to={`/purchase/${item.id}`}>
+                <li key={item.productid}>
+                  <Link to={`/purchase/${item.productid}`}>
                     <img src={item.image} height="200px" alt="product" />
                   </Link>
                 </li>
