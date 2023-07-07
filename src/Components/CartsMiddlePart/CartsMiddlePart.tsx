@@ -3,6 +3,7 @@ import "../CartsMiddlePart/CartsMiddlePart.css";
 import { ITEMS__DATA } from "../../Assets/Data/data";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import PurchaseCard from "../PurchaseCard/PurchaseCard.tsx";
 
 export default function CartsMiddlePart() {
   //const [data, setData] = useState(ITEMS__DATA)

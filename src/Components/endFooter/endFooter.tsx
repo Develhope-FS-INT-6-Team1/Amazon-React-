@@ -1,5 +1,5 @@
 import React from "react";
-import "./endFooter.css";
+import "./EndFooter.css";
 
 const EndFooter: React.FC = () => {
   return (
