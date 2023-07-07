@@ -24,17 +24,25 @@ function HomePage() {
     const fetchUserData = async () => {
       try {
         const value = await localStorage.getItem('userId');
+        const value1 = await localStorage.getItem('username');
+        const value2 = await localStorage.getItem('preferedLanguage');
+        const value3 = await localStorage.getItem('preferedCurrency');
+        let boolValue = false;
         if (value !== null) {
+          boolValue = true;
           console.log(value);
           setUserId(value);
         }
 
-        const user = userJson.find((user: User) => user.userID === userId);
-        if (user) {
+
+        if (boolValue) {
           console.log('User has logged in');
-          setUserName(user.userName);
-          setPreferedLanguage(user.preferedLanguage);
-          setPreferedCurrency(user.preferedCurrency);
+          if(value1 != null)
+            setUserName(value1);
+          if(value2 != null)
+            setPreferedLanguage(value2);
+          if(value3 != null)
+            setPreferedCurrency(value3);
         }
       } catch (error) {
         console.error('Error fetching user data:', error);

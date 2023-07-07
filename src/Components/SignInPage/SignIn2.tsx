@@ -3,6 +3,7 @@ import LogoBlack from '../../Assets/LogoBlack.png'
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import usersData from '../../Users.json';
+import axios  from 'axios';
 
 
 export function SignIn2() {
@@ -18,29 +19,37 @@ export function SignIn2() {
         //send login request with that username and password.
         const userInfo = {
             username: username,
-            password:password
+            password: password
           }
           try {
-            const response = await fetch('http://localhost:3010/login', {
-              method: 'POST',
+            axios.post('http://localhost:3001/login', userInfo, {
               headers: {
                 'Content-Type': 'application/json',
               },
-              body: JSON.stringify(userInfo),
-            });
-        
-            if (response.ok) {
-                alert('Login successful')
-                console.log('Login successful');
+            })
+            .then((response)=>{
                 console.log(response);
-                //localStorage.setItem('userId', user.userID);
-                //navigate('/', { state: { username: user.userName, preferedLanguage: user.preferedLanguage, preferedCurrency: user.preferedCurrency } });
-            } else {
-                alert('User not registered')
-            }
-          } catch (error) {
+                if (response.status === 200) {
+                    alert('Login successful');
+                    console.log('Login successful');
+                    console.log(response.data);
+                    
+                    localStorage.setItem('userId', response.data.userid);
+                    localStorage.setItem('username', response.data.username);
+                    localStorage.setItem('preferedLanguage', response.data.preferedlanguage);
+                    localStorage.setItem('preferedCurrency', response.data.preferedcurrency);
+
+                    navigate('/', { state: { username: response.data.username, preferedLanguage: response.data.preferedlanguage, preferedCurrency: response.data.preferedcurrency } });
+                  } else {
+                    alert('User not registered');
+                  }
+            } )
+            
+          } 
+          catch (error) {
             // Handle network errors or exceptions
-            alert('Wrong Username Or password')
+            console.log(error);
+            alert('Wrong Username or password');
           }
 
 
