@@ -4,9 +4,10 @@ import { ITEMS__DATA } from "../../Assets/Data/data";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import PurchaseCard from "../PurchaseCard/PurchaseCard.tsx";
+import Carousel from 'react-elastic-carousel';
+
 
 export default function CartsMiddlePart() {
-  //const [data, setData] = useState(ITEMS__DATA)
   const [slideIndex, setSlideIndex] = useState(0);
 
   const handleSlide = (direction) => {
@@ -239,119 +240,98 @@ export default function CartsMiddlePart() {
       </section>
       <section className="sec-2">
         <div className="slide-sec">
-          <div className="l-btn" onClick={() => handleSlide("left")}>
-            <i className="fa-solid fa-chevron-left"></i>
-          </div>
-          <div className="r-btn" onClick={() => handleSlide("right")}>
-            <i className="fa-solid fa-chevron-right"></i>
-          </div>
+
           <h3>Top Sellers in Toys for you</h3>
-          <ul className="product-slide">
-            <li>
+          <Carousel>
               <img
                 src="https://m.media-amazon.com/images/I/619FxH4rtOL._AC_SY400_.jpg"
                 height="200px"
                 alt=""
               />
-            </li>
-            <li>
               <img
                 src="https://m.media-amazon.com/images/I/71t+sCybQuL._AC_SY400_.jpg"
                 height="200px"
                 alt=""
               />
-            </li>
-            <li>
+
               <img
                 src="https://m.media-amazon.com/images/I/61vVhHO4gNL._AC_SY400_.jpg"
                 height="200px"
                 alt=""
               />
-            </li>
-            <li>
+
               <img
                 src="https://m.media-amazon.com/images/I/71aVpfthKSL._AC_SY400_.jpg"
                 height="200px"
                 alt=""
               />
-            </li>
-            <li>
+
               <img
                 src="https://m.media-amazon.com/images/I/51+73KwKXYL._AC_SY400_.jpg"
                 height="200px"
                 alt=""
               />
-            </li>
-            <li>
+
               <img
                 src="https://m.media-amazon.com/images/I/71asK0W7S9L._AC_SY400_.jpg"
                 height="200px"
                 alt=""
               />
-            </li>
-            <li>
+
               <img
                 src="https://m.media-amazon.com/images/I/61SD8-dBQtL._AC_SY400_.jpg"
                 height="200px"
                 alt=""
               />
-            </li>
-            <li>
+
               <img
                 src="https://m.media-amazon.com/images/I/71M4w2NSg4L._AC_SY400_.jpg"
                 height="200px"
                 alt=""
               />
-            </li>
-            <li>
+
               <img
                 src="https://m.media-amazon.com/images/I/51dwgtWvI9L._AC_SY400_.jpg"
                 height="200px"
                 alt=""
               />
-            </li>
-            <li>
+
               <img
                 src="https://m.media-amazon.com/images/I/81bTf4V7W7L._AC_SY400_.jpg"
                 height="200px"
                 alt=""
               />
-            </li>
-            <li>
+
               <img
                 src="https://m.media-amazon.com/images/I/81cLvXc7P2L._AC_SY400_.jpg"
                 height="200px"
                 alt=""
               />
-            </li>
-            <li>
+
               <img
                 src="https://m.media-amazon.com/images/I/71Nkj3RfkDL._AC_SY400_.jpg"
                 height="200px"
                 alt=""
               />
-            </li>
-            <li>
+
               <img
                 src="https://m.media-amazon.com/images/I/61LJoXj2HcL._AC_SY400_.jpg"
                 height="200px"
                 alt=""
               />
-            </li>
-          </ul>
+          </Carousel>
         </div>
       </section>
       <section className="sec-2">
         <div className="slide-sec">
-          <div className="l-btn btn-1b">
-            <i className="fa-solid fa-chevron-left"></i>
-          </div>
-          <div className="r-btn btn-1a">
-            <i className="fa-solid fa-chevron-right"></i>
-          </div>
           <h3>International top sellers</h3>
-          <ul className="product-slide product-slide-1">
-            {/* {data.map((item) => {
+          <Carousel>
+          
+         
+            {/* 
+            
+             //className="product-slide product-slide-1"
+            {data.map((item) => {
               return (
                 <li key={item.id}>
                   <Link to={`/purchase/${item.id}`}>
@@ -363,14 +343,12 @@ export default function CartsMiddlePart() {
             {products.map((item) => {
               console.log(item);
               return (
-                <li key={item.productid}>
                   <Link to={`/purchase/${item.productid}`}>
                     <img src={item.image} height="200px" alt="product" />
                   </Link>
-                </li>
               );
             })}
-          </ul>
+          </Carousel>
         </div>
       </section>
       <section className="sec-1-1">
@@ -425,116 +403,90 @@ export default function CartsMiddlePart() {
       </section>
       <section className="sec-2">
         <div className="slide-sec">
-          <div className="l-btn btn-3b">
-            <i className="fa-solid fa-chevron-left"></i>
-          </div>
-          <div className="r-btn btn-3a">
-            <i className="fa-solid fa-chevron-right"></i>
-          </div>
           <h3>Popular items this season</h3>
-          <ul className="product-slide product-slide-3">
-            <li>
+          <Carousel>
               <img
                 src="https://m.media-amazon.com/images/I/71g0Q186NUL._AC_SY400_.jpg"
                 height="200px"
                 alt=""
               />
-            </li>
-            <li>
+
               <img
                 src="https://m.media-amazon.com/images/I/61EaVIDyGZL._AC_SY400_.jpg"
                 height="200px"
                 alt=""
               />
-            </li>
-            <li>
+ 
               <img
                 src="https://m.media-amazon.com/images/I/61STs1XYheL._AC_SY400_.jpg"
                 height="200px"
                 alt=""
               />
-            </li>
-            <li>
+
               <img
                 src="https://m.media-amazon.com/images/I/41jgGrTrWdL._AC_SY400_.jpg"
                 height="200px"
                 alt=""
               />
-            </li>
-            <li>
+       
               <img
                 src="https://m.media-amazon.com/images/I/71Gzb9IUoxL._AC_SY400_.jpg"
                 height="200px"
                 alt=""
               />
-            </li>
-            <li>
+    
               <img
                 src="https://m.media-amazon.com/images/I/71ADFbGBtbL._AC_SY400_.jpg"
                 height="200px"
                 alt=""
               />
-            </li>
-            <li>
+   
               <img
                 src="https://m.media-amazon.com/images/I/71mc0Xfy81L._AC_SY400_.jpg"
                 height="200px"
                 alt=""
               />
-            </li>
-            <li>
+       
               <img
                 src="https://m.media-amazon.com/images/I/61Pl0vNGwKL._AC_SY400_.jpg"
                 height="200px"
                 alt=""
               />
-            </li>
-            <li>
+  
               <img
                 src="https://m.media-amazon.com/images/I/71QIlMkS9JL._AC_SY400_.jpg"
                 height="200px"
                 alt=""
               />
-            </li>
-            <li>
+  
               <img
                 src="https://m.media-amazon.com/images/I/91iR3q08RDL._AC_SY400_.jpg"
                 height="200px"
                 alt=""
               />
-            </li>
-            <li>
+
               <img
                 src="https://m.media-amazon.com/images/I/71vkDABQHhL._AC_SY400_.jpg"
                 height="200px"
                 alt=""
               />
-            </li>
-            <li>
+   
               <img
                 src="https://m.media-amazon.com/images/I/61mUJ44GjeL._AC_SY400_.jpg"
                 height="200px"
                 alt=""
               />
-            </li>
-            <li>
+         
               <img
                 src="https://m.media-amazon.com/images/I/61Hj10E8iCL._AC_SY400_.jpg"
                 height="200px"
                 alt=""
               />
-            </li>
-          </ul>
+          </Carousel>
         </div>
       </section>
       <section className="sec-2">
         <div className="slide-sec">
-          <div className="l-btn btn-4b">
-            <i className="fa-solid fa-chevron-left"></i>
-          </div>
-          <div className="r-btn btn-4a">
-            <i className="fa-solid fa-chevron-right"></i>
-          </div>
           <h3>
             Home Décor Under $20 &nbsp;&nbsp;{" "}
             <a
@@ -544,106 +496,91 @@ export default function CartsMiddlePart() {
               Shop now
             </a>
           </h3>
-          <ul className="product-slide product-slide-4">
-            <li>
+          <Carousel>
               <img
                 src="https://m.media-amazon.com/images/I/613+CG1dP1L._AC_SY400_.jpg"
                 height="200px"
                 alt=""
               />
-            </li>
-            <li>
+
               <img
                 src="https://m.media-amazon.com/images/I/71kENaxQixL._AC_SY400_.jpg"
                 height="200px"
                 alt=""
               />
-            </li>
-            <li>
+
               <img
                 src="https://m.media-amazon.com/images/I/61XYX1tzoTL._AC_SY400_.jpg"
                 height="200px"
                 alt=""
               />
-            </li>
-            <li>
+
               <img
                 src="https://m.media-amazon.com/images/I/41d1tq6oesL._AC_SY400_.jpg"
                 height="200px"
                 alt=""
               />
-            </li>
-            <li>
+
               <img
                 src="https://m.media-amazon.com/images/I/61j17FjPhtL._AC_SY400_.jpg"
                 height="200px"
                 alt=""
               />
-            </li>
-            <li>
+
               <img
                 src="https://m.media-amazon.com/images/I/81AOpcqJfHL._AC_SY400_.jpg"
                 height="200px"
                 alt=""
               />
-            </li>
-            <li>
+
               <img
                 src="https://m.media-amazon.com/images/I/81xiJRmOwUL._AC_SY400_.jpg"
                 height="200px"
                 alt=""
               />
-            </li>
-            <li>
+
               <img
                 src="https://m.media-amazon.com/images/I/51lFr88wxML._AC_SY400_.jpg"
                 height="200px"
                 alt=""
               />
-            </li>
-            <li>
+
               <img
                 src="https://m.media-amazon.com/images/I/71CDFmK2qNS._AC_SY400_.jpg"
                 height="200px"
                 alt=""
               />
-            </li>
-            <li>
+
               <img
                 src="https://m.media-amazon.com/images/I/710xU17suIL._AC_SY400_.jpg"
                 height="200px"
                 alt=""
               />
-            </li>
-            <li>
+
               <img
                 src="https://m.media-amazon.com/images/I/612xTdtHVfL._AC_SY400_.jpg"
                 height="200px"
                 alt=""
               />
-            </li>
-            <li>
+
               <img
                 src="https://m.media-amazon.com/images/I/71Mda9UuJhL._AC_SY400_.jpg"
                 height="200px"
                 alt=""
               />
-            </li>
-            <li>
+
               <img
                 src="https://m.media-amazon.com/images/I/61dhzAmqvOL._AC_SY400_.jpg"
                 height="200px"
                 alt=""
               />
-            </li>
-            <li>
+    
               <img
                 src="https://m.media-amazon.com/images/I/61XwmZLvaNL._AC_SY400_.jpg"
                 height="200px"
                 alt=""
               />
-            </li>
-          </ul>
+          </Carousel>
         </div>
       </section>
       <section className="sec-1-1">
