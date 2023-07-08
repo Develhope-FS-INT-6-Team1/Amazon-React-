@@ -8,7 +8,7 @@ import { SecondHeader } from "../Components/SecondHeader/SecondHeader.tsx";
 import "../Components/ItemCard/ItemCard.css";
 
 interface CartItem {
-  id: number;
+  productId: number;
   name: string;
   price: number;
   quantity: number; // Added quantity property
@@ -28,14 +28,14 @@ const CartPage: React.FC<CartPageProps> = ({
   );
 
   const handleRemoveItem = (itemId: number) => {
-    const updatedCartItems = cartItems.filter((item) => item.id !== itemId);
+    const updatedCartItems = cartItems.filter((item) => item.productid !== itemId);
     localStorage.setItem("cartItems", JSON.stringify(updatedCartItems));
     setCartItems(updatedCartItems);
   };
 
   const handleChangeQuantity = (itemId: number, newQuantity: number) => {
     const updatedCartItems = cartItems.map((item) => {
-      if (item.id === itemId) {
+      if (item.productid === itemId) {
         return { ...item, quantity: newQuantity };
       }
       return item;

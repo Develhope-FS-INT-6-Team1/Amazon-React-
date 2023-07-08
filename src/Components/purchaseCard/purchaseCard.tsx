@@ -1,19 +1,12 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import "./PurchaseCard.css";
 
 interface Item {
   image: string;
-  name: string;
-  price: number;
-  color: string;
-  About: {
-    first: string;
-    second: string;
-    third: string;
-    fourth: string;
-    fifth: string;
-    sixth: string;
-  }[];
+  productname: string;
+  price: string;
+  aboutthisitem: string;
+  productid:number;
 }
 
 interface PurchaseCardProps {
@@ -23,6 +16,10 @@ interface PurchaseCardProps {
 const PurchaseCard: React.FC<PurchaseCardProps> = ({ item }) => {
   const [quantity, setQuantity] = useState<number>(1);
 
+  useEffect(()=>{
+    console.log(item);
+
+  },[])
   const handleChangeQuantity = (event) => {
     const { value } = event.target;
     setQuantity(Number(value));
@@ -56,7 +53,7 @@ const PurchaseCard: React.FC<PurchaseCardProps> = ({ item }) => {
             Visit the Invicta Store
           </i>
           <h2 className="text" id="h2itemname">
-            {item.name}
+            {item.productname}
           </h2>
           <div className="inline">
             <i>
@@ -99,7 +96,7 @@ const PurchaseCard: React.FC<PurchaseCardProps> = ({ item }) => {
           </p>
           <hr />
           <div className="card-section">
-            <h2 className="card-section-title">Color:{item.color}</h2>
+            <h2 className="card-section-title">Color: red</h2>
             <div className="card-images">
               <div className="card-image">
                 <img src={item.image} alt="Image 1" />
@@ -135,12 +132,8 @@ const PurchaseCard: React.FC<PurchaseCardProps> = ({ item }) => {
           <div className="card-section">
             <ul className="card-list">
               <li>&#8226;&nbsp;&nbsp;Imported</li>
-              <li>{item.About[0].first}</li>
-              <li>{item.About[0].second}</li>
-              <li>{item.About[0].third}</li>
-              <li>{item.About[0].fourth}</li>
-              <li>{item.About[0].fifth}</li>
-              <li>{item.About[0].sixth}</li>
+              <li>{item.aboutthisitem}</li>
+
             </ul>
             <hr />
             <a href="#Main" className="card-link">

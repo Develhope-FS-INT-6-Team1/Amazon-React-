@@ -44,7 +44,8 @@ const CartItemCard: React.FC<CartItemCardProps> = ({ key,item, onRemoveItem,cart
     let newTempItems: any[] = [];
     for(let i = 0 ; i < cartItems.length;i++){
       let temp = cartItems[i];
-      if(temp.id == item.id){
+      console.log(item, temp, "HOLAAAA");
+      if(temp.productid == item.productid){
         temp.quantity = Number(value);
       }
       newTempItems.push(temp);
@@ -62,7 +63,7 @@ const CartItemCard: React.FC<CartItemCardProps> = ({ key,item, onRemoveItem,cart
   };
 
   const handleRemoveItem = () => {
-    onRemoveItem(item.id);
+    onRemoveItem(item.productid);
   };
 
   return (
