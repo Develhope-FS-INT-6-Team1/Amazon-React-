@@ -95,7 +95,7 @@ const CartPage: React.FC<CartPageProps> = ({
             <div className="checkout">
               <div className="subtotal">
                 Subtotal ({cartItems.length} Items):{" "}
-                <span className="subtotal-amount">{totalPrice}</span>
+                <span className="subtotal-amount">${totalPrice}</span>
               </div>
               <div>
                 <input type="checkbox" id="gift" />
