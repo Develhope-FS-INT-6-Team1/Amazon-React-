@@ -9,6 +9,7 @@ import { SignInPage } from './Pages/SignInPage.tsx';
 import { SignUpPage } from './Pages/SignUpPage.tsx';
 import CartPage from './Pages/CartPage.tsx';
 import { SignInPage2 } from './Pages/SignInPage2.tsx';
+import ProductPage from './Pages/ProductsPage.tsx';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path="/signin" element={<SignInPage />} />
           <Route path="/signin2" element={<SignInPage2 />} />
           <Route path="/signup" element={<SignUpPage />} />
+          <Route path="/products" element={<ProductPage />} />
           <Route path="/cart" element={<CartPage CartItems={[]}/>} />
         </Routes>
       </div>

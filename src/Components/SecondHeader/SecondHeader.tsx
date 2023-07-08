@@ -39,18 +39,18 @@ export function SecondHeader(): JSX.Element {
         <div className="sidenav">
           {closeBtn && (
             <>
-              <a href="/category1" className="hello">
-                <h2>☻ Hello, sign in</h2>
+              <a href="/signin" className="hello">
+                <h2>Hello, sign in</h2>
               </a>
               <button className="closebtn" onClick={closeBtn}>
                 X
               </button>
-              <a href="/category1">
-                <h3>Digital Content & Devices </h3>
+              <a href="/products">
+                <h3>Shop Amazon Products</h3>
               </a>
-              <a href="/category2">Amazon Music &gt;</a>
-              <a href="/category3">Kindle E-readers & Books &gt;</a>
-              <a href="/category3">Amazon Appstore &gt;</a>
+              <a href="/products">All categories &gt;</a>
+              <a href="/products">Kindle E-readers & Books &gt;</a>
+              <a href="/products">Amazon Appstore &gt;</a>
               <hr />
               <a href="/category1">
                 <h3>Help & Settings </h3>
@@ -59,7 +59,7 @@ export function SecondHeader(): JSX.Element {
               <a href="/category3">◍ English</a>
               <a href="/category3">🏳️‍⚧️ United States</a>
               <a href="/category3">Customer Service</a>
-              <a href="/category3">Sign in</a>
+              <a href="/signin">Sign in</a>
             </>
           )}
         </div>
