@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import "../App.css";
 import FirstHeader from "../Components/FirstHeader/FirstHeader.tsx";
 import CartItemCard from "../Components/ItemCard/ItemCard.tsx";
@@ -51,6 +51,18 @@ const CartPage: React.FC<CartPageProps> = ({
     return subtotal;
   };
 
+  const totalPrice = useMemo(() => {
+    console.log('Calculating total...');
+    let subtotal = 0;
+    for (const item of cartItems) {
+      console.log(Number(item.price),(item.quantity),"HELLO");
+      subtotal += Number(item.price) * Number(item.quantity);
+    }    
+
+    return subtotal;
+
+  }, [cartItems]);
+
   return (
     <div id="Main" className="App">
       <FirstHeader />
@@ -67,11 +79,13 @@ const CartPage: React.FC<CartPageProps> = ({
             {cartItems.length === 0 ? (
               <div>No Items</div>
             ) : (
-              cartItems.map((item: CartItem, index: number) => (
+              cartItems.map((item: any, index: number) => (
                 <CartItemCard
                   key={index}
                   item={item}
                   onRemoveItem={handleRemoveItem}
+                  cartItems = {cartItems}
+                  setCartItems = {setCartItems} 
                 />
               ))
             )}
@@ -81,7 +95,7 @@ const CartPage: React.FC<CartPageProps> = ({
             <div className="checkout">
               <div className="subtotal">
                 Subtotal ({cartItems.length} Items):{" "}
-                <span className="subtotal-amount">{calculateSubtotal()}</span>
+                <span className="subtotal-amount">{totalPrice}</span>
               </div>
               <div>
                 <input type="checkbox" id="gift" />

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../ItemCard/ItemCard.css";
 
 interface CartItem {
@@ -11,17 +11,50 @@ interface CartItem {
 interface CartItemCardProps {
   item: CartItem;
   onRemoveItem: (itemId: number) => void;
-  onChangeQuantity: (quantity: number) => void; 
+  //onChangeQuantity: (quantity: number) => void; 
+  cartItems: any;
+  setCartItems:any;
+  key:number;
 }
 
-const CartItemCard: React.FC<CartItemCardProps> = ({ item, onRemoveItem, onChangeQuantity }) => {
+const CartItemCard: React.FC<CartItemCardProps> = ({ key,item, onRemoveItem,cartItems,setCartItems }) => {
   const [quantity, setQuantity] = useState<number>(item.quantity);
+
+  useEffect(()=>{
+    console.log("BEFORE",cartItems);
+ 
+    let newTempItems: any[] = [];
+    for(let i = 0 ; i < cartItems.length;i++){
+      let temp = cartItems[i];
+      temp.quantity = 0;
+      newTempItems.push(temp);
+    }
+    console.log("LATER",newTempItems);
+    setCartItems(newTempItems);
+
+  },[])
 
   const handleChangeQuantity = (
     event: React.ChangeEvent<HTMLSelectElement>
   ) => {
     const { value } = event.target;
     setQuantity(Number(value));
+    console.log("BEFORE",cartItems);
+ 
+    let newTempItems: any[] = [];
+    for(let i = 0 ; i < cartItems.length;i++){
+      let temp = cartItems[i];
+      if(temp.id == item.id){
+        temp.quantity = Number(value);
+      }
+      newTempItems.push(temp);
+    } 
+    console.log("LATER",newTempItems);
+    setCartItems(newTempItems);
+
+
+
+
   };
 
   const calculateSubtotal = () => {
@@ -76,7 +109,7 @@ const CartItemCard: React.FC<CartItemCardProps> = ({ item, onRemoveItem, onChang
             <option value="7">7</option>
             <option value="8">8</option>
             <option value="9">9</option>
-            <option value="10">10+</option>
+            <option value="10">10</option>
           </select>
 
           <p className="cart-links">
