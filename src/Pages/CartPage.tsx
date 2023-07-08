@@ -76,6 +76,7 @@ const CartPage: React.FC<CartPageProps> = ({
               ))
             )}
           </div>
+
           <div className="policy">
             <div className="checkout">
               <div className="subtotal">
@@ -89,7 +90,11 @@ const CartPage: React.FC<CartPageProps> = ({
               <button id="checkout-button">Proceed to checkout</button>
             </div>
           </div>
-          <div
+          
+          
+          
+        </div>
+        <div
             style={{
               height: '60px',
               width: '73%',
@@ -98,6 +103,8 @@ const CartPage: React.FC<CartPageProps> = ({
               marginBottom: '40px',
             }}
           ></div>
+         
+        
           <p className="bottom-paragraph">
             The price and availability of items at Amazon.com are subject to
             change. The Cart is a temporary place to store a list of your items
@@ -106,7 +113,6 @@ const CartPage: React.FC<CartPageProps> = ({
             <br /> Do you have a gift card or promotional code? We'll ask you to
             enter your claim code when it's time to pay.
           </p>
-        </div>
       </div>
       <FirstFooter />
       <EndFooter />

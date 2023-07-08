@@ -7,6 +7,7 @@
   
   .cart-item {
     padding: 20px;
+    margin: 15px;
     margin-left: 30px;
     background-color: white;
     padding: 30px;
@@ -18,10 +19,10 @@
   .item-and-checkout {
     /* margin: 50px; */
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
   }
+
   .-row{
     display: flex;
     justify-content: space-between;
@@ -104,6 +105,7 @@
     grid-area: policy;
     font-size: 12px;
     line-height: 16px;
+    margin: 15px;
   }
   
   .policy a {
