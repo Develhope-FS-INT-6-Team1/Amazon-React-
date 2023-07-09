@@ -66,21 +66,23 @@ export default function FirstHeader(): JSX.Element {
         <a href="/" className="nav-logo header-links">
           <img src={MainLogo} alt="" width="100px" />
         </a>
-        <a href="/purchase" className="location  header-links">
-          <img
-            src={LocationIcon}
-            id="location-icon"
-            alt=""
-            width="15px"
-            height="18px"
-          />
-          <div>
-            <p id="row1" className="header-p">
-              Hello
-            </p>
-            <p className="header-p">Select your address</p>
-          </div>
-        </a>
+        <div className="deliver-location">
+          <a href="/purchase" className="location  header-links">
+            <img
+              src={LocationIcon}
+              id="location-icon"
+              alt=""
+              width="15px"
+              height="18px"
+            />
+            <div>
+              <p id="row1" className="header-p">
+                Hello
+              </p>
+              <p className="header-p">Select your address</p>
+            </div>
+          </a>
+        </div>
       </div>
 
       <div className="nav-fill">
@@ -125,17 +127,19 @@ export default function FirstHeader(): JSX.Element {
       </div>
 
       <div className="nav-right">
-        {userName ? (
-          <a href="#Main" className="lang  header-links">
-            <img src={LangFlagTr} alt="" width="17px" height="13" />
-            <p className="text-lang header-p">{preferedLanguage}</p>
-          </a>
-        ) : (
-          <a href="#Main" className="lang  header-links">
-            <img src={LangFlag} alt="" width="17px" height="13" />
-            <p className="text-lang header-p">EN</p>
-          </a>
-        )}
+        <div className="lang-part">
+          {userName ? (
+            <a href="#Main" className="lang  header-links">
+              <img src={LangFlagTr} alt="" width="17px" height="13" />
+              <p className="text-lang header-p">{preferedLanguage}</p>
+            </a>
+          ) : (
+            <a href="#Main" className="lang  header-links">
+              <img src={LangFlag} alt="" width="17px" height="13" />
+              <p className="text-lang header-p">EN</p>
+            </a>
+          )}
+        </div>
 
         <div className="hidden-lang">
           <p className="in-line">Change language</p>
@@ -192,23 +196,23 @@ export default function FirstHeader(): JSX.Element {
           </a>
         </div>
 
-        <div className="overlay"></div>
-
-        {userName ? (
-          <a href="/signin" className="account header-links">
-            <p id="row1" className="header-p">
-              Hello, {userName}
-            </p>
-            <p className="header-p">Accounts & Lists</p>
-          </a>
-        ) : (
-          <a href="/signin" className="account header-links">
-            <p id="row1" className="header-p">
-              Hello, sign in
-            </p>
-            <p className="header-p">Accounts & Lists</p>
-          </a>
-        )}
+        <div className="accounts">    
+          {userName ? (
+            <a href="/signin" className="account header-links">
+              <p id="row1" className="header-p">
+                Hello, {userName}
+              </p>
+              <p className="header-p">Accounts & Lists</p>
+            </a>
+          ) : (
+            <a href="/signin" className="account header-links">
+              <p id="row1" className="header-p">
+                Hello, sign in
+              </p>
+              <p className="header-p">Accounts & Lists</p>
+            </a>
+          )}
+        </div>
 
         {userName ? (
           <div className="hidden-account">

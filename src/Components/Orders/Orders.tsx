@@ -34,7 +34,7 @@ export function Orders(): JSX.Element {
         </div>
 
         <div className="header">
-          <h1>Your Orders</h1>
+          <h1 className="h1-orders">Your Orders</h1>
           <div className="order-search-bar">
             <form method="get" action="/your-account/order-history">
               <input

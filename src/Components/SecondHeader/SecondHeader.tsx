@@ -55,10 +55,10 @@ export function SecondHeader(): JSX.Element {
               <a href="/category1">
                 <h3>Help & Settings </h3>
               </a>
-              <a href="/category2">Your Account</a>
-              <a href="/category3">◍ English</a>
-              <a href="/category3">🏳️‍⚧️ United States</a>
-              <a href="/category3">Customer Service</a>
+              <a href="/account">Your Account</a>
+              <a href="/account">Language and Preferences</a>
+              <a href="/orders">Orders</a>
+              <a>Customer Service</a>
               <a href="/signin">Sign in</a>
             </>
           )}

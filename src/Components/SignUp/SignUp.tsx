@@ -58,7 +58,7 @@ export function SignUp() {
 
       <div className="signup-box">
         <div className="box-contents">
-          <h1>Create account</h1>
+          <h4 className='header-h4'>Create account</h4>
           <div>
             <label htmlFor="name-input">Your name</label>
             <input 
@@ -99,7 +99,7 @@ export function SignUp() {
           <br />
           <button className="continue" onClick={handleSubmit}>Continue</button>
           <br />
-          <span>
+          <span className='text-sign'>
             By continuing, you agree to Amazon's <a href="#">Conditions of Use</a> and <a href="#">Privacy Notice</a>.
           </span>
           <br />
