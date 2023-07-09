@@ -12,18 +12,12 @@
 .filters {
     display: flex;
     flex-direction: column;
-    width: 20%;
+    width: 15%;
     background-color: white;
-    padding: 10px;
+    padding: 20px;
     margin-left: 15px;
     color: #3d3d3d;
-}
-
-.filter-by{
-    display: flex;
-    flex-direction: column;
     align-items: flex-start;
-    padding: 10px;
 }
 
 .filter-by h4{
@@ -43,16 +37,29 @@
     width: 300px;
     background-color: white;
     margin: 15px;
+    height: 320px;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: flex;
+    flex-direction: column;
 }
 
 .product-item img {
     max-width: 250px;
+    padding-top: 10px;
 }
   
-
 .product-box{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+}
+.product-details{
+    color: rgb(96, 96, 96);
+}
+
+.about-item{
+    font-size: 10px;
+    color: rgb(129, 129, 129);
 }

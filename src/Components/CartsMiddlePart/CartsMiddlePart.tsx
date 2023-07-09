@@ -79,7 +79,7 @@ export default function CartsMiddlePart() {
                     <span>Chairs</span>
                   </div>
                 </div>
-                <a href="http://#">See more</a>
+                <a href="/products">See more</a>
               </div>
               <div className="box">
                 <h3>Refresh your space</h3>
@@ -113,7 +113,7 @@ export default function CartsMiddlePart() {
                     <span>Health and Beauty</span>
                   </div>
                 </div>
-                <a href="http://#">See more</a>
+                <a href="/products">See more</a>
               </div>
               <div className="box">
                 <h3>Shop by Category</h3>
@@ -147,7 +147,7 @@ export default function CartsMiddlePart() {
                     <span>Toys & Games</span>
                   </div>
                 </div>
-                <a href="http://#">Shop now</a>
+                <a href="/products">Shop now</a>
               </div>
               <div className="box-b">
                 <div className="best">
@@ -174,7 +174,7 @@ export default function CartsMiddlePart() {
                     alt=""
                   />
                 </div>
-                <a href="http://#">See more</a>
+                <a href="/products">See more</a>
               </div>
               <div className="box box-c">
                 <h3>Health & Personal Care</h3>
@@ -184,7 +184,7 @@ export default function CartsMiddlePart() {
                     alt=""
                   />
                 </div>
-                <a href="http://#">Shop now</a>
+                <a href="/products">Shop now</a>
               </div>
               <div className="box box-c">
                 <h3>Dresses</h3>
@@ -194,7 +194,7 @@ export default function CartsMiddlePart() {
                     alt=""
                   />
                 </div>
-                <a href="http://#">Shop now</a>
+                <a href="/products">Shop now</a>
               </div>
               <div className="box box-c">
                 <h3>Beauty picks</h3>
@@ -204,7 +204,7 @@ export default function CartsMiddlePart() {
                     alt=""
                   />
                 </div>
-                <a href="http://#">Shop now</a>
+                <a href="/products">Shop now</a>
               </div>
             </div>
           </div>
@@ -363,7 +363,7 @@ export default function CartsMiddlePart() {
                     alt=""
                   />
                 </div>
-                <a href="http://#">Shop now</a>
+                <a href="/products">Shop now</a>
               </div>
               <div className="box box-c">
                 <h3>Discover fashion trends</h3>
@@ -373,7 +373,7 @@ export default function CartsMiddlePart() {
                     alt=""
                   />
                 </div>
-                <a href="http://#">See more</a>
+                <a href="/products">See more</a>
               </div>
               <div className="box box-c">
                 <h3>For your Fitness Needs</h3>
@@ -383,7 +383,7 @@ export default function CartsMiddlePart() {
                     alt=""
                   />
                 </div>
-                <a href="http://#">Shop now</a>
+                <a href="/products">Shop now</a>
               </div>
               <div className="box box-c">
                 <h3>Shop activity trackers and smartwatches</h3>
@@ -490,7 +490,7 @@ export default function CartsMiddlePart() {
           <h3>
             Home Décor Under $20 &nbsp;&nbsp;{" "}
             <a
-              href="#Main"
+              href="/products"
               style={{ fontSize: "13px", color: "#007185", fontWeight: 500 }}
             >
               Shop now
@@ -595,7 +595,7 @@ export default function CartsMiddlePart() {
                     alt=""
                   />
                 </div>
-                <a href="http://#">Shop kitchen upgrades</a>
+                <a href="/products">Shop kitchen upgrades</a>
               </div>
               <div className="box box-c">
                 <h3>Kindle E readers</h3>
@@ -605,7 +605,7 @@ export default function CartsMiddlePart() {
                     alt=""
                   />
                 </div>
-                <a href="http://#">Shop now</a>
+                <a href="/products">Shop now</a>
               </div>
               <div className="box box-c">
                 <h3>Shop Laptops & Tablets</h3>
@@ -615,7 +615,7 @@ export default function CartsMiddlePart() {
                     alt=""
                   />
                 </div>
-                <a href="http://#">See more</a>
+                <a href="/products">See more</a>
               </div>
               <div className="box box-c">
                 <h3>Spring new arrivals</h3>
@@ -625,7 +625,7 @@ export default function CartsMiddlePart() {
                     alt=""
                   />
                 </div>
-                <a href="http://#">Discover more</a>
+                <a href="/products">Discover more</a>
               </div>
             </div>
           </div>
@@ -643,7 +643,7 @@ export default function CartsMiddlePart() {
                     alt=""
                   />
                 </div>
-                <a href="http://#">Shop now</a>
+                <a href="/products">Shop now</a>
               </div>
               <div className="box">
                 <h3>Gaming merchandise</h3>
@@ -677,7 +677,7 @@ export default function CartsMiddlePart() {
                     <span>Mugs</span>
                   </div>
                 </div>
-                <a href="http://#">See more</a>
+                <a href="/products">See more</a>
               </div>
               <div className="box box-c">
                 <h3>Shop Pet supplies</h3>
@@ -687,7 +687,7 @@ export default function CartsMiddlePart() {
                     alt=""
                   />
                 </div>
-                <a href="http://#">See more</a>
+                <a href="/products">See more</a>
               </div>
               <div className="box box-c">
                 <h3>Deals in Tools and Home Improvement</h3>
@@ -697,7 +697,7 @@ export default function CartsMiddlePart() {
                     alt=""
                   />
                 </div>
-                <a style={{ marginTop: "-22px" }} href="http://#">
+                <a style={{ marginTop: "-22px" }} href="/products">
                   Shop now
                 </a>
               </div>

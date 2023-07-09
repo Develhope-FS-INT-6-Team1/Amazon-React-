@@ -172,8 +172,8 @@ export default function Products(){
                                 </Link>
                                 <div className="product-details">
                                     <h5>{item.productname}</h5>
-                                    <p>{item.aboutthisitem}</p>
-                                    <p>Price: ${item.price}</p>
+                                    <p className="about-item">{item.aboutthisitem}</p>
+                                    <p className="price-item">Price: ${item.price}</p>
                                 </div>
                             </div>
                         ))}
