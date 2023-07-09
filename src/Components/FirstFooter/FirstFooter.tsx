@@ -84,16 +84,16 @@ export default function FirstFooter(): JSX.Element {
               <a href="#Main">Amazon and Covid-19</a>
             </li>
             <li>
-              <a href="#Main">Your Account</a>
+              <a href="/account">Your Account</a>
             </li>
             <li>
-              <a href="#Main">Your Orders</a>
+              <a href="/orders">Your Orders</a>
             </li>
             <li>
               <a href="#Main">Shipping Rates & Policies</a>
             </li>
             <li>
-              <a href="#Main">Returns & Replacements</a>
+              <a href="/orders">Returns & Replacements</a>
             </li>
             <li>
               <a href="#Main">Manage Your Content and Devices</a>

@@ -58,7 +58,7 @@ export function SignUp() {
 
       <div className="signup-box">
         <div className="box-contents">
-          <h1>Create account</h1>
+          <h4 className='header-h4'>Create account</h4>
           <div>
             <label htmlFor="name-input">Your name</label>
             <input 
@@ -80,6 +80,7 @@ export function SignUp() {
             <label htmlFor="password-input">Password</label>
             <input 
             id="password-input" 
+            type='password'
             className="email-input" 
             placeholder="At least 6 characters" 
             onChange={(e) => setPassword(e.target.value) }
@@ -93,13 +94,14 @@ export function SignUp() {
             <input 
             id="reenter-input" 
             className="email-input" 
+            type='password'
             // onChange={(e) => setConfirmPassword(e.target.value)}
             />
           </div>
           <br />
           <button className="continue" onClick={handleSubmit}>Continue</button>
           <br />
-          <span>
+          <span className='text-sign'>
             By continuing, you agree to Amazon's <a href="#">Conditions of Use</a> and <a href="#">Privacy Notice</a>.
           </span>
           <br />

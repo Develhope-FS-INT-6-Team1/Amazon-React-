@@ -10,10 +10,10 @@ export function Account(): JSX.Element {
 
 return(
     <div className='container'>
-    <h1 className='h1'>Your Account</h1>
+    <h1 className='h1-account'>Your Account</h1>
     <div className='allBoxes'>
     <a href='/orders' className='grid'><img src='https://m.media-amazon.com/images/G/01/x-locale/cs/help/images/gateway/self-service/order._CB660668735_.png'></img><b>Your Orders</b><p>Track, return, cancel an order, download invoice or buy again</p></a>
-    <button className='grid'><img src='https://m.media-amazon.com/images/G/01/x-locale/cs/help/images/gateway/self-service/security._CB659600413_.png'></img><b>Login&Security</b><p>Edit login, name, and mobile number</p></button>
+    <a href='/account-details' className='grid'><img src='https://m.media-amazon.com/images/G/01/x-locale/cs/help/images/gateway/self-service/security._CB659600413_.png'></img><b>Login&Security</b><p>Edit account, name, and password</p></a>
     <button className='grid'><img src='https://m.media-amazon.com/images/G/01/x-locale/cs/help/images/gateway/self-service/fshub/fshub_prime._CB433666831_.png'></img><b>Prime</b><p>Manage your memebership, view benefits, and payment settings</p></button>
     <button className='grid'><img src='https://m.media-amazon.com/images/G/01/x-locale/cs/help/images/gateway/self-service/fshub/fshub_address_book._CB613924977_.png'></img><b>Your addresses</b><p>Edit, remove or set default address</p></button>
     <button className='grid'><img src='https://m.media-amazon.com/images/G/01/x-locale/cs/contact-us/GiftCard_icon_01._CB660349069_.png'></img><b>Gift cards</b><p>View balance or redeem a card, and purchase a new Gift Card</p></button>

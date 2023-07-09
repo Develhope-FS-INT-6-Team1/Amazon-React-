@@ -16,22 +16,22 @@ export function SecondHeader(): JSX.Element {
     <div>
       <nav className="navbar">
         <button onClick={toggleSidebar}>≡All</button>
-        <a className="left" href="todays">
+        <a className="sec-links">
           Todays Deals
         </a>
-        <a className="left" href="todays">
+        <a className="sec-links">
           Customer Service
         </a>
-        <a className="left" href="todays">
+        <a className="register" href="/signup">
           Registry
         </a>
-        <a className="left" href="todays">
+        <a className="sec-links">
           Gift Cards
         </a>
-        <a className="left" href="/page3">
+        <a className="sec-links">
           Sell
         </a>
-        <a className="right" href="todays">
+        <a className="shop" href="/products">
           Shop deals in Electronics
         </a>
       </nav>
@@ -39,6 +39,9 @@ export function SecondHeader(): JSX.Element {
         <div className="sidenav">
           {closeBtn && (
             <>
+              <button className="closebtn" onClick={closeBtn}>
+                X
+              </button>
               <a href="/signin" className="hello">
                 <h2>Hello, sign in</h2>
               </a>
@@ -55,10 +58,10 @@ export function SecondHeader(): JSX.Element {
               <a href="/category1">
                 <h3>Help & Settings </h3>
               </a>
-              <a href="/category2">Your Account</a>
-              <a href="/category3">◍ English</a>
-              <a href="/category3">🏳️‍⚧️ United States</a>
-              <a href="/category3">Customer Service</a>
+              <a href="/account">Your Account</a>
+              <a href="/account">Language and Preferences</a>
+              <a href="/orders">Orders</a>
+              <a>Customer Service</a>
               <a href="/signin">Sign in</a>
             </>
           )}

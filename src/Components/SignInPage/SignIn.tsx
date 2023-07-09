@@ -36,7 +36,7 @@ export function SignIn() {
                     <button className="continue" onClick={handleLogin}>
                         <a href={`/signin2?username=${encodeURIComponent(username)}`}>Continue</a>
                     </button>
-                    <span>
+                    <span className='text-sign'>
                         By continuing, you agree to Amazon's
                         <a href="#">Conditions of Use</a>
                         and <a href="#">Privacy Notice</a>.
