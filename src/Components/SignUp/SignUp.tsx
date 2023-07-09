@@ -80,6 +80,7 @@ export function SignUp() {
             <label htmlFor="password-input">Password</label>
             <input 
             id="password-input" 
+            type='password'
             className="email-input" 
             placeholder="At least 6 characters" 
             onChange={(e) => setPassword(e.target.value) }
@@ -93,6 +94,7 @@ export function SignUp() {
             <input 
             id="reenter-input" 
             className="email-input" 
+            type='password'
             // onChange={(e) => setConfirmPassword(e.target.value)}
             />
           </div>

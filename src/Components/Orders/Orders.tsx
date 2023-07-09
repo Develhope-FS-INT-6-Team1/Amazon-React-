@@ -24,7 +24,7 @@ export function Orders(): JSX.Element {
         <div className="breadcrumbs">
           <ul>
             <li>
-              <a href="/your-account">Your Account</a>
+              <a href="/account">Your Account</a>
             </li>
             <li>›</li>
             <li>
