@@ -16,22 +16,22 @@ export function SecondHeader(): JSX.Element {
     <div>
       <nav className="navbar">
         <button onClick={toggleSidebar}>≡All</button>
-        <a className="left" href="todays">
+        <a className="sec-links">
           Todays Deals
         </a>
-        <a className="left" href="todays">
+        <a className="sec-links">
           Customer Service
         </a>
-        <a className="left" href="todays">
+        <a className="register" href="/signup">
           Registry
         </a>
-        <a className="left" href="todays">
+        <a className="sec-links">
           Gift Cards
         </a>
-        <a className="left" href="/page3">
+        <a className="sec-links">
           Sell
         </a>
-        <a className="right" href="todays">
+        <a className="shop" href="/products">
           Shop deals in Electronics
         </a>
       </nav>
@@ -39,6 +39,9 @@ export function SecondHeader(): JSX.Element {
         <div className="sidenav">
           {closeBtn && (
             <>
+              <button className="closebtn" onClick={closeBtn}>
+                X
+              </button>
               <a href="/signin" className="hello">
                 <h2>Hello, sign in</h2>
               </a>
