@@ -196,6 +196,61 @@
     justify-content: space-between;
 }
 
+@media screen and (max-width: 767px) {
+  .order-fisrt-part {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
 
+  h1 {
+    font-size: 18px;
+    margin: 5px 0;
+  }
+
+  .order-search-bar {
+    align-items: flex-start;
+  }
+
+  .search-input {
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 5px;
+  }
+
+  .search-button {
+    max-width: 100px;
+    margin-bottom: 5px;
+  }
+
+  .page-tabs ul li {
+    font-size: 14px;
+  }
+
+  .time-filter label {
+    font-size: 14px;
+  }
+
+  .message {
+    font-size: 12px;
+  }
+
+  .order-slide-sec h4 {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  .order-slide-sec img {
+    height: 100px;
+    margin-right: 3px;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 25px;
+    height: 25px;
+    font-size: 16px;
+    line-height: 25px;
+  }
+}
   
   
