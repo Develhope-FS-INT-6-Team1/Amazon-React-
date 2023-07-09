@@ -199,9 +199,6 @@ i {
     color: gray;
 }
 
-/* .fa-shopping-cart {
-    font-size: 60px;
-} */
 .fa-cart-arrow-down {
     font-size: 28px;
 }
@@ -212,18 +209,6 @@ i {
     padding-top: 16px;
 }
 
-/* .cart p {
-    position: absolute;
-    font-weight: bolder;
-    color: #131a22;
-    top: 7px;
-    left: 23px;
-} */
-
-/* .cart:hover {
-    border: 1px solid white;
-    border-radius: 3px;
-} */
 
 .logo img:hover {
     border: 1px solid white;
@@ -720,4 +705,17 @@ input div:hover {
 }
 .signInContent a:hover {
     color: red;
+}
+
+
+@media (max-width: 540px) {
+    .image-box{
+        display: none;
+    }
+
+    .product-comp{
+        margin-top: 40px;
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
