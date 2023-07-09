@@ -11,6 +11,8 @@ import CartPage from './Pages/CartPage.tsx';
 import { SignInPage2 } from './Pages/SignInPage2.tsx';
 import ProductPage from './Pages/ProductsPage.tsx';
 import { AccountPage } from './Pages/AccountPage.tsx';
+import {OrdersPage} from './Pages/OrdersPage.tsx'
+
 
 
 function App() {
@@ -25,6 +27,7 @@ function App() {
           <Route path="/signup" element={<SignUpPage />} />
           <Route path="/products" element={<ProductPage />} />
           <Route path="/account" element={<AccountPage />} />
+          <Route path="/orders" element={<OrdersPage />} />
           <Route path="/cart" element={<CartPage CartItems={[]}/>} />
         </Routes>
       </div>

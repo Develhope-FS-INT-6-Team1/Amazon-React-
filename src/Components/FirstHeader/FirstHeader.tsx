@@ -275,7 +275,7 @@ export default function FirstHeader(): JSX.Element {
           </div>
         )}
 
-        <a href="#Main" className="text header-links">
+        <a href="/account" className="text header-links">
           <p id="row1" className="header-p">Returns</p>
           <p className="header-p ">& Orders</p>
         </a>
