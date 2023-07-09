@@ -5,10 +5,10 @@ import FooterLogo from '../../Assets/Images/logo.png'
 export default function FirstFooter(): JSX.Element {
   return (
     <div className="footer-wrapper">
-      <button className="footer-btn">Back to top</button>
+      <a href="#" className="footer-btn">Back to top</a>
       <div className="footer-one-container">
         <div className="footer-one-links">
-          <h1>Get to Know Us</h1>
+          <h4>Get to Know Us</h4>
           <ul>
             <li>
               <a href="#Main">Careers</a>
@@ -31,7 +31,7 @@ export default function FirstFooter(): JSX.Element {
           </ul>
         </div>
         <div className="footer-one-links">
-          <h1>Make Money With Us</h1>
+          <h4>Make Money With Us</h4>
           <ul>
             <li>
               <a href="#Main">Sell products on Amazon</a>
@@ -61,7 +61,7 @@ export default function FirstFooter(): JSX.Element {
           </ul>
         </div>
         <div className="footer-one-links">
-          <h1>Amazon Payment Products</h1>
+          <h4>Amazon Payment Products</h4>
           <ul>
             <li>
               <a href="#Main">Amazon Business Card</a>
@@ -78,7 +78,7 @@ export default function FirstFooter(): JSX.Element {
           </ul>
         </div>
         <div className="footer-one-links">
-          <h1>Let us Help You</h1>
+          <h4>Let us Help You</h4>
           <ul>
             <li>
               <a href="#Main">Amazon and Covid-19</a>
