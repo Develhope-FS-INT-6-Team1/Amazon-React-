@@ -3,7 +3,7 @@ import "../CartsMiddlePart/CartsMiddlePart.css";
 import { ITEMS__DATA } from "../../Assets/Data/data";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import PurchaseCard from "../PurchaseCard/PurchaseCard.tsx";
+import PurchaseCard from "../PurchaseCard/PurchaseCard";
 import Carousel from 'react-elastic-carousel';
 
 
@@ -326,10 +326,10 @@ export default function CartsMiddlePart() {
         <div className="slide-sec">
           <h3>International top sellers</h3>
           <Carousel>
-          
-         
-            {/* 
-            
+
+
+            {/*
+
              //className="product-slide product-slide-1"
             {data.map((item) => {
               return (
@@ -416,7 +416,7 @@ export default function CartsMiddlePart() {
                 height="200px"
                 alt=""
               />
- 
+
               <img
                 src="https://m.media-amazon.com/images/I/61STs1XYheL._AC_SY400_.jpg"
                 height="200px"
@@ -428,37 +428,37 @@ export default function CartsMiddlePart() {
                 height="200px"
                 alt=""
               />
-       
+
               <img
                 src="https://m.media-amazon.com/images/I/71Gzb9IUoxL._AC_SY400_.jpg"
                 height="200px"
                 alt=""
               />
-    
+
               <img
                 src="https://m.media-amazon.com/images/I/71ADFbGBtbL._AC_SY400_.jpg"
                 height="200px"
                 alt=""
               />
-   
+
               <img
                 src="https://m.media-amazon.com/images/I/71mc0Xfy81L._AC_SY400_.jpg"
                 height="200px"
                 alt=""
               />
-       
+
               <img
                 src="https://m.media-amazon.com/images/I/61Pl0vNGwKL._AC_SY400_.jpg"
                 height="200px"
                 alt=""
               />
-  
+
               <img
                 src="https://m.media-amazon.com/images/I/71QIlMkS9JL._AC_SY400_.jpg"
                 height="200px"
                 alt=""
               />
-  
+
               <img
                 src="https://m.media-amazon.com/images/I/91iR3q08RDL._AC_SY400_.jpg"
                 height="200px"
@@ -470,13 +470,13 @@ export default function CartsMiddlePart() {
                 height="200px"
                 alt=""
               />
-   
+
               <img
                 src="https://m.media-amazon.com/images/I/61mUJ44GjeL._AC_SY400_.jpg"
                 height="200px"
                 alt=""
               />
-         
+
               <img
                 src="https://m.media-amazon.com/images/I/61Hj10E8iCL._AC_SY400_.jpg"
                 height="200px"
@@ -574,7 +574,7 @@ export default function CartsMiddlePart() {
                 height="200px"
                 alt=""
               />
-    
+
               <img
                 src="https://m.media-amazon.com/images/I/61XwmZLvaNL._AC_SY400_.jpg"
                 height="200px"

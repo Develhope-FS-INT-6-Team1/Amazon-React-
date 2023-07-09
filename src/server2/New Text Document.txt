@@ -1,0 +1,13 @@
+INSERT INTO Products (productid, productname, price, aboutthisitem, image)
+VALUES
+    (1, 'Invicta Men Pro Diver Collection Coin-Edge Automatic Watch', '85.03', 'good product', 'https://m.media-amazon.com/images/I/71RdP+pYfbL._AC_UY500_.jpg'),
+    (2, 'Logitech G502 HERO High Performance Wired Gaming Mouse', '34.00', 'Hero 25K sensor through a software update from G HUB', 'https://m.media-amazon.com/images/I/61mpMH5TzkL._AC_SL1500_.jpg'),
+    (3, 'Hot Wheels Fast and Furious 5-Pack of Toy Race and Drift Cars in 1:64 Scale with Exclusive Decos', '6.25', 'Hit the accelerator on a Hot Wheels collection with this 5-Pack of Fast & Furious themed toy cars!', 'https://m.media-amazon.com/images/I/619FxH4rtOL._AC_SL1500_.jpg'),
+    (4, 'Xiaomi Redmi Buds 3 Pro Wireless in-Ear Headphones Bluetooth', '47.50', '35dB deep noise cancellation. Allowing you to enjoy a world with less background noise: The earbuds adopt the dual active noise cancellation technology with feedback and feed-forward microphones. They effectively cancel ambient noise and reduce excess noise in the ear canal. Noise cancellation can be as deep as 35dB*.', 'https://m.media-amazon.com/images/I/719Te1m4qRL._AC_SL1500_.jpg'),
+    (6, 'Milwaukee 2953-20 18V Lithium-Ion Brushless Cordless 1/4 Hex Impact Driver (Bare Tool), Red', '104.35', 'Brand: Milwaukee\nVoltage: 18 Volts', 'https://m.media-amazon.com/images/I/61nNyksoKbL._AC_SL1500_.jpg'),
+    (7, 'Philips Norelco Multigroomer All-in-One Trimmer Series 7000', '58.49', 'The all in 1 trimmer for your choice of beard, head, body, and/or face hair styling with 23 pieces for all your trimming needs', 'https://m.media-amazon.com/images/I/71YCllvavVL._SL1500_.jpg'),
+    (8, 'A Single Shard Book', '6.09', 'the master potter, Min—even if it means making a solitary journey to present Min’s work in the hope of a royal', 'https://m.media-amazon.com/images/I/51ZTziDmJeL._SX336_BO1,204,203,200_.jpg'),
+    (9, 'Dove Body Wash with Pump Deep Moisture For Dry Skin Moisturizing', '21.58', '24HR RENEWING MICROMOISTURE: Dove Deep Moisture Body Wash gently cleanses and deeply moisturizes the skin, leaving it renewed and healthy-looking for 24 hours', 'https://m.media-amazon.com/images/I/71lPw5gA3-L._SL1500_.jpg'),
+    (10, 'Mandy\'s 28pcs Multicolor Artificial Tulip Silk Flowers', '18.99', 'Materials: Flower is made of soft Polyurethane (PU), stem is made of Plastic.', 'https://m.media-amazon.com/images/I/71wkTGNOn0L._AC_SL1500_.jpg'),
+    (11, 'PowerA Enhanced Wireless Controller for Nintendo Switch - Black', '34.95', 'Wireless freedom using Bluetooth 5.0\nFeatures motion controls and mappable advanced gaming buttons', 'https://m.media-amazon.com/images/I/71RPD7jKGxL._SX522_.jpg'),
+    

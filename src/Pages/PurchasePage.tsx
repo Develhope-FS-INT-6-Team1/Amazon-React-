@@ -20,9 +20,10 @@ function PurchasePage() {
   const [currentProduct,setCurrentProduct] = useState({});
   const productId = parseInt(id, 10); // Replace 'yourProductId' with the desired product ID
 
-  const product = data.find((item) => item.id === productId);
+  
   useEffect(() => {
     fetchProducts();
+
   }, []);
 
   const fetchProducts = async () => {
@@ -42,8 +43,8 @@ function PurchasePage() {
         <FirstHeader />
         <div className="content-pcard">
           <div>
-            {product ? (
-              <PurchaseCard item={product} key={product.id} />
+            {currentProduct ? (
+              <PurchaseCard item={currentProduct} key={currentProduct.productid} />
             ) : (
               <p>Product not found</p>
             )}

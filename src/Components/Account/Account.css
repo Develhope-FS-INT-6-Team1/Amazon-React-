@@ -1,0 +1,48 @@
+.container {
+  background-color: white;
+  font-family: "Amazon Ember", Arial, sans-serif;
+  margin-top: 0;
+}
+
+.allBoxes {
+  /* display: grid; */
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+.allBoxes a {
+  text-decoration: none;
+  color: #000;
+}
+.h1 {
+  text-align: left;
+  margin-left: 10vw;
+  margin-top: 5px;
+}
+.grid {
+  text-align: left;
+  padding: 25px;
+  margin: 10px;
+  /* display:inline-flex; */
+  /* flex-direction: column; */
+  background-color: white;
+  border: 1px solid lightgray;
+  border-radius: 20px;
+  padding: 10px 20px;
+  background-color: transparent;
+  cursor: pointer;
+  width: 300px;
+  height: 150px;
+}
+
+.grid b {
+  font-size: larger;
+  margin-bottom: 10px;
+}
+
+.allBoxes img {
+  height: 60px;
+  width: 60px;
+}
