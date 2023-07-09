@@ -89,6 +89,8 @@
   .quantity {
     font-size: 14px;
     display: flex;
+    justify-content: center;
+    /* align-items: center; */
   }
   
   .subtotal {
@@ -162,6 +164,7 @@
   }
   .cart-links{
     width: 90%;
+    margin-left: 20px;
   }
   .cart-links a{
     cursor: pointer;

@@ -62,6 +62,13 @@ const CartPage: React.FC<CartPageProps> = ({
     return subtotal;
 
   }, [cartItems]);
+  const totalQuantity = useMemo(() => {
+    let quantity = 0;
+    for (const item of cartItems) {
+      quantity += item.quantity;
+    }
+    return quantity;
+  }, [cartItems]);
 
   return (
     <div id="Main" className="App">
@@ -94,7 +101,8 @@ const CartPage: React.FC<CartPageProps> = ({
           <div className="policy">
             <div className="checkout">
               <div className="subtotal">
-                Subtotal ({cartItems.length} Items):{" "}
+                {/* Subtotal ({cartItems.length} Items):{" "} */}
+                Subtotal ({totalQuantity} Items):{" "}
                 <span className="subtotal-amount">${totalPrice}</span>
               </div>
               <div>

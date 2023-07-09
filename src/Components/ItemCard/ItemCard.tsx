@@ -115,11 +115,11 @@ const CartItemCard: React.FC<CartItemCardProps> = ({ key,item, onRemoveItem,cart
 
           <p className="cart-links">
             <a onClick={handleRemoveItem}>Delete</a> &nbsp; &nbsp; &nbsp;
-            <span>|</span> &nbsp; &nbsp;
+            <span>|</span> &nbsp;
             <a href="#">Save for later</a> &nbsp; &nbsp; &nbsp;
-            <span> | </span> &nbsp; &nbsp;
+            <span> | </span> &nbsp; 
             <a href="#">Compare with similar items</a> &nbsp; &nbsp; &nbsp;
-            <span> | </span> &nbsp; &nbsp; &nbsp;
+            <span> | </span> &nbsp; 
             <a href="#">Share</a> &nbsp; &nbsp; &nbsp;
           </p>
         </div>
