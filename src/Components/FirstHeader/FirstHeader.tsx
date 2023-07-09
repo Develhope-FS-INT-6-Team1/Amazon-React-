@@ -227,7 +227,7 @@ export default function FirstHeader(): JSX.Element {
             </div>
             <div id="account3">
               <h3>Your Account</h3>
-              <a href="/">Account</a>
+              <a href="/account">Account</a>
               <a href="/">Orders</a>
               <a href="/">Recommendations</a>
               <a href="/">Browsing History</a>
@@ -260,7 +260,7 @@ export default function FirstHeader(): JSX.Element {
             </div>
             <div id="account3">
               <h3>Your Account</h3>
-              <a href="/">Account</a>
+              <a href="/account">Account</a>
               <a href="/">Orders</a>
               <a href="/">Recommendations</a>
               <a href="/">Browsing History</a>
