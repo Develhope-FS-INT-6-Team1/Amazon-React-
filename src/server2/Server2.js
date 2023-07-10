@@ -174,38 +174,32 @@ app.listen(port, () => {
 });
 
 
-/*
-// Call the functions or perform other operations here
-getAllProducts()
-  .then((products) => {
-    console.log('All products:', products);
-  })
-  .catch((error) => {
-    console.error('Error retrieving products:', error);
-  });
+  // Function to update user details
+function updateUserDetails(userId, username, password) {
+  return new Promise((resolve, reject) => {
+    const query = 'UPDATE Users SET username = $1, password = $2 WHERE user_id = $3';
+    const values = [username, password, userId];
 
-login('johndoe', 'abc123')
-  .then((userId) => {
-    console.log('Logged in successfully. User ID:', userId);
-  })
-  .catch((error) => {
-    console.error('Error logging in:', error);
-  });
+    pool.query(query, values, (error, results) => {
+      if (error) {
+        reject(error);
+        return;
+      }
 
-register('newuser', 'newpassword')
-  .then((userId) => {
-    console.log('Registered successfully. User ID:', userId);
-  })
-  .catch((error) => {
-    console.error('Error registering:', error);
+      resolve();
+    });
   });
+}
 
-getItemsByProductId(1)
-  .then((items) => {
-    console.log('Items with product ID 1:', items);
-  })
-  .catch((error) => {
-    console.error('Error retrieving items:', error);
-  });
+// Endpoint to update user details
+app.put('/api/users/update', (req, res) => {
+  const { userId, username, password } = req.body;
 
-  */
+  updateUserDetails(userId, username, password)
+    .then(() => {
+      res.status(200).json({ message: 'User details updated successfully' });
+    })
+    .catch((error) => {
+      res.status(500).json({ error: 'Failed to update user details' });
+    });
+});
