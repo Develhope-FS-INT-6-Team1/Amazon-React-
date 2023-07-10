@@ -175,16 +175,20 @@ app.listen(port, () => {
 
 
   // Function to update user details
-function updateUserDetails(userId, username, password) {
+function updateUserDetails( username, password) {
+
   return new Promise((resolve, reject) => {
-    const query = 'UPDATE Users SET username = $1, password = $2 WHERE user_id = $3';
-    const values = [username, password, userId];
+    const query = 'UPDATE Users SET password = $2 WHERE username = $1';
+    const values = [username, password];
 
     pool.query(query, values, (error, results) => {
       if (error) {
         reject(error);
+        console.log(error);
         return;
       }
+
+      console.log("Updated Succesfully");
 
       resolve();
     });
@@ -193,9 +197,9 @@ function updateUserDetails(userId, username, password) {
 
 // Endpoint to update user details
 app.put('/api/users/update', (req, res) => {
-  const { userId, username, password } = req.body;
+  const { username, password } = req.body;
 
-  updateUserDetails(userId, username, password)
+  updateUserDetails(username, password)
     .then(() => {
       res.status(200).json({ message: 'User details updated successfully' });
     })
