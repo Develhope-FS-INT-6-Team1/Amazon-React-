@@ -6,6 +6,8 @@ import FirstFooter from "../Components/FirstFooter/FirstFooter.tsx";
 import EndFooter from "../Components/EndFooter/EndFooter.tsx";
 import { SecondHeader } from "../Components/SecondHeader/SecondHeader.tsx";
 import "../Components/ItemCard/ItemCard.css";
+import axios from 'axios';
+
 
 interface CartItem {
   productId: number;
@@ -109,7 +111,25 @@ const CartPage: React.FC<CartPageProps> = ({
                 <input type="checkbox" id="gift" />
                 <label htmlFor="gift">This order contains a gift</label>
               </div>
-              <button id="checkout-button">Proceed to checkout</button>
+              <button id="checkout-button" onClick={ async ()=>{
+                const userId = await localStorage.getItem('userId');
+
+                axios.post('http://localhost:3001/api/users/addOrder', {
+                  "userId":userId,
+                  "products":cartItems,
+                })
+                .then((response) => {
+                  console.log('added to orders successfully');
+                  alert('added to orders successfully');
+                  //navigate('/');
+        
+                })
+                .catch((error) => {
+                  console.error('Error occurred while updating user details:', error);
+                });
+
+
+              }}>Proceed to checkout</button>
             </div>
           </div>
           

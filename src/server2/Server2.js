@@ -207,3 +207,160 @@ app.put('/api/users/update', (req, res) => {
       res.status(500).json({ error: 'Failed to update user details' });
     });
 });
+
+
+async function createOrder(userId,products) {
+
+    const query = `INSERT INTO orders (userId) VALUES (${userId});`;
+    let result ;
+
+    await pool.query(query, async (error, results) => {
+      if (error) {
+        console.log(error);
+        result = false;    
+        return "ERROR";
+      }
+
+      const query = `select * from orders where userId = ${userId};`;
+      await pool.query(query, async (error, results) => {
+        if (error) {
+          console.log(error);
+          result = false;    
+          return "ERROR";
+        }
+
+        console.log("LAST:",results.rows[results.rows.length-1]);
+
+        let orderId = results.rows[results.rows.length-1].orderid;
+
+        for(let i = 0 ; i < products.length;i++){
+          const query = `INSERT INTO orderproducts (orderId, producId,productCount ) VALUES (${orderId} ,${products[i].productid},${products[i].quantity});`;
+          // eslint-disable-next-line no-loop-func
+          await pool.query(query, async (error, results) => {
+            if (error) {
+              console.log(error);
+              result = false;       
+              return "ERROR";
+            }
+            console.log("Item Added Succesfully");
+          });
+        }
+
+        result = true;
+  
+      });
+    });
+
+    return result
+
+
+}
+
+app.post('/api/users/addOrder', async (req, res) => {
+  const { userId, products } = req.body;
+
+  console.log(userId,products);
+
+  let order = createOrder(userId,products);
+
+  if(order){
+    res.status(200).json({ message: 'Order Added SuccesFully'});
+  }
+  else{
+    res.status(500).json({ message: 'Order could not added SuccesFully'});
+
+  }
+
+});
+
+
+
+
+/*
+async function getOrders(userId) {
+
+  const query = `select * from orders where userId = ${userId};`;
+  let resultArray = [];
+
+  await pool.query(query, async (error, results) => {
+    if (error) {
+      console.log(error);
+      resultArray = false;    
+      return "ERROR";
+    }
+
+    console.log(results.rows);
+
+    for(let i = 0;i< results.rows.length;i++ ){
+      let orderId = results.rows[i].orderid;
+      const query = `select * from orderproducts where orderid = ${orderId};`;
+
+      // eslint-disable-next-line no-loop-func
+      await pool.query(query, async (error, results) => {
+        if (error) {
+          console.log(error);
+          resultArray = false;    
+          return "ERROR";
+        }
+        
+        resultArray.push({"orderId":orderId,"Products":results.rows});
+        console.log(resultArray);
+      });
+
+    }
+
+
+  });
+
+
+  return resultArray
+
+
+}*/
+
+
+async function getOrders(userId) {
+  const query = `SELECT * FROM orders WHERE userId = ${userId};`;
+  let resultArray = [];
+
+  try {
+    const results = await pool.query(query);
+    const orders = results.rows;
+
+    for (let i = 0; i < orders.length; i++) {
+      const orderId = orders[i].orderid;
+      const productQuery = `SELECT * FROM orderproducts WHERE orderid = ${orderId};`;
+      const productResults = await pool.query(productQuery);
+      const products = productResults.rows;
+      
+      resultArray.push({ "orderId": orderId, "Products": products });
+    }
+
+    console.log(resultArray);
+    return resultArray;
+  } catch (error) {
+    console.log(error);
+    return "ERROR";
+  }
+}
+
+
+
+app.get('/api/users/getOrders', async (req, res) => {
+  const { userId } = req.body;
+
+  console.log(userId);
+
+  let order = await getOrders(userId);
+
+  console.log("FINAL",order);
+
+  if(order){
+    res.status(200).json(order);
+  }
+  else{
+    res.status(500).json({ message: 'Could not get the orders'});
+
+  }
+
+});
