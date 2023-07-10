@@ -171,7 +171,7 @@ export default function Products(){
                                     <img src={item.image} height="200px" alt="product" />
                                 </Link>
                                 <div className="product-details">
-                                    <h5>{item.productname}</h5>
+                                    <h5 className="name-item">{item.productname}</h5>
                                     <p className="about-item">{item.aboutthisitem}</p>
                                     <p className="price-item">Price: ${item.price}</p>
                                 </div>

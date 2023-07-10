@@ -1,6 +1,7 @@
 .products-main {
     display: flex;
     flex-direction: column;
+    background-color: rgb(234,237,237);
 }
 
 .filters-results {
@@ -22,6 +23,7 @@
 
 .filter-by h4{
     padding-bottom: 5px;
+    font-size: 20px;
 }
 
 .results{
@@ -62,4 +64,13 @@
 .about-item{
     font-size: 10px;
     color: rgb(129, 129, 129);
+    margin-bottom: 0px;
+}
+
+.name-item{
+    font-size: 15px;
+}
+
+.price-item{
+    margin-top: 0px;
 }

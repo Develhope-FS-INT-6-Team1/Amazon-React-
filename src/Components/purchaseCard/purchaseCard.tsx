@@ -143,17 +143,16 @@ const PurchaseCard: React.FC<PurchaseCardProps> = ({ item }) => {
         </div>
       </div>
       <div />
-      <div className="card">
+      <div className="left-card">
         <div className="price">${calculateSubtotal()} </div>
         <div className="description">
           <p>
-            $95.56 Shipping & Import Fees <br />
+            Shipping & Import Fees <br />
             Deposit to Turkey
             <a href="#Main" className="more-info">
               Details&#x25BC;<i className="fas fa-angle-down"></i>
             </a>
             <br />
-            $14.51 delivery
           </p>
         </div>
         <div className="location">
@@ -175,7 +174,7 @@ const PurchaseCard: React.FC<PurchaseCardProps> = ({ item }) => {
         <div className="quantity">
           <select
             name="quantity"
-            tabindex="0"
+            tabIndex="0"
             className="quantity-dropdown-menu dropdown-toggle"
             type="number"
             min="1"
