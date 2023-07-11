@@ -59,7 +59,8 @@ export function SecondHeader(): JSX.Element {
               <a href="/account">Your Account</a>
               <a href="/account">Language and Preferences</a>
               <a href="/orders">Orders</a>
-              <a>Customer Service</a>
+              <a href="/address">Your Adresses</a>
+              <a>Live Support</a>
               <a href="/signin">Sign in</a>
             </>
           )}

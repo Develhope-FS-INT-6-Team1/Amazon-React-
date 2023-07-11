@@ -275,50 +275,6 @@ app.post('/api/users/addOrder', async (req, res) => {
 
 
 
-
-/*
-async function getOrders(userId) {
-
-  const query = `select * from orders where userId = ${userId};`;
-  let resultArray = [];
-
-  await pool.query(query, async (error, results) => {
-    if (error) {
-      console.log(error);
-      resultArray = false;    
-      return "ERROR";
-    }
-
-    console.log(results.rows);
-
-    for(let i = 0;i< results.rows.length;i++ ){
-      let orderId = results.rows[i].orderid;
-      const query = `select * from orderproducts where orderid = ${orderId};`;
-
-      // eslint-disable-next-line no-loop-func
-      await pool.query(query, async (error, results) => {
-        if (error) {
-          console.log(error);
-          resultArray = false;    
-          return "ERROR";
-        }
-        
-        resultArray.push({"orderId":orderId,"Products":results.rows});
-        console.log(resultArray);
-      });
-
-    }
-
-
-  });
-
-
-  return resultArray
-
-
-}*/
-
-
 async function getOrders(userId) {
   const query = `SELECT * FROM orders WHERE userId = ${userId};`;
   let resultArray = [];
