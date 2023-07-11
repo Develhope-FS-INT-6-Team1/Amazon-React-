@@ -49,9 +49,9 @@
 }
 
 .oldAddress span{
-    display: flex;
-    flex-direction: column;
-    text-align: left;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
 }
 
 .oldAddress button{
@@ -61,36 +61,38 @@ margin: 10px;
 align-items: left;
 justify-content: left;
 background: none;
-	color: gray;
-	border: none;
-	padding: 0;
-	font: inherit;
-	cursor: pointer;
-	outline: inherit;;
+color: gray;
+border: none;
+padding: 0;
+font: inherit;
+cursor: pointer;
+outline: inherit;;
 
 }
-  .addressgrid p{
-    margin-top: 7vh;
-    text-align: center;
-    font-weight: bolder;
-    color: gray;
-    font-size: 30px;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-  }
-  .h1-address {
-    text-align: left;
-    margin-left: 10vw;
-    margin-top: 5px;
-  }
+.addressgrid p{
+  margin-top: 7vh;
+  text-align: center;
+  font-weight: bolder;
+  color: gray;
+  font-size: 30px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.h1-address {
+  text-align: left;
+  margin-left: 10vw;
+  margin-top: 5px;
+}
 
-  .h1-address a{
-    color: black;
-    text-decoration:none;
-  }
+.h1-address a{
+  color: black;
+  text-decoration:none;
+}
 
-  .img{
-    height: 15px;
-    width: 30px;
-  }
+.remove-address {
+  border: none;
+  background-color: white;
+  color: rgb(255, 110, 110);
+  margin-bottom: 15px;
+}

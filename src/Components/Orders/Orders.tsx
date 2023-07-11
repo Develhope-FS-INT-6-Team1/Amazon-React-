@@ -65,7 +65,16 @@ export function Orders(): JSX.Element {
     fetchOrders();
   }, []);
   
+  const handleCancelOrder = async (orderId) => {
+    try {
+      await axios.delete(`http://localhost:3001/api/orders/${orderId}`);
+      setOrders((prevOrders) => prevOrders.filter((order) => order.orderID !== orderId));
+    } catch (error) {
+      console.error('Failed to cancel order:', error);
+    }
+  };
 
+  
   return (
     <div className="your-orders">
       <div className="order-fisrt-part">
@@ -126,17 +135,29 @@ export function Orders(): JSX.Element {
         <div className="content">
             {orders.length > 0 ? (
               orders.map((order) => (
-                <div key={order.orderID}>
-                  <h2>Order ID: {order.orderID}</h2>
-                  <ul>
+                <div className="order-box" key={order.orderID}>
+                  <p>Order ID: {order.orderID}</p>
+                  <hr></hr>
+                  <ul className="order-details">
                     {order.products.map((product) => (
                       <div>
-                        <img src={product.image} height="200px" alt="product" />
-                        <li key={product.productid}>{product.productname} : {product.quantity} </li>
-                      </div>
-                    
+                        <img className="product-img" src={product.image} height="200px" alt="product" />
+                        <li className="product-name" key={product.productid}>
+                          {product.productname}
+                        </li>
+                        <li className="product-quantity" key={product.productid}>
+                          Quantity: {product.quantity}
+                        </li>
+                        <hr></hr>
+                      </div> 
                     ))}
                   </ul>
+                  <hr></hr>
+                  <button
+                    className="cancel-order"
+                    onClick={() => handleCancelOrder(order.orderID)}>
+                      Cancel Order
+                  </button>
                 </div>
               ))
             ) : (

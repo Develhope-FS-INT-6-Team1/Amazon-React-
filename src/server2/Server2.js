@@ -323,6 +323,18 @@ app.post('/api/users/getOrders', async (req, res) => {
 
 });
 
+app.delete('/api/orders/:orderId', async (req, res) => {
+  const { orderId } = req.params;
+
+  try {
+    const query = `DELETE FROM orders WHERE orderId = ${orderId}`;
+    await pool.query(query);
+    res.status(200).json({ message: 'Order cancelled successfully' });
+  } catch (error) {
+    console.error('Failed to cancel order:', error);
+    res.status(500).json({ error: 'Failed to cancel order' });
+  }
+});
 
 
 
@@ -395,4 +407,37 @@ app.post('/api/users/getAddress', async (req, res) => {
 
   }
 
+});
+
+
+async function removeAddress(userId) {
+  const query = `DELETE FROM address WHERE userID = ${userId}`;
+
+  try {
+    const results = await pool.query(query);
+
+  
+    console.log('Address removed successfully');
+
+    return results.rows[0];
+  } 
+  catch (error) {
+    console.log(error);
+    return false;
+  }
+
+}
+
+app.delete('/api/address', async (req, res) => {
+  const userId = req.user.id;
+
+  let removeAddressValue = await removeAddress(userId);
+
+  if(removeAddressValue){
+    res.status(200).json(removeAddressValue);
+  }
+  else{
+    res.status(500).json({ message: 'Address could not removed'});
+
+  }
 });
