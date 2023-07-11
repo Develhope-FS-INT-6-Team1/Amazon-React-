@@ -35,9 +35,9 @@
  /*this makes the content move while hovering */
 .nav-logo:hover,
 .location:hover,
-.lang:hover,
+.lang-part:hover,
 .text:hover,
-.account:hover,
+.accounts:hover,
 .cart:hover {
     border: 1px solid white;
     height: 50px;
@@ -184,7 +184,7 @@
 }
 
 
-.lang:hover + .hidden-lang {
+.lang-part:hover + .hidden-lang {
     display: block;
 }
 
@@ -213,7 +213,7 @@
     margin: 0px;
 }
 
-.account:hover + .hidden-account {
+.accounts:hover + .hidden-account {
     display: grid;
     grid-template: 1fr, 1fr / 2fr;
 }

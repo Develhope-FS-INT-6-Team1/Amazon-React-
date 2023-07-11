@@ -42,21 +42,19 @@ export function SecondHeader(): JSX.Element {
               <button className="closebtn" onClick={closeBtn}>
                 X
               </button>
-              <a href="/signin" className="hello">
-                <h2>Hello, sign in</h2>
-              </a>
+              <a className="hello" id="hello">Hello</a>
               <button className="closebtn" onClick={closeBtn}>
                 X
               </button>
               <a href="/products">
-                <h3>Shop Amazon Products</h3>
+                <h4>Shop Amazon Products</h4>
               </a>
               <a href="/products">All categories &gt;</a>
               <a href="/products">Kindle E-readers & Books &gt;</a>
               <a href="/products">Amazon Appstore &gt;</a>
               <hr />
               <a href="/category1">
-                <h3>Help & Settings </h3>
+                <h4>Help & Settings </h4>
               </a>
               <a href="/account">Your Account</a>
               <a href="/account">Language and Preferences</a>

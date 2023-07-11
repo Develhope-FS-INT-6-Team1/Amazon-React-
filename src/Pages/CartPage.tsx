@@ -129,7 +129,7 @@ const CartPage: React.FC<CartPageProps> = ({
                 });
 
 
-              }}>Proceed to checkout</button>
+              }}>Confirm Order</button>
             </div>
           </div>
           
