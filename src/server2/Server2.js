@@ -322,3 +322,77 @@ app.post('/api/users/getOrders', async (req, res) => {
   }
 
 });
+
+
+
+
+async function addAddress(userId, name, country, city, phoneNumber, address) {
+  const query = `INSERT INTO address (userID, name, country, city, phoneNumber, address) VALUES (${userId}, '${name}', '${country}', '${city}', '${phoneNumber}', '${address}')`;
+
+  try {
+    const results = await pool.query(query);
+
+  
+    console.log("Address inserted successfully!");
+
+    return true;
+  } 
+  catch (error) {
+    console.log(error);
+    return false;
+  }
+
+}
+
+
+
+app.post('/api/users/addAddress', async (req, res) => {
+  const { userId, name, country, city, phoneNumber, address } = req.body;
+  console.log("BODY:",req.body);
+
+  let addAddressValue = await addAddress(userId, name, country, city, phoneNumber, address );
+
+  if(addAddressValue){
+    res.status(200).json({ message: 'Address added'});
+  }
+  else{
+    res.status(500).json({ message: 'Address could not added'});
+
+  }
+
+});
+
+async function getAddress(userId) {
+  const query = `select * from address where userid = ${userId}`;
+
+  try {
+    const results = await pool.query(query);
+
+  
+    console.log("Address inserted successfully!");
+
+    return results.rows[0];
+  } 
+  catch (error) {
+    console.log(error);
+    return false;
+  }
+
+}
+
+
+app.post('/api/users/getAddress', async (req, res) => {
+  const { userId} = req.body;
+  console.log("BODY:",req.body);
+
+  let addAddressValue = await getAddress(userId);
+
+  if(addAddressValue){
+    res.status(200).json(addAddressValue);
+  }
+  else{
+    res.status(500).json({ message: 'Address could not added'});
+
+  }
+
+});

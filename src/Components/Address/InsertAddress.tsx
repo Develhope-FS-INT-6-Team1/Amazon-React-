@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../Address/InsertAddress.css";
+import axios from "axios";
 
 export function InsertAddress(): JSX.Element {
   const [address, setAddress] = useState({
@@ -12,6 +13,12 @@ export function InsertAddress(): JSX.Element {
     zip: "",
     phone: "",
   });
+  const [selectedCountry, setSelectedCountry] = useState("United States");
+  const navigate = useNavigate();
+
+  const handleCountryChange = (event) => {
+    setSelectedCountry(event.target.value);
+  };
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -21,9 +28,34 @@ export function InsertAddress(): JSX.Element {
     }));
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     console.log("New address:", address);
+    const value = await localStorage.getItem('userId');
+    try{
+      const response = await axios.post("http://localhost:3001/api/users/addAddress", {
+        'userId': value,
+        "name":address.name, 
+        "country":selectedCountry, 
+        "city":address.city, 
+        "phoneNumber":address.phone, 
+        "address":address.apartment
+      });
+
+      navigate('/');
+
+
+    }
+    catch(error){
+
+    }
+    
+
+    
+
+
+
+
     setAddress({
       name: "",
       street: "",
@@ -33,6 +65,13 @@ export function InsertAddress(): JSX.Element {
       zip: "",
       phone: "",
     });
+
+
+
+
+
+
+
   };
 
   return (
@@ -43,7 +82,12 @@ export function InsertAddress(): JSX.Element {
       </h6>
       <h2 className="h1-inAddress">Add a new address</h2>
       <b>Country/Region</b>
-      <select name="United States" className="dropdown">
+      <select
+        name="country"
+        className="dropdown"
+        value={selectedCountry}
+        onChange={handleCountryChange}
+      >
         <option value="Albania">Albania</option>
         <option value="United States">United States</option>
         <option value="Italy">Italy</option>
@@ -63,8 +107,8 @@ export function InsertAddress(): JSX.Element {
       Phone number
         <input
           type="number"
-          name="street"
-          value={address.street}
+          name="phone"
+          value={address.phone}
           onChange={handleInputChange}
         />
       </label>
@@ -76,12 +120,7 @@ export function InsertAddress(): JSX.Element {
           value={address.apartment}
           onChange={handleInputChange}
         />
-        <input
-          type="text"
-          name="apartment"
-          value={address.apartment}
-          onChange={handleInputChange}
-        />
+
       </label>
       <div className="CSZ">
       <div className="column">
