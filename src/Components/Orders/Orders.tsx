@@ -10,7 +10,7 @@ export function Orders(): JSX.Element {
   const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [slidesToShow, setSlidesToShow] = useState(6);
-  const [orders, setOrders] = useState([]);
+  const [orders, setOrders] = useState([{"orderId":-1,"products":[]}]);
 
 
   const handleSlideChange = (index) => {
@@ -21,15 +21,42 @@ export function Orders(): JSX.Element {
     }
   };
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
+
     const fetchOrders = async () => {
-      try {
-        const response = await axios.get("http://localhost:3001/api/users/getOrders", {
-          params: {
-            userId: userId,
-          },
+
+      try { 
+        const value = await localStorage.getItem('userId');
+        console.log("VALUEEE",value);
+        let tempOrders = [];
+        const response = await axios.post("http://localhost:3001/api/users/getOrders", {
+            'userId': value
         });
-        setOrders(response.data);
+        //setOrders(response.data);
+        console.log(response.data);
+        let allOrders = response.data;
+        for(let i = 0 ; i < allOrders.length;i++){
+          let curOrder = {"orderID":allOrders[i].orderId, "products":[]};
+          let products = allOrders[i].Products
+          for(let j = 0;j<products.length;j++){
+            await axios.get(`http://localhost:3001/products/${products[j].producid}`)
+            .then(async (response) => {
+              //console.log(response.data);
+              let temp = response.data;
+              temp.quantity = products[j].productcount;
+              curOrder.products.push(temp);
+            })
+            .catch((error) => {
+              console.error('Error occurred while fetching products:', error);
+            });
+          }
+
+          //console.log(curOrder);
+          tempOrders.push(curOrder);
+        }
+        console.log(tempOrders);
+        setOrders(tempOrders);
       } catch (error) {
         console.error("Failed to fetch orders:", error);
       }
@@ -99,11 +126,15 @@ export function Orders(): JSX.Element {
         <div className="content">
             {orders.length > 0 ? (
               orders.map((order) => (
-                <div key={order.orderId}>
-                  <h2>Order ID: {order.orderId}</h2>
+                <div key={order.orderID}>
+                  <h2>Order ID: {order.orderID}</h2>
                   <ul>
-                    {order.Products.map((product) => (
-                      <li key={product.productId}>{product.productName}</li>
+                    {order.products.map((product) => (
+                      <div>
+                        <img src={product.image} height="200px" alt="product" />
+                        <li key={product.productid}>{product.productname} : {product.quantity} </li>
+                      </div>
+                    
                     ))}
                   </ul>
                 </div>

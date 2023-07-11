@@ -302,10 +302,12 @@ async function getOrders(userId) {
 
 
 
-app.get('/api/users/getOrders', async (req, res) => {
+app.post('/api/users/getOrders', async (req, res) => {
   const { userId } = req.body;
 
-  console.log(userId);
+  console.log("BODY:",req.body);
+
+  console.log("VALUE:",userId);
 
   let order = await getOrders(userId);
 
