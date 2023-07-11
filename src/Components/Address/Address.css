@@ -1,0 +1,96 @@
+.addresscontainer {
+    background-color: white;
+    font-family: "Amazon Ember", Arial, sans-serif;
+    margin-top: 0;
+    display: grid | inline;
+
+  }
+
+.addAddress a{
+    align-items: left;
+    justify-content: left;
+    float: left;
+    padding: 40px;
+    margin: 10px;
+    background-color: white;
+    border: 3px dashed lightgray;
+    border-radius: 7px;
+    padding: 20px 20px;
+    background-color: transparent;
+    cursor: pointer;
+    width: 350px;
+    height: 300px;
+    margin-left: 10vw;
+
+
+  }
+
+.oldAddress{
+    align-items: left;
+    justify-content: left;
+    float: left;
+    padding: 40px;
+    margin: 10px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 7px;
+    padding: 20px 20px;
+    background-color: transparent;
+    cursor: pointer;
+    width: 350px;
+    height: 300px;
+}
+
+.addresscontainer a{
+    text-decoration: none;
+    color: gray;
+    text-align: left;
+
+}
+
+.oldAddress span{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.oldAddress button{
+text-decoration: none;
+border: none;
+margin: 10px;
+align-items: left;
+justify-content: left;
+background: none;
+	color: gray;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;;
+
+}
+  .addressgrid p{
+    margin-top: 7vh;
+    text-align: center;
+    font-weight: bolder;
+    color: gray;
+    font-size: 30px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+  .h1-address {
+    text-align: left;
+    margin-left: 10vw;
+    margin-top: 5px;
+  }
+
+  .h1-address a{
+    color: black;
+    text-decoration:none;
+  }
+
+  .img{
+    height: 15px;
+    width: 30px;
+  }

@@ -13,7 +13,8 @@ import ProductPage from './Pages/ProductsPage.tsx';
 import { AccountPage } from './Pages/AccountPage.tsx';
 import {OrdersPage} from './Pages/OrdersPage.tsx'
 import AccountDetailsPage from './Pages/AccountDetailsPage.tsx';
-
+import { AddressPage } from './Pages/AddressPage.tsx';
+import { InsertAddressPage } from './Pages/InsertAddressPage.tsx';
 
 
 function App() {
@@ -28,6 +29,8 @@ function App() {
           <Route path="/signup" element={<SignUpPage />} />
           <Route path="/products" element={<ProductPage />} />
           <Route path="/account" element={<AccountPage />} />
+          <Route path="/address" element={<AddressPage />} />
+          <Route path="/insertaddress" element={<InsertAddressPage />} />
           <Route path="/account-details" element={<AccountDetailsPage />} />
           <Route path="/orders" element={<OrdersPage />} />
           <Route path="/cart" element={<CartPage CartItems={[]}/>} />
